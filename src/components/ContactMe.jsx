@@ -62,6 +62,7 @@ function ContactMe() {
           <Grid xs={12} sm={5}>
             <Box
               sx={{
+                py: "18%",
                 background: color2,
                 borderRadius: 5,
                 ml: "10%",
@@ -79,7 +80,8 @@ function ContactMe() {
                   fontFamily: font2,
                   textAlign: "left",
                   ml: "20%",
-                }}
+                  color: color6,
+                                }}
               >
                 let's
               </Typography>
@@ -94,6 +96,7 @@ function ContactMe() {
                   fontFamily: font2,
                   textAlign: "right",
                   mr: "20%",
+                  color: color6,
                 }}
               >
                 get in
@@ -110,6 +113,7 @@ function ContactMe() {
                   fontFamily: font2,
                   textAlign: "left",
                   ml: "20%",
+                  color: color6,
                 }}
               >
                 touch
@@ -261,6 +265,8 @@ function ContactMe() {
                     }}
                   />
                 </Box>
+
+                <Button>SUBMIT</Button>
               </Box>
 
               <hr />
@@ -345,6 +351,7 @@ function ContactMe() {
                         },
                         fontFamily: font2,
                         textAlign: "left",
+                        mt: "7%",
                       }}
                     >
                       {" "}

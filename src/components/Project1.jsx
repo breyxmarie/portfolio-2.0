@@ -68,11 +68,14 @@ function Project1() {
               md: "3em",
               lg: "4em",
               xl: "5em",
-            }, fontWeight: "bold", fontFamily: font2 }}
+            }, fontWeight: "bold", fontFamily: font2,
+            mb: {xs: "5%", sm: "0%"}
+          }}
           >
             Projects
           </Typography>
         </center>
+
 
         <Typography
           sx={{
@@ -262,6 +265,8 @@ function Project1() {
                 {" "}
                 <Box
                   sx={{
+                    
+                    color: color6,
                     background: color3,
                     borderRadius: 5,
                     py: "2.5%",
@@ -283,6 +288,7 @@ function Project1() {
                 {" "}
                 <Box
                   sx={{
+                    color: color6,
                     background: color3,
                     borderRadius: 5,
                     py: "2.5%",
@@ -305,6 +311,7 @@ function Project1() {
                 {" "}
                 <Box
                   sx={{
+                    color: color6,
                     background: color3,
                     borderRadius: 5,
                     py: "2.5%",
@@ -326,6 +333,7 @@ function Project1() {
                 {" "}
                 <Box
                   sx={{
+                    color: color6,
                     background: color3,
                     borderRadius: 5,
                     py: "2.5%",
@@ -343,11 +351,12 @@ function Project1() {
                 </Box>
               </Grid>
             </Grid>
-            <Grid container spacing={2} sx={{ ml: "5%", mt: 2 }}>
+            <Grid container spacing={2} sx={{ ml: "4.5%", mt: 2 }}>
               <Grid xs={6} sm={6}>
                 {" "}
                 <Box
                   sx={{
+                    color: color6,
                     background: color3,
                     borderRadius: 5,
                     py: "2.5%",
@@ -369,6 +378,7 @@ function Project1() {
                 {" "}
                 <Box
                   sx={{
+                    color: color6,
                     background: color3,
                     borderRadius: 5,
                     py: "2.5%",

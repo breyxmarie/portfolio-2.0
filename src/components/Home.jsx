@@ -13,6 +13,7 @@ function Home() {
     color3,
     color4,
     color5,
+    color6,
     font1,
     setBackgroundColor,
     setColor1,
@@ -20,6 +21,7 @@ function Home() {
     setColor3,
     setColor4,
     setColor5,
+    setColor6,
     setFont1,
     font2,
     setFont2,
@@ -80,7 +82,7 @@ function Home() {
                         md: "5em",
                         lg: "7em",
                       },
-
+                      color: color6,
                       lineHeight: 1,
                     }}
                   >
@@ -100,6 +102,7 @@ function Home() {
                         lg: "7em",
                       },
                       lineHeight: 1,
+                      color: color6,
                     }}
                   >
                     i'm
@@ -126,6 +129,7 @@ function Home() {
                         lg: "10em",
                       },
                       lineHeight: 1,
+                      color: color6,
                     }}
                   >
                     aubrey
@@ -147,6 +151,7 @@ function Home() {
                   alignItems: "flex-start",
                   ml: "20%",
                   fontSize: "1.5em",
+                  color: color6,
                 }}
               >
                 {" "}
@@ -166,6 +171,7 @@ function Home() {
                     alignItems: "flex-start",
                     fontSize: "1.5em",
                     mb: 1,
+                    color: color6,
                   }}
                 >
                   quick links
@@ -368,6 +374,7 @@ function Home() {
 
       <Box
         sx={{
+          pb: "10%",
           display: {
             xs: "block", // Hide on extra small screens
             sm: "none",
@@ -378,6 +385,7 @@ function Home() {
       >
         <Typography
           sx={{
+            color: color6,
             fontFamily: font1,
             display: "flex",
             justifyContent: "center", // Aligns content horizontally to the start
@@ -386,7 +394,7 @@ function Home() {
             fontSize: {
               xs: "1.7em",
             },
-
+           
             //lineHeight: 1,
           }}
         >

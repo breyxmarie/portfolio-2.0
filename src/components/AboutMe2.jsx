@@ -73,8 +73,8 @@ function AboutMe2() {
   };
 
   const certs = [
-    <Box sx={{ mt: "7%", ml: 1, mr: 3 }}>
-      <Grid container spacing={2}>
+    <Box sx={{ mt: "7%", ml: "0%", mr: 0 }}>
+      <Grid container spacing={2} sx = {{ml: "0%"}}>
         <Grid xs={6} sm={6}>
           {" "}
           <img
@@ -130,7 +130,7 @@ function AboutMe2() {
             src="images/cert3.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
             onClick={() => handleImageClick("images/cert3.png")}
           />
           <Typography
@@ -154,7 +154,7 @@ function AboutMe2() {
             src="images/cert2.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "5%" }}
+            style={{ marginLeft: "10%" }}
             onClick={() => handleImageClick("images/cert2.png")}
           />
           <Typography
@@ -182,7 +182,7 @@ function AboutMe2() {
             src="images/cert5.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -204,7 +204,7 @@ function AboutMe2() {
             src="images/cert7.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -229,7 +229,7 @@ function AboutMe2() {
             src="images/cert6.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "5%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -252,7 +252,7 @@ function AboutMe2() {
             src="images/cert8.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "6%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -279,7 +279,7 @@ function AboutMe2() {
             src="images/cert9.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -301,7 +301,7 @@ function AboutMe2() {
             src="images/cert10.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "5%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -318,14 +318,14 @@ function AboutMe2() {
           </Typography>
         </Grid>
       </Grid>
-      <Grid container spacing={2} sx={{ mt: 2 }}>
+      <Grid container spacing={2} sx={{ mt: 3 }}>
         <Grid xs={6} sm={6}>
           {" "}
           <img
             src="images/cert11.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -347,7 +347,7 @@ function AboutMe2() {
             src="images/cert12.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "6%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -373,7 +373,7 @@ function AboutMe2() {
             src="images/cert13.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -395,7 +395,7 @@ function AboutMe2() {
             src="images/cert14.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "5%" }}
+            style={{ marginLeft: "10%" }}
           />
           <Typography
             sx={{
@@ -419,7 +419,8 @@ function AboutMe2() {
             src="images/cert15.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
+
           />
           <Typography
             sx={{
@@ -441,7 +442,8 @@ function AboutMe2() {
             src="images/cert16.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "6%" }}
+            style={{ marginLeft: "10%" }}
+
           />
           <Typography
             sx={{
@@ -467,7 +469,8 @@ function AboutMe2() {
             src="images/cert17.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "4%" }}
+            style={{ marginLeft: "10%" }}
+
           />
           <Typography
             sx={{
@@ -489,7 +492,8 @@ function AboutMe2() {
             src="images/cert18.png"
             height="90%"
             width="80%"
-            style={{ marginLeft: "5%" }}
+            style={{ marginLeft: "10%" }}
+
           />
           <Typography
             sx={{
@@ -1046,7 +1050,7 @@ function AboutMe2() {
                   },
                 }}
               >
-                <Button
+                {/* <Button
                   onClick={() => handlePrevC}
                   sx={{ mt: "235%", background: "#ffffff" }}
                 >
@@ -1055,7 +1059,7 @@ function AboutMe2() {
                     width="30px"
                     height="30px"
                   />
-                </Button>
+                </Button> */}
               </Grid>
               <Grid item xs={12} sm={12} md={10}>
                 <Slider
@@ -1092,7 +1096,7 @@ function AboutMe2() {
               >
                 {" "}
                 {/* Button container (adjust width as needed) */}
-                <Button
+                {/* <Button
                   onClick={() => handleNextC}
                   sx={{ mt: "235%", background: "#ffffff" }}
                 >
@@ -1101,7 +1105,7 @@ function AboutMe2() {
                     width="30px"
                     height="30px"
                   />
-                </Button>
+                </Button> */}
               </Grid>
             </Grid>
           </Box>
