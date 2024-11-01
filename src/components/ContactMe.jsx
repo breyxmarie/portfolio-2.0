@@ -39,7 +39,7 @@ function ContactMe() {
       className="content"
       style={{
         width: "100vw",
-        height: "100vh",
+      //  height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "0%",
         // display: "flex", // Flex to center content (optional)

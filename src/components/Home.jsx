@@ -29,14 +29,14 @@ function Home() {
     <div
       className="content"
       style={{
-        width: "100vw",
-        height: "100vh",
+       width: "100vw",
+        // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         display: "flex", // Flex to center content (optional)
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden", // Prevent overflow, useful for full-screen layouts
-        paddingBottom: "0px",
+        paddingBottom: "0%",
         paddingTop: "0px",
         // display: 'flex',
         // justifyContent: 'center',
@@ -46,6 +46,8 @@ function Home() {
       <Box
         sx={{
           width: "100vw",
+        //  height: "100vh",
+          pb: "4%",
           display: {
             xs: "none", // Hide on extra small screens
             sm: "block",

@@ -37,9 +37,9 @@ function AboutMe1() {
       className="content"
       style={{
         width: "100vw",
-        height: "100vh",
+       // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
-        paddingBottom: "50%",
+        paddingBottom: "5%",
         display: "flex", // Flex to center content (optional)
         justifyContent: "center",
         // alignItems: "center",
@@ -56,6 +56,7 @@ function AboutMe1() {
               background: color2,
               borderRadius: 5,
               ml: 5,
+              pb: "10%",
               display: {
                 xs: "none", // Hide on extra small screens
                 sm: "block",
@@ -98,7 +99,7 @@ function AboutMe1() {
                       fontSize: {
                         xs: "0.5em",
                         sm: "0.4em",
-                        md: "1em",
+                        md: "0.8em",
                         lg: "1em",
                       },
                     }}
@@ -144,10 +145,12 @@ function AboutMe1() {
                         borderRadius: 2,
                         color: color4,
                         mr: "70%",
+                        fontFamily: font2,
+
                         fontSize: {
                           xs: "0.5em",
                           sm: "0.5em",
-                          md: "1em",
+                          md: "0.8em",
                           lg: "1em",
                         },
                       }}
@@ -155,14 +158,18 @@ function AboutMe1() {
                       About Me
                     </Box>
                     <Typography
+                      align="justify"
                       sx={{
+                        fontFamily: font2,
+
+                        color: color6,
                         ml: 2,
                         mr: 2,
                         py: 1.5,
                         fontSize: {
                           xs: "0.5em",
                           sm: "0.3em",
-                          md: "1em",
+                          md: "0.5em",
                           lg: "1em",
                         },
                       }}
@@ -177,6 +184,8 @@ function AboutMe1() {
                   <Box sx={{ background: color4, borderRadius: 5, mt: 2 }}>
                     <Box
                       sx={{
+                        fontFamily: font2,
+
                         background: color1,
                         borderRadius: 2,
                         color: color4,
@@ -184,7 +193,7 @@ function AboutMe1() {
                         fontSize: {
                           xs: "0.5em",
                           sm: "0.5em",
-                          md: "1em",
+                          md: "0.8em",
                           lg: "1em",
                         },
                       }}
@@ -192,14 +201,18 @@ function AboutMe1() {
                       Interests
                     </Box>
                     <Typography
+                      align="justify"
+                      
                       sx={{
+                        fontFamily: font2,
+                        color: color6,
                         ml: 2,
                         mr: 2,
                         py: 1.5,
                         fontSize: {
                           xs: "0.5em",
                           sm: "0.3em",
-                          md: "1em",
+                          md: "0.8em",
                           lg: "1em",
                         },
                       }}
@@ -219,30 +232,36 @@ function AboutMe1() {
                       fontSize: {
                         xs: "0.5em",
                         sm: "0.5em",
-                        md: "1em",
+                        md: "0.8em",
                         lg: "1em",
                       },
                     }}
                   >
                     <Box
                       sx={{
+                        fontFamily: font2,
+
                         background: color1,
                         borderRadius: 2,
                         color: color4,
-                        mr: "60%",
+                        mr: "50%",
                       }}
                     >
                       Area of Interests
                     </Box>
                     <Typography
+                      align="justify"
                       sx={{
+                        fontFamily: font2,
+
+                        color: color6,
                         ml: 2,
                         mr: 2,
                         py: 1.5,
                         fontSize: {
                           xs: "0.5em",
                           sm: "0.3em",
-                          md: "1em",
+                          md: "0.8em",
                           lg: "1em",
                         },
                       }}
@@ -256,7 +275,7 @@ function AboutMe1() {
                 </Box>
               </Grid>
             </Grid>
-            hi
+         
           </Box>
 
           <Box
@@ -265,7 +284,7 @@ function AboutMe1() {
               borderRadius: 5,
               ml: "10%",
               mr: "6%",
-
+             
               display: {
                 xs: "block", // Hide on extra small screens
                 sm: "none",
@@ -370,6 +389,8 @@ function AboutMe1() {
                         <Typography
                           align="justify"
                           sx={{
+                            color: color6,
+                         
                             ml: 2,
                             mr: 2,
                             py: 1.5,
@@ -410,6 +431,7 @@ function AboutMe1() {
                         <Typography
                           align="justify"
                           sx={{
+                            color: color6,
                             ml: 2,
                             mr: 2,
                             py: 1.5,
@@ -456,6 +478,7 @@ function AboutMe1() {
                     <Typography
                       align="justify"
                       sx={{
+                        color: color6,
                         ml: 2,
                         mr: 2,
                         py: 1.5,
@@ -481,7 +504,7 @@ function AboutMe1() {
         </Grid>
         <Grid xs={12} sm={7}>
           <Box
-            sx={{ background: color2, borderRadius: 5, ml: 5, mr: 4, pb: 1 }}
+            sx={{ background: color2, borderRadius: 5, ml: 5, mr: 4, pb: "4%" }}
           >
             <Grid container spacing={2} sx={{ pt: 1 }}>
               <Grid xs={8}></Grid>
@@ -519,7 +542,7 @@ function AboutMe1() {
                       fontSize: {
                         xs: "0.5em",
                         sm: "0.4em",
-                        md: "1em",
+                        md: "0.8em",
                         lg: "1em",
                       },
                     }}
@@ -530,7 +553,7 @@ function AboutMe1() {
                 <Grid xs={2}>
                   <img
                     src="images/search.png"
-                    height="70%"
+                    height="80%"
                     width="20%"
                     style={{ marginLeft: "65%" }}
                   />
@@ -540,7 +563,7 @@ function AboutMe1() {
             <br />
             <br />
 
-            <Grid container spacing={2}>
+            <Grid container spacing={2} sx = {{ml: "0.5%"}}>
               <Grid xs={1.7}>
                 <img src="images/android.png" width="50%" height="90%" />
               </Grid>
@@ -651,7 +674,7 @@ function AboutMe1() {
                         ml: "5%",
                         display: "flex",
                         justifyContent: "flex-start", // Aligns content horizontally to the start
-                        alignItems: "flex-start",
+                        alignItems: "flex-start",color: color6,
                       }}
                     >
                       <Typography
@@ -659,7 +682,7 @@ function AboutMe1() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.4em",
-                            md: "1em",
+                            md: "0.8em",
                             lg: "1em",
                           },
                           color: color6,
@@ -682,18 +705,48 @@ function AboutMe1() {
                 </Box>
 
                 <Grid container spacing={2}>
-                  <Grid xs={6}>
+                  <Grid xs={5}
+                  sx = {{ display: "flex",
+                      justifyContent: "flex-end", // Aligns content horizontally to the start
+                      alignItems: "flex-end",
+                      ml: "-10%",
+                      mr: "5%",
+                     
+                    }}
+                  >
                     <img src="images/igpic.png" width="50%" height="95%" />
                   </Grid>
-                  <Grid xs={6}>
-                    <Typography>breyxmarie</Typography>
+                  <Grid xs={6}  sx = {{ mt: "2%",}}
+                  // sx = {{ display: "flex",
+                  //     justifyContent: "flex-start", // Aligns content horizontally to the start
+                  //     alignItems: "flex-start",}}
+                      >
+                    <Typography sx = {{   color: color6,
+                        fontFamily: font1,
+                        textAlign: "left",
+                        fontSize: {
+                          xs: "0.5em",
+                          sm: "0.5em",
+                          md: "0.8em",
+                          lg: "1em",
+                        },}}>breyxmarie</Typography>
+                      
+
                     <Button
                       sx={{
+                        display: "flex",
+                      justifyContent: "flex-start", // Aligns content horizontally to the start
+                      alignItems: "flex-start", 
                         textTransform: "none",
                         background: color1,
-                        color: "#ffffff",
+                        color: color4,
                         fontFamily: font1,
-                        fontSize: "1em",
+                        fontSize: {
+                          xs: "0.5em",
+                          sm: "0.5em",
+                          md: "0.8em",
+                          lg: "1em",
+                        },
                         px: 3,
                         "&:hover": {
                           backgroundColor: color2,
@@ -711,32 +764,45 @@ function AboutMe1() {
                 </Grid>
                 <br />
 
-                <Grid container spacing={2}>
-                  <Grid xs={6}>
+                <Box sx = {{ml: "-10%", mr: "-5%"}}>
+                <Grid container spacing={2} sx = {{ml: "0%", mr: "0%"}}>
+                  <Grid xs={4} sx = {{   display: "flex",
+                      justifyContent: "flex-end", // Aligns content horizontally to the start
+                      alignItems: "flex-end",}}>
                     {" "}
                     <img
                       src="images/ig1.png"
-                      height="50%"
+                     height="100%"
                       width="55%"
-                      style={{ marginLeft: "15%" }}
+                      style={{ marginLeft: "0%" }}
                     />
-                    <br />
+                   
+                 
+                  </Grid>
+                  <Grid xs={4} sx = {{   display: "flex",
+                      justifyContent: "center", // Aligns content horizontally to the start
+                      alignItems: "center",}}>
                     <img
                       src="images/ig2.png"
-                      height="50%"
+                      height="100%"
+
                       width="55%"
-                      style={{ marginLeft: "10%" }}
+                      style={{ marginLeft: "0%" }}
                     />
                   </Grid>
-                  <Grid xs={6}>
+                  <Grid xs={4} sx = {{   display: "flex",
+                      justifyContent: "flex-start", // Aligns content horizontally to the start
+                      alignItems: "flex-start",}}>
                     <img
                       src="images/ig3.png"
-                      height="50%"
+                      height="100%"
+
                       width="55%"
                       style={{ marginLeft: "0%" }}
                     />
                   </Grid>
                 </Grid>
+                </Box>
               </Box>
               <Box
                 sx={{
@@ -784,6 +850,7 @@ function AboutMe1() {
                     >
                       <Typography
                         xs={{
+                          
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.4em",
@@ -916,7 +983,7 @@ function AboutMe1() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.4em",
-                            md: "1em",
+                            md: "0.8em",
                             lg: "1em",
                           },
                           color: color6,
@@ -941,6 +1008,7 @@ function AboutMe1() {
                 <Box sx={{ ml: 3 }}>
                   <Typography
                     sx={{
+                      color: color6,
                       fontFamily: font2,
                       textAlign: "center",
                       fontWeight: "bold",
@@ -948,7 +1016,7 @@ function AboutMe1() {
                         xs: "0.5em",
                         sm: "0.5em",
                         md: "1em",
-                        lg: "1em",
+                        lg: "1.5em",
                       },
                     }}
                   >
@@ -956,13 +1024,14 @@ function AboutMe1() {
                   </Typography>
                   <Typography
                     sx={{
+                      color: color6,
                       fontFamily: font2,
                       textAlign: "left",
                       fontWeight: "bold",
                       fontSize: {
                         xs: "0.5em",
                         sm: "0.5em",
-                        md: "1em",
+                        md: "0.8em",
                         lg: "1em",
                       },
                     }}
@@ -972,13 +1041,14 @@ function AboutMe1() {
                   </Typography>
                   <Typography
                     sx={{
+                      color: color6,
                       textAlign: "left",
                       fontFamily: "sans-serif",
                       fontStyle: "italic",
                       fontSize: {
                         xs: "0.5em",
                         sm: "0.5em",
-                        md: "1em",
+                        md: "0.8em",
                         lg: "1em",
                       },
                     }}
@@ -989,17 +1059,19 @@ function AboutMe1() {
                   <br />
                   <Grid container spacing={2}>
                     <Grid xs={2}>
-                      <img src="images/acm.png" width="70%" height="100%" />
+                      <img src="images/acm.png" width="50%" height="100%" />
                     </Grid>
                     <Grid xs={10}>
                       <Typography
                         sx={{
+                          color: color6,
+                          fontFamily: font2, 
                           textAlign: "left",
                           mt: "5%",
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
                             lg: "1em",
                           },
                         }}
@@ -1023,43 +1095,47 @@ function AboutMe1() {
                     <Grid sm={1}>
                       <Typography
                         sx={{
+                        fontFamily: font2,
+                        color: color6,
                           textAlign: "left",
                           fontWeight: "bold",
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
                             lg: "1em",
                           },
                         }}
                       >
-                        Link:
+                        Link: {" "}
                       </Typography>
                     </Grid>
                     <Grid
                       sm={7}
                       sx={{
-                        ml: 0,
+                        ml: 2,
                         display: "flex",
                         justifyContent: "flex-start", // Aligns content horizontally to the start
                         alignItems: "flex-start",
                       }}
                     >
                       <a
+                     
                         href="https://dl.acm.org/doi/abs/10.1145/3629378.3629415"
                         target="_blank"
                       >
                         <Typography
                           sx={{
+                            fontFamily: font2, 
                             fontSize: {
                               xs: "0.5em",
                               sm: "0.5em",
-                              md: "1em",
+                              md: "0.8em",
                               lg: "1em",
                             },
                           }}
                         >
-                          Publication{" "}
+                          {" "} Publication{" "}
                         </Typography>
                       </a>
                     </Grid>

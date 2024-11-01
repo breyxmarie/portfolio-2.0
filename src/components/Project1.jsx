@@ -38,9 +38,9 @@ function Project1() {
       className="content"
       style={{
         width: "100vw",
-        height: "100vh",
+       // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
-        paddingBottom: "5%",
+        paddingBottom: "7%",
         // display: "flex", // Flex to center content (optional)
         // justifyContent: "center",
         // alignItems: "center",
@@ -62,7 +62,13 @@ function Project1() {
       >
         <center>
           <Typography
-            sx={{ fontSize: "3em", fontWeight: "bold", fontFamily: font2 }}
+            sx={{color: color6,  fontSize: {
+              xs: "1em",
+              sm: "2em",
+              md: "3em",
+              lg: "4em",
+              xl: "5em",
+            }, fontWeight: "bold", fontFamily: font2 }}
           >
             Projects
           </Typography>
@@ -70,6 +76,7 @@ function Project1() {
 
         <Typography
           sx={{
+            color: color6, 
             textAlign: "left",
             fontSize: {
               xs: "0.5em",
@@ -90,21 +97,25 @@ function Project1() {
             ml: "4%",
             mr: "6%",
             borderRadius: 4,
+            pb: "2%",
           }}
         >
-          <Grid container spacing={4}>
-            <Grid xs={12} sm={6}>
+          <Grid container spacing={4} sx = {{}}>
+            <Grid xs={12} sm={4}>
               <img
                 src="images/nutrifyme.png"
-                height="90%"
-                width="70%"
+                height="100%"
+                width="80%"
                 style={{ marginLeft: "5%" }}
               />
             </Grid>
-            <Grid xs={12} sm={6}>
-              <Box sx={{ ml: "15%", mt: { xs: "0%", sm: "13%" } }}>
+            <Grid xs={12} sm={8} sx = {{ display: "flex",
+                  justifyContent: "flex-start", // Aligns content horizontally to the start
+                  alignItems: "flex-start",}}>
+              <Box sx={{ ml: "10%", mt: { xs: "0%", sm: "4%", md: "5%", lg: "5%", xl: "8%" },  }}>
                 <Typography
                   sx={{
+                    color: color6, 
                     textAlign: "left",
                     fontFamily: font2,
                     fontSize: {
@@ -113,6 +124,7 @@ function Project1() {
                       md: "1em",
                       lg: "1em",
                     },
+                    mr: "5%"
                   }}
                 >
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -132,6 +144,7 @@ function Project1() {
                       md: "1em",
                       lg: "1em",
                     },
+                    color: color6, 
                   }}
                 >
                   {" "}
@@ -149,7 +162,9 @@ function Project1() {
                       sm: "1em",
                       md: "1em",
                       lg: "1em",
+                      xl: "1.3em",
                     },
+                    color: color6, 
                   }}
                 >
                   Github Repository:{" "}
@@ -168,11 +183,12 @@ function Project1() {
         <Grid
           container
           spacing={0}
-          sx={{ ml: "0%", mt: { xs: "0%", sm: "0%" } }}
+          sx={{ ml: "0%", mt: { xs: "0%", sm: "-3%" } }}
         >
           <Grid xs={4} sm={4}>
             <Typography
               sx={{
+                color: color6, 
                 fontSize: {
                   xs: "0.5em",
                   sm: "2em",
@@ -229,6 +245,7 @@ function Project1() {
             {" "}
             <Typography
               sx={{
+                color: color6, 
                 fontSize: {
                   xs: "0.5em",
                   sm: "2em",
@@ -376,6 +393,7 @@ function Project1() {
             {" "}
             <Typography
               sx={{
+                color: color6, 
                 fontSize: {
                   xs: "0.5em",
                   sm: "2em",
