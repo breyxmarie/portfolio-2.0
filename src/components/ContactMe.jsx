@@ -36,6 +36,7 @@ function ContactMe() {
 
   return (
     <div
+    id="contact"
       className="content"
       style={{
         width: "100vw",

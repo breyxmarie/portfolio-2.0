@@ -8,6 +8,8 @@ const ColorContext = createContext({
   color4: "#FFFFFF",
   color5: "#EBD5D5",
   color6: "#2C2C2C",
+  color7: "#D5C4A1",
+
 
   font1: "Lobster Two",
   font2: "Caladea",
@@ -18,6 +20,8 @@ const ColorContext = createContext({
   setColor4: () => {},
   setColor5: () => {},
   setColor6: () => {},
+  setColor7: () => {},
+
   setFont1: () => {},
   setFont2: () => {},
 });
@@ -30,8 +34,21 @@ const ColorProvider = ({ children }) => {
   const [color4, setColor4] = useState("#FFFFFF");
   const [color5, setColor5] = useState("#EBD5D5");
   const [color6, setColor6] = useState("#2C2C2C");
+  const [color7, setColor7] = useState("#FDFDFD");
+
+  
   const [font1, setFont1] = useState("Lobster Two");
   const [font2, setFont2] = useState("Caladea");
+
+  // const setDarkMode = () => {
+  //   setColor1()
+  //   setColor2()
+  //   setColor3()
+  //   setColor4()
+  //   setColor5()
+  //   setColor6()
+  // }
+
 
   const value = {
     backgroundColor,
@@ -41,6 +58,8 @@ const ColorProvider = ({ children }) => {
     color4,
     color5,
     color6,
+    color7,
+
 
     font1,
     font2,
@@ -52,6 +71,8 @@ const ColorProvider = ({ children }) => {
     setColor4,
     setColor5,
     setColor6,
+    setColor7,
+
     setFont1,
     setFont2,
   };

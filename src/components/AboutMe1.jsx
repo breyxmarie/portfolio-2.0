@@ -7,6 +7,8 @@ import ColorContext from "./ColorContext"; // Import the context
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import NavBar from "./NavBar";
+
 
 function AboutMe1() {
   const {
@@ -34,9 +36,11 @@ function AboutMe1() {
 
   return (
     <div
-      className="content"
+    id="about"
+    //  className="content"
       style={{
         width: "100vw",
+        marginTop: "8%",
        // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "5%",
@@ -49,6 +53,7 @@ function AboutMe1() {
         alignItems: "center",
       }}
     >
+      {/* <NavBar/> */}
       <Grid container spacing={2}>
         <Grid xs={12} sm={5}>
           <Box
@@ -942,7 +947,7 @@ function AboutMe1() {
                   borderRadius: 5,
                   ml: { xs: 8, sm: 5 },
                   mr: 4,
-                  pb: "10%",
+                  pb: "3%",
                 }}
               >
                 <Grid container spacing={2} sx={{ pt: 0.5 }}>

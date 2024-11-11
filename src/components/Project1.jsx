@@ -35,6 +35,7 @@ function Project1() {
   //?
   return (
     <div
+    id = "project"
       className="content"
       style={{
         width: "100vw",
@@ -95,6 +96,10 @@ function Project1() {
         </Typography>
         <Box
           sx={{
+            display: {
+              xs:  "block", // Hide on extra small screens
+              sm: "none",
+            },
             background: color2,
             mt: 0,
             ml: "4%",
@@ -179,6 +184,133 @@ function Project1() {
                   </a>
                 </Typography>
               </Box>
+            </Grid>
+          </Grid>
+        </Box>
+
+
+        <Box
+          sx={{
+            display: {
+              xs:   "none", // Hide on extra small screens
+              sm: "block",
+            },
+            background: color2,
+            mt: 0,
+            ml: "4%",
+            mr: "6%",
+            borderRadius: 4,
+            pb: "2%",
+          }}
+        >
+          <Grid container spacing={4} sx = {{}}>
+           
+            <Grid xs={12} sm={6} sx = {{ display: "flex",
+                  justifyContent: "flex-start", // Aligns content horizontally to the start
+                  alignItems: "flex-start",}}>
+              <Box sx={{ ml: "10%", mt: { xs: "0%", sm: "4%", md: "5%", lg: "5%", xl: "13%" },  }}>
+                <Typography
+                  sx={{
+                    color: color6, 
+                    textAlign: "left",
+                    fontFamily: font2,
+                    fontSize: {
+                      xs: "0.5em",
+                      sm: "1em",
+                      md: "1em",
+                      lg: "1em",
+                    },
+                    mr: "5%"
+                  }}
+                >
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                  irure dolor in reprehenderit in voluptate velit esse cillum
+                  dolore eu fugiat nulla pariatur. 
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "left",
+                    fontFamily: font2,
+                    fontSize: {
+                      xs: "0.5em",
+                      sm: "1em",
+                      md: "1em",
+                      lg: "1em",
+                    },
+                    color: color6, 
+                  }}
+                >
+                  {/* {" "}
+                  Link:{" "}
+                  <a href="https://nutrify-me-eight.vercel.app" target="_blank">
+                    https://nutrify-me-eight.vercel.app
+                  </a>
+                </Typography>
+                <Typography
+                  sx={{
+                    textAlign: "left",
+                    fontFamily: font2,
+                    fontSize: {
+                      xs: "0.5em",
+                      sm: "1em",
+                      md: "1em",
+                      lg: "1em",
+                      xl: "1.3em",
+                    },
+                    color: color6, 
+                  }}
+                >
+                  Github Repository:{" "}
+                  <a
+                    href="https://github.com/breyxmarie/Nutrify-Me"
+                    target="_blank"
+                  >
+                    https://github.com/breyxmarie/Nutrify-Me
+                  </a> */}
+
+                  <Grid container spacing = {2} sx = {{mt: 3}}>
+                    <Grid xs = {4}>
+                      <Button sx = {{ml: "55%", background: color3, color: color6, borderRadius: 4}}>
+                      <a
+                      style = {{color: color6}}
+                    href="https://nutrify-me-eight.vercel.app"
+                    target="_blank"
+                  > <img width="10%" height="10%" src = "/images/link.png"/>
+                        {"      "} 
+                    
+
+                        Link </a> </Button>
+                    </Grid>
+                    <Grid xs = {4}>
+                    <Button sx = {{ml: "5%", mr: "45%", background: color3, color: color6, borderRadius: 4}}>
+                    <a
+                      style = {{color: color6}}
+                    href="https://github.com/breyxmarie/Nutrify-Me"
+                    target="_blank"
+                  > 
+                       
+                        <img width="10%" height="10%" src = "/images/github.png"/>
+                        {"      "} 
+                    
+
+                        github</a> </Button>
+                    </Grid>
+                    <Grid xs = {4}></Grid>
+
+                  </Grid>
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid xs={12} sm={6}>
+              <img
+                src="images/nutrifyme.png"
+                height="130%"
+                width="80%"
+                style={{ marginLeft: "5%", marginTop: "-13%" }}
+              />
             </Grid>
           </Grid>
         </Box>

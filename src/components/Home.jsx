@@ -29,6 +29,7 @@ function Home() {
 
   return (
     <div
+ 
       className="content"
       style={{
        width: "100vw",

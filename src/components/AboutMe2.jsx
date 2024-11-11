@@ -73,7 +73,7 @@ function AboutMe2() {
   };
 
   const certs = [
-    <Box sx={{ mt: "7%", ml: "0%", mr: 0 }}>
+    <Box sx={{ mt: "7%", ml: "0%", mr: 0, color: color6,}}>
       <Grid container spacing={2} sx = {{ml: "0%"}}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -174,7 +174,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3 }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3 , color: color6,}}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -271,7 +271,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3 }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6, }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -365,7 +365,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3 }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6, }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -461,7 +461,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3 }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6, }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -520,6 +520,7 @@ function AboutMe2() {
   return (
     <div
       className="content"
+      id="about2"
       style={{
         // display: "flex",
         // flexDirection: "column",
@@ -534,6 +535,7 @@ function AboutMe2() {
         // display: "flex",
         // justifyContent: "center",
         alignItems: "center",
+       color: color6,
       }}
     >
       <Modal
@@ -557,7 +559,7 @@ function AboutMe2() {
         <img src={selectedImage} alt="Selected Image" />
       </Modal>
 
-      <Grid container spacing={2}>
+      <Grid container spacing={2} >
         <Grid xs={12} sm={4}>
           <Box
             sx={{
