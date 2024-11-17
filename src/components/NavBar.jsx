@@ -16,12 +16,11 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import ColorContext from "./ColorContext";
-import { alpha, styled } from '@mui/material/styles';
-import { pink } from '@mui/material/colors';
-import Switch from '@mui/material/Switch';
+import { alpha, styled } from "@mui/material/styles";
+import { pink } from "@mui/material/colors";
+import Switch from "@mui/material/Switch";
 
 import { useState, useContext, useEffect } from "react";
-
 
 const pages = [
   { names: "home", links: "#" },
@@ -49,123 +48,115 @@ const StyledLink = `
 const settings = ["linked in", "github", "resume", "instagram", "spotify"];
 
 function NavBar() {
+  const {
+    backgroundColor,
+    color1,
+    color2,
+    color3,
+    color4,
+    color5,
+    color6,
+    color7,
 
-    const {
-        backgroundColor,
-        color1,
-        color2,
-        color3,
-        color4,
-        color5,
-        color6,
-        color7,
+    font1,
+    setBackgroundColor,
+    setColor1,
+    setColor2,
+    setColor3,
+    setColor4,
+    setColor5,
+    setColor6,
+    setColor7,
 
-    
-        font1,
-        setBackgroundColor,
-        setColor1,
-        setColor2,
-        setColor3,
-        setColor4,
-        setColor5,
-        setColor6,
-        setColor7,
+    setFont1,
+    font2,
+    setFont2,
+  } = useContext(ColorContext);
 
-        
-    
-        setFont1,
-        font2,
-        setFont2,
-      } = useContext(ColorContext);
+  const PinkSwitch = styled(Switch)(({ theme }) => ({
+    "& .MuiSwitch-switchBase.Mui-checked": {
+      color: pink[600],
+      "&:hover": {
+        backgroundColor: alpha(pink[600], theme.palette.action.hoverOpacity),
+      },
+    },
+    "& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track": {
+      backgroundColor: pink[600],
+    },
+  }));
 
-      const PinkSwitch = styled(Switch)(({ theme }) => ({
-        '& .MuiSwitch-switchBase.Mui-checked': {
-          color: pink[600],
-          '&:hover': {
-            backgroundColor: alpha(pink[600], theme.palette.action.hoverOpacity),
-          },
+  const [checked, setChecked] = useState(false);
+
+  const handleModeChange = (event) => {
+    setChecked(event.target.checked);
+  };
+
+  const MaterialUISwitch = styled(Switch)(({ theme }) => ({
+    width: 62,
+    height: 34,
+    padding: 7,
+    "& .MuiSwitch-switchBase": {
+      margin: 1,
+      padding: 0,
+      transform: "translateX(6px)",
+      "&.Mui-checked": {
+        color: "#fff",
+        transform: "translateX(22px)",
+        "& .MuiSwitch-thumb:before": {
+          backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+            "#fff"
+          )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
         },
-        '& .MuiSwitch-switchBase.Mui-checked + .MuiSwitch-track': {
-          backgroundColor: pink[600],
-        },
-      }));
-
-      const [checked, setChecked] = useState(false);
-
-      const handleModeChange = (event) => {
-        setChecked(event.target.checked);
-      };
-
-      const MaterialUISwitch = styled(Switch)(({ theme }) => ({
-        width: 62,
-        height: 34,
-        padding: 7,
-        '& .MuiSwitch-switchBase': {
-          margin: 1,
-          padding: 0,
-          transform: 'translateX(6px)',
-          '&.Mui-checked': {
-            color: '#fff',
-            transform: 'translateX(22px)',
-            '& .MuiSwitch-thumb:before': {
-              backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
-                '#fff',
-              )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
-            },
-            '& + .MuiSwitch-track': {
-              opacity: 1,
-              backgroundColor: '#aab4be',
-              ...theme.applyStyles('dark', {
-                backgroundColor: '#8796A5',
-              }),
-            },
-          },
-        },
-        '& .MuiSwitch-thumb': {
-          backgroundColor: '#001e3c',
-          width: 32,
-          height: 32,
-          '&::before': {
-            content: "''",
-            position: 'absolute',
-            width: '100%',
-            height: '100%',
-            left: 0,
-            top: 0,
-            backgroundRepeat: 'no-repeat',
-            backgroundPosition: 'center',
-            backgroundImage: 
-            `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
-              '#fff',
-            )}" d="M9.305 1.667V3.75h1.389V1.667h-1.39zm-4.707 1.95l-.982.982L5.09 6.072l.982-.982-1.473-1.473zm10.802 0L13.927 5.09l.982.982 1.473-1.473-.982-.982zM10 5.139a4.872 4.872 0 00-4.862 4.86A4.872 4.872 0 0010 14.862 4.872 4.872 0 0014.86 10 4.872 4.872 0 0010 5.139zm0 1.389A3.462 3.462 0 0113.471 10a3.462 3.462 0 01-3.473 3.472A3.462 3.462 0 016.527 10 3.462 3.462 0 0110 6.528zM1.665 9.305v1.39h2.083v-1.39H1.666zm14.583 0v1.39h2.084v-1.39h-2.084zM5.09 13.928L3.616 15.4l.982.982 1.473-1.473-.982-.982zm9.82 0l-.982.982 1.473 1.473.982-.982-1.473-1.473zM9.305 16.25v2.083h1.389V16.25h-1.39z"/></svg>')`,
-          },
-          ...theme.applyStyles('dark', {
-            backgroundColor: '#003892',
-          }),
-        },
-        '& .MuiSwitch-track': {
+        "& + .MuiSwitch-track": {
           opacity: 1,
-          backgroundColor: '#aab4be',
-          borderRadius: 20 / 2,
-          ...theme.applyStyles('dark', {
-            backgroundColor: '#8796A5',
+          backgroundColor: "#aab4be",
+          ...theme.applyStyles("dark", {
+            backgroundColor: "#8796A5",
           }),
         },
-      }));
-      
+      },
+    },
+    "& .MuiSwitch-thumb": {
+      backgroundColor: "#001e3c",
+      width: 32,
+      height: 32,
+      "&::before": {
+        content: "''",
+        position: "absolute",
+        width: "100%",
+        height: "100%",
+        left: 0,
+        top: 0,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+        backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+          "#fff"
+        )}" d="M9.305 1.667V3.75h1.389V1.667h-1.39zm-4.707 1.95l-.982.982L5.09 6.072l.982-.982-1.473-1.473zm10.802 0L13.927 5.09l.982.982 1.473-1.473-.982-.982zM10 5.139a4.872 4.872 0 00-4.862 4.86A4.872 4.872 0 0010 14.862 4.872 4.872 0 0014.86 10 4.872 4.872 0 0010 5.139zm0 1.389A3.462 3.462 0 0113.471 10a3.462 3.462 0 01-3.473 3.472A3.462 3.462 0 016.527 10 3.462 3.462 0 0110 6.528zM1.665 9.305v1.39h2.083v-1.39H1.666zm14.583 0v1.39h2.084v-1.39h-2.084zM5.09 13.928L3.616 15.4l.982.982 1.473-1.473-.982-.982zm9.82 0l-.982.982 1.473 1.473.982-.982-1.473-1.473zM9.305 16.25v2.083h1.389V16.25h-1.39z"/></svg>')`,
+      },
+      ...theme.applyStyles("dark", {
+        backgroundColor: "#003892",
+      }),
+    },
+    "& .MuiSwitch-track": {
+      opacity: 1,
+      backgroundColor: "#aab4be",
+      borderRadius: 20 / 2,
+      ...theme.applyStyles("dark", {
+        backgroundColor: "#8796A5",
+      }),
+    },
+  }));
+
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
   const [anchorElNotif, setAnchorElNotif] = React.useState(null);
   const activeLink = " bg-blue-100 text-black";
   const normalLink = "";
 
-
-
-
   // ? anchorElNotif
 
   const [linkChoice, setLinkChoice] = useState("linked in");
-  const [links, setLinks] = useState("https://linkedin.com/in/aubreyquiatchon")
+  const [links, setLinks] = useState("https://linkedin.com/in/aubreyquiatchon");
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -182,47 +173,47 @@ function NavBar() {
     console.log(setting);
     switch (setting) {
       case "linked in":
-        setLinkChoice("linked in")
-        setLinks("https://linkedin.com/in/aubreyquiatchon")
+        setLinkChoice("linked in");
+        setLinks("https://linkedin.com/in/aubreyquiatchon");
         break;
       case "github":
-        setLinkChoice("github")
-        setLinks("https://github.com/breyxmarie")
+        setLinkChoice("github");
+        setLinks("https://github.com/breyxmarie");
         break;
-    case "resume":
-        setLinkChoice("resume")
-        setLinks("https://tinyurl.com/ysr6v67p")
+      case "resume":
+        setLinkChoice("resume");
+        setLinks("https://tinyurl.com/ysr6v67p");
         break;
-    case "instagram":
-        setLinkChoice("instagram")
-        setLinks("https://www.instagram.com/breyxmarie/")
+      case "instagram":
+        setLinkChoice("instagram");
+        setLinks("https://www.instagram.com/breyxmarie/");
         break;
-    case "spotify":
-        setLinkChoice("spotify")
-        setLinks("https://open.spotify.com/user/miaageha")
+      case "spotify":
+        setLinkChoice("spotify");
+        setLinks("https://open.spotify.com/user/miaageha");
         break;
     }
     setAnchorElUser(null);
   };
 
   const openLink = () => {
-    window.open(links, '_blank');
-  }
-//   const [notifsData, setNotifsData] = useState([]);
-//   const getNotifData = () => {
-//     AxiosInstance.get(`notifications`).then((res) => {
-//       console.log(res);
-//       setNotifsData(
-//         res.data
-//           .reverse()
-//           .filter((item) => item.user_id === loggedInUser.user_id)
-//       );
-//     });
-//   };
+    window.open(links, "_blank");
+  };
+  //   const [notifsData, setNotifsData] = useState([]);
+  //   const getNotifData = () => {
+  //     AxiosInstance.get(`notifications`).then((res) => {
+  //       console.log(res);
+  //       setNotifsData(
+  //         res.data
+  //           .reverse()
+  //           .filter((item) => item.user_id === loggedInUser.user_id)
+  //       );
+  //     });
+  //   };
 
-//   useEffect(() => {
-//     getNotifData();
-//   }, []);
+  //   useEffect(() => {
+  //     getNotifData();
+  //   }, []);
 
   const getNotifsNumber = () => {
     const count = notifsData.filter((item) => item.seen === false);
@@ -270,8 +261,16 @@ function NavBar() {
   };
 
   return (
-    <AppBar position="sticky" className="w-full" style={{ width: "100vw" }} sx={{ zIndex: 999 }}>
-      <Container maxWidth="100%" sx={{ backgroundColor: color7, paddingTop: 1, opacity: 1 }}>
+    <AppBar
+      position="sticky"
+      className="w-full"
+      style={{ width: "100vw" }}
+      sx={{ zIndex: 999 }}
+    >
+      <Container
+        maxWidth="100%"
+        sx={{ backgroundColor: color7, paddingTop: 1, opacity: 1 }}
+      >
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -279,7 +278,6 @@ function NavBar() {
             component="a"
             href="/user-home"
             sx={{
-               
               ml: 1,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
@@ -341,9 +339,9 @@ function NavBar() {
                 ) => (
                   <MenuItem
                     // key={page.names}
-                     onClick={handleCloseNavMenu}
-                  //   component={Link}
-                     to={page.links}
+                    onClick={handleCloseNavMenu}
+                    //   component={Link}
+                    to={page.links}
                     // selected={page.links === path}
                     //! changes per notif style
                     sx={{ color: "#000000" }}
@@ -376,21 +374,20 @@ function NavBar() {
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               background: color2,
-              border:0,
+              border: 0,
               borderColor: "#000000",
               borderRadius: 4,
               justifyContent: "space-between",
               alignItems: "center",
-              px: 5,
+              pl: 4,
               ml: "0%",
-              mr: "25%",
+              mr: "0%",
               fontSize: {
                 xs: "0.5em",
                 sm: "1em",
               },
             }}
           >
-
             {"<"}
             {pages.map((page) => (
               // <Box
@@ -410,68 +407,71 @@ function NavBar() {
               //     py: "10px",
               //   }}
               // >
-            //   <NavLink
-            //     key={page.names}
-            //     onClick={handleCloseNavMenu}
-            //     sx={{
-            //       textcolor: "#99756E",
-            //       display: "block",
-            //       transition: "box-shadow 0.3s background ease-in-out", // Add transition for smooth effect
+              //   <NavLink
+              //     key={page.names}
+              //     onClick={handleCloseNavMenu}
+              //     sx={{
+              //       textcolor: "#99756E",
+              //       display: "block",
+              //       transition: "box-shadow 0.3s background ease-in-out", // Add transition for smooth effect
 
-            //       "&:hover": {
-            //         // Target the element on hover
-            //         background: "#d3d3d3d3",
-            //         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.2)", // Add box-shadow property
-            //       },
-            //     }}
-            //     style={{
-            //       color: color6,
-            //       textDecoration: "none",
-            //       fontFamily: font2, 
-            //       //  fontWeight: "bold",
-            //       //height: "50px",
-            //       display: "block",
-            //       transition: "background-color 0.2s ease-in-out",
-            //       paddingTop: "20px",
-            //       paddingBottom: "20px",
-            //       "&:hover": {
-            //         // Target the element on hover
-            //         background: "#000000",
-            //         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.2)",
-            //       },
-            //     }}
-            //     //  onMouseOver={(e) => (e.target.style.background = "#e3aca5")}
-            //     onMouseOver={(e) => (e.target.style.fontWeight = "bold")}
-            //     //   onMouseOut={(e) => (e.target.style.background = "#FFFFFF")}
-            //     onMouseOut={(e) => (e.target.style.fontWeight = "")}
-            //     className="activeLink border w-full h-full px-4 centered"
-            //     activeClassName="StyledLink" // Define your active class in CSS
-            //     // className="normalLink"
-            //     // component={Link}
-            //      to={page.links}
-            //     // selected={page.links === path}
-            //   >
-            <a href = {page.links} onMouseOver={{ color: 'blue' }}
-            onMouseDown={{ color: 'red' }} style = {{color: color6, fontFamily: font2, fontSize: "1.3em"}}>
+              //       "&:hover": {
+              //         // Target the element on hover
+              //         background: "#d3d3d3d3",
+              //         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.2)", // Add box-shadow property
+              //       },
+              //     }}
+              //     style={{
+              //       color: color6,
+              //       textDecoration: "none",
+              //       fontFamily: font2,
+              //       //  fontWeight: "bold",
+              //       //height: "50px",
+              //       display: "block",
+              //       transition: "background-color 0.2s ease-in-out",
+              //       paddingTop: "20px",
+              //       paddingBottom: "20px",
+              //       "&:hover": {
+              //         // Target the element on hover
+              //         background: "#000000",
+              //         boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.2)",
+              //       },
+              //     }}
+              //     //  onMouseOver={(e) => (e.target.style.background = "#e3aca5")}
+              //     onMouseOver={(e) => (e.target.style.fontWeight = "bold")}
+              //     //   onMouseOut={(e) => (e.target.style.background = "#FFFFFF")}
+              //     onMouseOut={(e) => (e.target.style.fontWeight = "")}
+              //     className="activeLink border w-full h-full px-4 centered"
+              //     activeClassName="StyledLink" // Define your active class in CSS
+              //     // className="normalLink"
+              //     // component={Link}
+              //      to={page.links}
+              //     // selected={page.links === path}
+              //   >
+              <a
+                href={page.links}
+                onMouseOver={{ color: "blue" }}
+                onMouseDown={{ color: "red" }}
+                style={{ color: color6, fontFamily: font2, fontSize: "1.3em" }}
+              >
                 {page.names}
-                </a>
-            //   </NavLink>
+              </a>
+              //   </NavLink>
             ))}
           </Box>
-
 
           <Box // * dito yun change ng style for main nav bar
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               background: color2,
-              border:0,
+              border: 0,
               borderColor: "#000000",
               borderRadius: 4,
               justifyContent: "space-between",
               alignItems: "center",
-              px: 5,
-              ml: "0%",
+              px: 0,
+              ml: "10%",
               mr: "0%",
               fontSize: {
                 xs: "0.5em",
@@ -479,98 +479,108 @@ function NavBar() {
               },
             }}
           >
-           
-
-            <Grid container spacing = {2} sx = {{mt: "0%"}}> 
-                <Grid xs = {3} sx = {{mt: "1%"}}> 
+            <Grid container spacing={2} sx={{ mt: "0%" }}>
+              <Grid xs={3} sx={{ mt: "1%" }}>
                 <Tooltip title="More Links">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Button
-                  variant="contained"
-                  className="userButton"
-                  onMouseEnter={(e) =>
-                    (e.target.style.background = color1)
-                  }
-                  onMouseLeave={(e) =>
-                    (e.target.style.background = color1)
-                  }
+                  <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                    <Button
+                      variant="contained"
+                      className="userButton"
+                      onMouseEnter={(e) => (e.target.style.background = color1)}
+                      onMouseLeave={(e) => (e.target.style.background = color1)}
+                      sx={{
+                        borderRadius: 4,
+                        background: color1,
+                        mr: "5px ",
+                        fontSize: {
+                          xs: "0.4em",
+                          sm: "0.5em",
+                        },
+                      }}
+                    >
+                      {linkChoice}
+                    </Button>
+                  </IconButton>
+                </Tooltip>
+
+                <Menu
+                  sx={{ mt: "45px" }}
+                  id="menu-appbar"
+                  anchorEl={anchorElUser}
+                  anchorOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  keepMounted
+                  transformOrigin={{
+                    vertical: "top",
+                    horizontal: "right",
+                  }}
+                  open={Boolean(anchorElUser)}
+                  onClose={handleCloseUserMenu}
+                >
+                  {settings.map((setting) => (
+                    <MenuItem
+                      key={setting}
+                      onClick={() => {
+                        handleCloseUserMenu(setting);
+                      }}
+                    >
+                      <Typography textAlign="center">{setting}</Typography>
+                      {/* <Link to={navigate}></Link> */}
+                    </MenuItem>
+                  ))}
+                </Menu>
+              </Grid>
+              <Grid xs={6}>
+                <Box
                   sx={{
-                    borderRadius: 4,
-                    background: color1,
-                    mr: "5px ",
-                    fontSize: {
-                      xs: "0.4em",
-                      sm: "0.5em",
-                    },
+                    background: color3,
+                    borderRadius: 5,
+                    pr: "70%",
+                    py: "2.5%",
+                    pl: "6%",
+                    ml: "-5%",
+                    mr: "7%",
                   }}
                 >
-                  {linkChoice}
+                  {links}
+                </Box>
+              </Grid>
+
+              <Grid xs={2}>
+                <Button
+                  onClick={openLink}
+                  sx={{ background: color4, borderRadius: 10, mr: "100%" }}
+                >
+                  <img src="images/search-icon.png" width="60%" height="50%" />
                 </Button>
-              </IconButton>
-            </Tooltip>
-
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem
-                  key={setting}
-                  onClick={() => {
-                    handleCloseUserMenu(setting);
-                  }}
-                >
-                  <Typography textAlign="center">{setting}</Typography>
-                  {/* <Link to={navigate}></Link> */}
-                </MenuItem>
-              ))}
-            </Menu>
-                </Grid>
-                <Grid xs = {6}><Box sx = {{background: color3, borderRadius: 5, pr: "70%", py: "2.5%", pl: "6%", ml: "-5%", mr: "7%"}}>{links}</Box></Grid>
-
-                <Grid xs = {2}><Button onClick = {openLink} sx = {{background: color4,borderRadius: 10, mr: "100%"}}><img src="images/search-icon.png" width="60%" height="50%" /></Button></Grid>
-
+              </Grid>
             </Grid>
-            </Box>
+          </Box>
 
-
-            <Box // * dito yun change ng style for main nav bar
+          <Box // * dito yun change ng style for main nav bar
             sx={{
               flexGrow: 1,
               display: { xs: "none", md: "flex" },
               background: color2,
-              border:0,
+              border: 0,
               borderColor: "#000000",
               borderRadius: 4,
               justifyContent: "space-between",
-              alignItems: "center",
-              px: 5,
+              alignItems: "right",
+              pr: 0,
               ml: "0%",
-              mr: "0%",
+              mr: "-6%",
               fontSize: {
                 xs: "0.5em",
                 sm: "1em",
               },
             }}
           >
-            dark mode
-           
             {/* <PinkSwitch defaultChecked /> */}
-            <MaterialUISwitch   checked={checked}
-      onChange={handleModeChange} />
-            </Box>
+            <MaterialUISwitch checked={checked} onChange={handleModeChange} />
+          </Box>
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open Notifications">
               <IconButton onClick={handleOpenNotifMenu} sx={{ p: 0 }}>

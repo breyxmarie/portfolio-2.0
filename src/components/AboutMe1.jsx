@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NavBar from "./NavBar";
 import SpotifyPlayer from "./SpotifyPlayer";
+  // import Player from "./Player";
 
 
 function AboutMe1() {
@@ -45,7 +46,7 @@ function AboutMe1() {
     //  className="content"
       style={{
         width: "100vw",
-        paddingTop: "8%",
+        paddingTop: "7%",
        // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "5%",
@@ -146,8 +147,8 @@ function AboutMe1() {
                     }}
                   />
                 </Box>
-                <Box>Spotify
-
+                <Box>
+{/* 
                 <SpotifyPlayer
         client_id="22b071825abe48bd80d4c9237876c073"
         client_secret="d540a159c96e486384af97a635c125d6"
@@ -170,7 +171,9 @@ function AboutMe1() {
         client_id="22b071825abe48bd80d4c9237876c073"
         client_secret="d540a159c96e486384af97a635c125d6"
         refresh_token="AQDozLqTkCUcR8365VrQq-PvYFcrKUoJsNbU8O7hCIx2yqvtaIwi7g3ZRdvOkFsT4LAyjofbBEXNWUQdlLDbg2VN5C_b2e3UQXls1XYnQGwkgXNLrUCMnuVVW8hWfH92I3Q"
-      />
+      /> */}
+
+      {/* <Player/> */}
                 </Box>
               </Grid>
               <Grid sm={7}>
@@ -260,7 +263,7 @@ function AboutMe1() {
                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </Typography>
                   </Box>
-
+{/* 
                   <Box
                     sx={{
                       background: color4,
@@ -308,11 +311,15 @@ function AboutMe1() {
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </Typography>
-                  </Box>
+                  </Box> */}
                 </Box>
               </Grid>
             </Grid>
-         
+            <SpotifyPlayer
+        client_id="22b071825abe48bd80d4c9237876c073"
+        client_secret="d540a159c96e486384af97a635c125d6"
+        refresh_token="AQDozLqTkCUcR8365VrQq-PvYFcrKUoJsNbU8O7hCIx2yqvtaIwi7g3ZRdvOkFsT4LAyjofbBEXNWUQdlLDbg2VN5C_b2e3UQXls1XYnQGwkgXNLrUCMnuVVW8hWfH92I3Q"
+      />
           </Box>
 
           <Box
