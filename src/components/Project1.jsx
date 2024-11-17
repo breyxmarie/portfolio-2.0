@@ -40,6 +40,7 @@ function Project1() {
       style={{
         width: "100vw",
        // height: "100vh",
+       paddingTop: "5%",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "7%",
         // display: "flex", // Flex to center content (optional)

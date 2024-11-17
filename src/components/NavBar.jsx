@@ -191,7 +191,7 @@ function NavBar() {
         break;
     case "resume":
         setLinkChoice("resume")
-        setLinks()
+        setLinks("https://tinyurl.com/ysr6v67p")
         break;
     case "instagram":
         setLinkChoice("instagram")
@@ -481,8 +481,8 @@ function NavBar() {
           >
            
 
-            <Grid container spacing = {2}>
-                <Grid xs = {3}> 
+            <Grid container spacing = {2} sx = {{mt: "0%"}}> 
+                <Grid xs = {3} sx = {{mt: "1%"}}> 
                 <Tooltip title="More Links">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Button
@@ -538,9 +538,9 @@ function NavBar() {
               ))}
             </Menu>
                 </Grid>
-                <Grid xs = {6}><Box sx = {{background: color3, borderRadius: 5}}>{links}</Box></Grid>
+                <Grid xs = {6}><Box sx = {{background: color3, borderRadius: 5, pr: "70%", py: "2.5%", pl: "6%", ml: "-5%", mr: "7%"}}>{links}</Box></Grid>
 
-                <Grid xs = {3}><Button onClick = {openLink}>?</Button></Grid>
+                <Grid xs = {2}><Button onClick = {openLink} sx = {{background: color4,borderRadius: 10, mr: "100%"}}><img src="images/search-icon.png" width="60%" height="50%" /></Button></Grid>
 
             </Grid>
             </Box>

@@ -40,6 +40,7 @@ function ContactMe() {
       className="content"
       style={{
         width: "100vw",
+        paddingTop: "6%",
       //  height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "0%",
@@ -59,11 +60,12 @@ function ContactMe() {
           backgroundColor: backgroundColor,
         }}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} >
           <Grid xs={12} sm={5}>
             <Box
               sx={{
-                py: "18%",
+                pt: "13%",
+                pb: "16%",
                 background: color2,
                 borderRadius: 5,
                 ml: "10%",
@@ -145,7 +147,7 @@ function ContactMe() {
           </Grid>
           <Grid sm={7}>
             <Box sx={{ mr: "5%", ml: "4%" }}>
-              <Box sx={{ background: color3, borderRadius: 3, py: "5%" }}>
+              <Box sx={{ background: color3, borderRadius: 3, pt: "3%" }}>
                 <Typography
                   sx={{
                     fontFamily: font2,
@@ -282,7 +284,7 @@ function ContactMe() {
                   borderRadius: 4,
                   ml: "5%",
                   mr: "5%",
-                  pb: "3%",
+                  pb: "0%",
                 }}
               >
                 <Grid container spacing={2}>

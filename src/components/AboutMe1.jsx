@@ -8,6 +8,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import NavBar from "./NavBar";
+import SpotifyPlayer from "./SpotifyPlayer";
 
 
 function AboutMe1() {
@@ -34,13 +35,17 @@ function AboutMe1() {
     setFont2,
   } = useContext(ColorContext);
 
+  //? spotify stuff
+
+  //?
+
   return (
     <div
     id="about"
     //  className="content"
       style={{
         width: "100vw",
-        marginTop: "8%",
+        paddingTop: "8%",
        // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "5%",
@@ -53,9 +58,11 @@ function AboutMe1() {
         alignItems: "center",
       }}
     >
+  
       {/* <NavBar/> */}
       <Grid container spacing={2}>
         <Grid xs={12} sm={5}>
+      
           <Box
             sx={{
               background: color2,
@@ -139,7 +146,32 @@ function AboutMe1() {
                     }}
                   />
                 </Box>
-                <Box>Spotify</Box>
+                <Box>Spotify
+
+                <SpotifyPlayer
+        client_id="22b071825abe48bd80d4c9237876c073"
+        client_secret="d540a159c96e486384af97a635c125d6"
+        refresh_token="AQB5YJrpAccOwb4rILpQylu_XsoXkjH6WW-RNagFDjjcnH8PPkdgQwed1EYDOOO6ariGPfOSunSRmVfKhK4SKXcJ2ho8OLsG57uDpqadPMH7pywKPB4izjVphNYMgF4MFA4"
+      />
+
+<SpotifyPlayer
+        client_id="22b071825abe48bd80d4c9237876c073"
+        client_secret="d540a159c96e486384af97a635c125d6"
+        refresh_token="AQDWPyumZQOcsVOqEcG54m84Kvooh0mGEQiwnlEWq0OCYxD6rnNhTC0ep4g9dQcEqOvzaCkU4nNX4iNynzS-m7sCPZOh0cH6Am9xWyJnxvq5lOxUry9G6qrxtSZ4lnv-8Zo"
+      />
+ <SpotifyPlayer
+        client_id="22b071825abe48bd80d4c9237876c073"
+        client_secret="d540a159c96e486384af97a635c125d6"
+        refresh_token="AQDHmQ8bPbgQJtb2qrYkP7ATrfj1VTCed-kqNmoo5hEhoWREvmuXTJkZMmlYhi-PJ-ALRsE1X54wcYx9KKlabo4RADXIC-Q7GU8hMyOuPN9vy49w63wtlklBQEnGchbZMtA"
+      />
+
+
+<SpotifyPlayer
+        client_id="22b071825abe48bd80d4c9237876c073"
+        client_secret="d540a159c96e486384af97a635c125d6"
+        refresh_token="AQDozLqTkCUcR8365VrQq-PvYFcrKUoJsNbU8O7hCIx2yqvtaIwi7g3ZRdvOkFsT4LAyjofbBEXNWUQdlLDbg2VN5C_b2e3UQXls1XYnQGwkgXNLrUCMnuVVW8hWfH92I3Q"
+      />
+                </Box>
               </Grid>
               <Grid sm={7}>
                 <Box sx={{ mr: "5%" }}>
@@ -516,7 +548,7 @@ function AboutMe1() {
               <Grid xs={4}>
                 <img
                   src="images/bar.png"
-                  height="100%"
+                  height="90%"
                   width="30%"
                   style={{ marginLeft: "65%" }}
                 />
@@ -570,67 +602,69 @@ function AboutMe1() {
 
             <Grid container spacing={2} sx = {{ml: "0.5%"}}>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/python.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/java.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/c++.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/c#.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/html.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/react.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/js.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/sql.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/mysql.png" width="50%" height="90%" />
+              </Grid>
+             
+              <Grid xs={1.7}>
+                <img src="images/firebase.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/django.png" width="50%" height="90%" />
+              </Grid>
+              
+              <Grid xs={1.7}>
+                <img src="images/springboot.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/restapi.png" width="50%" height="90%" />
+              </Grid>
+              <Grid xs={1.7}>
+                <img src="images/git.png" width="50%" height="90%" />
               </Grid>
               <Grid xs={1.7}>
                 <img src="images/android.png" width="50%" height="90%" />
               </Grid>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/figma.png" width="50%" height="90%" />
               </Grid>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/vscode.png" width="50%" height="90%" />
               </Grid>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/github.png" width="50%" height="90%" />
               </Grid>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/materialui.png" width="50%" height="90%" />
               </Grid>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/tailwind.png" width="50%" height="60%" />
               </Grid>
               <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
-              </Grid>
-              <Grid xs={1.7}>
-                <img src="images/android.png" width="50%" height="90%" />
+                <img src="images/css.png" width="50%" height="90%" />
               </Grid>
             </Grid>
           </Box>
@@ -1151,6 +1185,7 @@ function AboutMe1() {
           </Grid>
         </Grid>
       </Grid>
+      
     </div>
   );
 }
