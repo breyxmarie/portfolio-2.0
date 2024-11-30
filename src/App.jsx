@@ -9,7 +9,7 @@ import AboutMe2 from "./components/AboutMe2";
 import Project1 from "./components/Project1";
 import ContactMe from "./components/ContactMe";
 import NavBar from "./components/NavBar";
-
+import { ColorProvider } from "./components/ColorContext";
 
 import ColorContext from "./components/ColorContext"; // Import the context
 import Box from "@mui/material/Box";
@@ -37,14 +37,16 @@ function App() {
     setFont1,
   } = useContext(ColorContext);
   return (
-    <Box sx = {{background: backgroundColor, width: "100vw"}}>
-    <Home />
-    <NavBar/>
-    <AboutMe1 />
-    <AboutMe2 />
-    <Project1 />
-    <ContactMe />
-  </Box>
+    <Box sx={{ background: backgroundColor, width: "100vw" }}>
+      <ColorProvider>
+        <Home />
+        <NavBar />
+        <AboutMe1 />
+        <AboutMe2 />
+        <Project1 />
+        <ContactMe />
+      </ColorProvider>
+    </Box>
   );
 }
 

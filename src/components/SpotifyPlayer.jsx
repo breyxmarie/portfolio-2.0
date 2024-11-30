@@ -80,7 +80,13 @@ function SpotifyPlayer(props) {
           textAlign: "left",
           ml: "10%",
           fontWeight: "bold",
-          fontSize: "1.5em",
+          fontSize: {
+            xs: "0.5em",
+            sm: "0.8em",
+            md: "1.1em",
+            lg: "1.3em",
+            xl: "1.5em",
+          },
         }}
       >
         {" "}
@@ -105,7 +111,13 @@ function SpotifyPlayer(props) {
                   fontFamily: font2,
                   textAlign: "left",
                   whiteSpace: "wrap",
-                  fontSize: "1.5em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
                   fontWeight: "bold",
                 }}
               >
@@ -114,7 +126,17 @@ function SpotifyPlayer(props) {
               </Typography>
 
               <Typography
-                sx={{ fontFamily: font2, textAlign: "left", fontSize: "1.1em" }}
+                sx={{
+                  fontFamily: font2,
+                  textAlign: "left",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
+                }}
               >
                 {" "}
                 {result.artist}
@@ -126,28 +148,44 @@ function SpotifyPlayer(props) {
                   ml: "0%",
                   textAlign: "left",
                   fontStyle: "italic",
-                  fontSize: "1.1em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.6em",
+                    md: "1.1em",
+                    lg: "1.1em",
+                    xl: "1.1em",
+                  },
                 }}
               >
                 {result.album}
               </Typography>
-
-              <Typography
-                sx={{ fontFamily: font2, textAlign: "left", fontSize: "1.1em" }}
-              >
-                {Math.floor(Math.floor(result.timePlayed / 1000) / 60)} :
-                {Math.floor(result.timePlayed / 1000) % 60} /{" "}
-                {Math.floor(Math.floor(result.timeTotal / 1000) / 60)} :
-                {Math.floor(result.timeTotal / 1000) % 60} <br />
-              </Typography>
             </Grid>
-            <Grid xs={3} sx={{ mt: "3%" }}>
+            <Grid xs={3} sx={{ mt: "0%" }}>
               <img
                 alt="soundbar"
                 width="50%"
                 src="./images/soundbar.gif"
                 title="Now Listening"
               />
+              <Typography
+                sx={{
+                  ml: "20%",
+                  fontFamily: font2,
+                  textAlign: "left",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1.1em",
+                    lg: "1.1em",
+                    xl: "1.1em",
+                  },
+                }}
+              >
+                {Math.floor(Math.floor(result.timePlayed / 1000) / 60)} :
+                {Math.floor(result.timePlayed / 1000) % 60} /{" "}
+                {Math.floor(Math.floor(result.timeTotal / 1000) / 60)} :
+                {Math.floor(result.timeTotal / 1000) % 60} <br />
+              </Typography>
             </Grid>
           </Grid>
 
@@ -185,7 +223,13 @@ function SpotifyPlayer(props) {
           textAlign: "left",
           ml: "10%",
           fontWeight: "bold",
-          fontSize: "1.5em",
+          fontSize: {
+            xs: "0.5em",
+            sm: "0.8em",
+            md: "1.1em",
+            lg: "1.3em",
+            xl: "1.5em",
+          },
         }}
       >
         {" "}
@@ -210,7 +254,13 @@ function SpotifyPlayer(props) {
                   fontFamily: font2,
                   textAlign: "left",
                   whiteSpace: "wrap",
-                  fontSize: "1.5em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
                   fontWeight: "bold",
                 }}
               >
@@ -219,7 +269,17 @@ function SpotifyPlayer(props) {
               </Typography>
 
               <Typography
-                sx={{ fontFamily: font2, textAlign: "left", fontSize: "1.1em" }}
+                sx={{
+                  fontFamily: font2,
+                  textAlign: "left",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
+                }}
               >
                 {" "}
                 {result.artist}
@@ -231,14 +291,30 @@ function SpotifyPlayer(props) {
                   ml: "0%",
                   textAlign: "left",
                   fontStyle: "italic",
-                  fontSize: "1.1em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1.1em",
+                    lg: "1.1em",
+                    xl: "1.1em",
+                  },
                 }}
               >
                 {result.album}
               </Typography>
 
               <Typography
-                sx={{ fontFamily: font2, textAlign: "left", fontSize: "1.1em" }}
+                sx={{
+                  fontFamily: font2,
+                  textAlign: "left",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
+                }}
               >
                 {Math.floor(Math.floor(result.timePlayed / 1000) / 60)} :
                 {Math.floor(result.timePlayed / 1000) % 60} /{" "}
@@ -256,14 +332,20 @@ function SpotifyPlayer(props) {
       </a>
     </Box>
   ) : (
-    <Box sx={{ mt: "2%", color: color6 }}>
+    <Box sx={{ mt: "0%", color: color6 }}>
       <Typography
         sx={{
           fontFamily: font2,
           textAlign: "left",
           ml: "10%",
           fontWeight: "bold",
-          fontSize: "1.5em",
+          fontSize: {
+            xs: "0.5em",
+            sm: "0.8em",
+            md: "1.1em",
+            lg: "1.3em",
+            xl: "1.5em",
+          },
         }}
       >
         {" "}
@@ -288,7 +370,13 @@ function SpotifyPlayer(props) {
                   fontFamily: font2,
                   textAlign: "left",
                   whiteSpace: "wrap",
-                  fontSize: "1.5em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
                   fontWeight: "bold",
                 }}
               >
@@ -297,7 +385,18 @@ function SpotifyPlayer(props) {
               </Typography>
 
               <Typography
-                sx={{ fontFamily: font2, textAlign: "left", fontSize: "1.1em" }}
+                sx={{
+                  fontFamily: font2,
+                  textAlign: "left",
+
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
+                }}
               >
                 {" "}
                 {result.artist}
@@ -309,7 +408,13 @@ function SpotifyPlayer(props) {
                   ml: "0%",
                   textAlign: "left",
                   fontStyle: "italic",
-                  fontSize: "1.1em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
                 }}
               >
                 {result.album}
@@ -330,14 +435,20 @@ function SpotifyPlayer(props) {
                   fontFamily: font2,
                   textAlign: "center",
                   whiteSpace: "wrap",
-                  fontSize: "1em",
+                  fontSize: {
+                    xs: "0.5em",
+                    sm: "0.8em",
+                    md: "1em",
+                    lg: "1em",
+                    xl: "1em",
+                  },
                   fontWeight: "bold",
                 }}
               >
                 {timeDiff}
               </Typography>
 
-              <AiOutlinePauseCircle size={65} />
+              <AiOutlinePauseCircle size={"50%"} />
             </Grid>
           </Grid>
 

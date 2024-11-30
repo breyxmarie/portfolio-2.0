@@ -8,8 +8,49 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
+import { motion, useInView } from "framer-motion";
+import { useSpring, animated } from "@react-spring/web";
 
 function AboutMe2() {
+  const props = useSpring({
+    from: { opacity: 0, scale: 0.8 },
+    to: { opacity: 1, scale: 1 },
+    config: { mass: 1, tension: 200, friction: 20 }, // Adjust these values for slower animations
+  });
+  //? animation
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+
+  const topVariants = {
+    hidden: { opacity: 1, y: "-100%" }, // Initial position off-screen, 50 pixels above
+    visible: { opacity: 1, y: 0 }, // Final position on-screen
+    transition: { duration: 500, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+  };
+
+  const bottomVariants = {
+    hidden: { opacity: 1, y: "30%" }, // Initial position off-screen, 50 pixels above
+    visible: { opacity: 1, y: 0 }, // Final position on-screen
+    transition: { duration: 10, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+  };
+
+  const leftVariants = {
+    hidden: { opacity: 0, x: -100 }, // Initial position off-screen, 50 pixels above
+    visible: { opacity: 1, x: 0 }, // Final position on-screen
+    transition: { duration: 1, ease: "easeInOut", delay: 0.5 }, // Adjust the duration here
+  };
+
+  const rightVariants = {
+    hidden: { opacity: 1, x: 350 }, // Initial position off-screen, 50 pixels above
+    visible: { opacity: 1, x: 0 }, // Final position on-screen
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      delay: 0.5,
+      stiffness: 10,
+      damping: 45,
+    }, // Adjust the duration here
+  };
+  //?
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -73,8 +114,8 @@ function AboutMe2() {
   };
 
   const certs = [
-    <Box sx={{ mt: "7%", ml: "0%", mr: 0, color: color6,}}>
-      <Grid container spacing={2} sx = {{ml: "0%"}}>
+    <Box sx={{ mt: "7%", ml: "0%", mr: 0, color: color6 }}>
+      <Grid container spacing={2} sx={{ ml: "0%" }}>
         <Grid xs={6} sm={6}>
           {" "}
           <img
@@ -174,7 +215,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3 , color: color6,}}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6 }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -271,7 +312,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6, }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6 }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -365,7 +406,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6, }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6 }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -420,7 +461,6 @@ function AboutMe2() {
             height="90%"
             width="80%"
             style={{ marginLeft: "10%" }}
-
           />
           <Typography
             sx={{
@@ -443,7 +483,6 @@ function AboutMe2() {
             height="90%"
             width="80%"
             style={{ marginLeft: "10%" }}
-
           />
           <Typography
             sx={{
@@ -461,7 +500,7 @@ function AboutMe2() {
         </Grid>
       </Grid>
     </Box>,
-    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6, }}>
+    <Box sx={{ mt: "7%", ml: 1, mr: 3, color: color6 }}>
       <Grid container spacing={2}>
         <Grid xs={6} sm={6}>
           {" "}
@@ -470,7 +509,6 @@ function AboutMe2() {
             height="90%"
             width="80%"
             style={{ marginLeft: "10%" }}
-
           />
           <Typography
             sx={{
@@ -493,7 +531,6 @@ function AboutMe2() {
             height="90%"
             width="80%"
             style={{ marginLeft: "10%" }}
-
           />
           <Typography
             sx={{
@@ -525,7 +562,7 @@ function AboutMe2() {
         // display: "flex",
         // flexDirection: "column",
         width: "100vw",
-       // height: "100vh",
+        // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "0%",
         display: "flex", // Flex to center content (optional)
@@ -535,9 +572,11 @@ function AboutMe2() {
         // display: "flex",
         // justifyContent: "center",
         alignItems: "center",
-       color: color6,
+        color: color6,
       }}
     >
+      {/* <animated.div style={props}>hellooo</animated.div> */}
+      <br />
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
@@ -559,500 +598,517 @@ function AboutMe2() {
         <img src={selectedImage} alt="Selected Image" />
       </Modal>
 
-      <Grid container spacing={2} >
+      <Grid container spacing={2}>
         <Grid xs={12} sm={4}>
-          <Box
-            sx={{
-              background: color2,
-              borderRadius: 5,
-              ml: 5,
-              mr: 0,
-              pb: "10%",
-            }}
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={leftVariants}
           >
-            <Grid container spacing={2} sx={{ pt: 1 }}>
-              <Grid xs={8}></Grid>
-              <Grid xs={4}>
-                <img
-                  src="images/bar.png"
-                  height="90%"
-                  width="50%"
-                  style={{ marginLeft: "40%" }}
-                />
-              </Grid>
-            </Grid>
             <Box
               sx={{
-                background: color3,
+                background: color2,
                 borderRadius: 5,
-                ml: "3%",
-                mr: "3%",
-                mt: "4%",
+                ml: 5,
+                mr: 0,
+                pb: "10%",
               }}
             >
-              <Grid container spacing={2} sx={{ pt: 0.5 }}>
-                <Grid
-                  xs={9}
-                  sx={{
-                    ml: "5%",
-                    display: "flex",
-                    justifyContent: "flex-start", // Aligns content horizontally to the start
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <Typography sx={{ color: color6, ml: 1, fontFamily: font2 }}>
-                    education.site
-                  </Typography>
-                </Grid>
-                <Grid xs={2}>
+              <Grid container spacing={2} sx={{ pt: 1 }}>
+                <Grid xs={8}></Grid>
+                <Grid xs={4}>
                   <img
-                    src="images/search.png"
+                    src="images/bar.png"
                     height="90%"
-                    width="30%"
-                    style={{ marginLeft: "65%" }}
+                    width="50%"
+                    style={{ marginLeft: "40%" }}
                   />
                 </Grid>
               </Grid>
-            </Box>
-            <Grid container spacing={0} sx={{ mt: 1 }}>
-              <Grid
-                xs={2}
+              <Box
                 sx={{
-                  marginLeft: "0%",
-                  display: "flex",
-                  justifyContent: "flex-end", // Aligns content horizontally to the start
-                  alignItems: "flex-end",
+                  background: color3,
+                  borderRadius: 5,
+                  ml: "3%",
+                  mr: "3%",
+                  mt: "4%",
                 }}
               >
-                {" "}
-                <img
-                  src="images/timeline.png"
-                  height="100%"
-                  width="35%"
-                  style={{
-                    marginLeft: "0%",
-
-                    display: "flex",
-                    justifyContent: "flex-end", // Aligns content horizontally to the start
-                    alignItems: "flex-end",
-                  }}
-                />
-              </Grid>
-              <Grid
-                xs={10}
-                // sx={{
-                //   display: "flex",
-                //   justifyContent: "flex-start", // Aligns content horizontally to the start
-                //   alignItems: "flex-start",
-                // }}
-              >
-                <Typography
-                  sx={{
-                    ml: 1,
-                    textAlign: "left",
-                    fontFamily: font2,
-                    fontWeight: "bold",
-                    mt: 1,
-                    fontSize: {
-                      xs: "0.5em",
-                      sm: "0.5em",
-                      md: "1em",
-                      lg: "1em",
-                    },
-                  }}
-                >
-                  2019 - 2024 <br />
-                </Typography>
-                <br />
-
-                <Grid container spacing={2}>
-                  <Grid xs={3}>
-                    <Box sx={{ width: "100%", maxWidth: "70%", ml: "20%" }}>
-                      <img
-                        src="images/mapuaLogo.png"
-                        width="80%"
-                        height="80%"
-                      />
-                    </Box>
-                  </Grid>
+                <Grid container spacing={2} sx={{ pt: 0.5 }}>
                   <Grid
                     xs={9}
-                    // sx={{
-                    //   display: "flex",
-                    //   justifyContent: "flex-start", // Aligns content horizontally to the start
-                    //   alignItems: "flex-start",
-                    // }}
+                    sx={{
+                      ml: "5%",
+                      display: "flex",
+                      justifyContent: "flex-start", // Aligns content horizontally to the start
+                      alignItems: "flex-start",
+                    }}
                   >
                     <Typography
-                      sx={{
-                        fontWeight: "bold",
-                        textAlign: "left",
-                        fontFamily: font2,
-                        fontSize: {
-                          xs: "0.5em",
-                          sm: "0.5em",
-                          md: "1em",
-                          lg: "1em",
-                        },
-                      }}
+                      sx={{ color: color6, ml: 1, fontFamily: font2 }}
                     >
-                      {" "}
-                      Mapua University - Makati
+                      education.site
                     </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "0.5em",
-                          sm: "0.4em",
-                          md: "1em",
-                          lg: "1em",
-                        },
-                        textAlign: "left",
-                        fontFamily: font2,
-                      }}
-                    >
-                      Bachelor of Science in Information Technology <br />
-                      Specialized in Application Development
-                    </Typography>
+                  </Grid>
+                  <Grid xs={2}>
+                    <img
+                      src="images/search.png"
+                      height="90%"
+                      width="30%"
+                      style={{ marginLeft: "65%" }}
+                    />
                   </Grid>
                 </Grid>
-              </Grid>
-            </Grid>
-            <Grid container spacing={0}>
-              <Grid
-                xs={2}
-                sx={{
-                  marginLeft: "0%",
-                  display: "flex",
-                  justifyContent: "flex-end", // Aligns content horizontally to the start
-                  alignItems: "flex-end",
-                }}
-              >
-                {" "}
-                <img
-                  src="images/timeline.png"
-                  height="100%"
-                  width="30%"
-                  style={{
-                    marginLeft: "0%",
-
-                    display: "flex",
-                    justifyContent: "flex-end", // Aligns content horizontally to the start
-                    alignItems: "flex-end",
-                  }}
-                />
-              </Grid>
-              <Grid
-                xs={10}
-                // sx={{
-                //   display: "flex",
-                //   justifyContent: "flex-start", // Aligns content horizontally to the start
-                //   alignItems: "flex-start",
-                // }}
-              >
-                <Typography
-                  sx={{
-                    ml: 1,
-                    textAlign: "left",
-                    fontFamily: font2,
-                    fontWeight: "bold",
-                    mt: 0.5,
-                    fontSize: {
-                      xs: "0.5em",
-                      sm: "0.5em",
-                      md: "1em",
-                      lg: "1em",
-                    },
-                  }}
-                >
-                  2017 - 2019 <br />
-                </Typography>
-                <br />
-
-                <Grid container spacing={2}>
-                  <Grid xs={3}>
-                    <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
-                      <img src="images/sti.png" width="80%" height="80%" />
-                    </Box>
-                  </Grid>
-                  <Grid
-                    xs={9}
-                    // sx={{
-                    //   display: "flex",
-                    //   justifyContent: "flex-start", // Aligns content horizontally to the start
-                    //   alignItems: "flex-start",
-                    // }}
-                  >
-                    <Typography
-                      sx={{
-                        fontWeight: "bold",
-                        textAlign: "left",
-                        fontFamily: font2,
-                        fontSize: {
-                          xs: "0.5em",
-                          sm: "0.5em",
-                          md: "1em",
-                          lg: "1em",
-                        },
-                      }}
-                    >
-                      {" "}
-                      STI College Santa Rosa
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "0.5em",
-                          sm: "0.4em",
-                          md: "1em",
-                          lg: "1em",
-                        },
-                        textAlign: "left",
-                        fontFamily: font2,
-                      }}
-                    >
-                      Technical Vocational Track
-                      <br />
-                      Information Communications Technology <br />
-                      (Mobile Application and Web Development)
-                    </Typography>
-                  </Grid>
-                </Grid>
-              </Grid>
-            </Grid>
-          </Box>
-
-          <Box
-            sx={{
-              background: color2,
-              borderRadius: 5,
-              ml: 5,
-              mr: 4,
-              pb: "30%",
-              mt: "5%",
-            }}
-          >
-            <Grid container spacing={2} sx={{ pt: 1 }}>
-              <Grid xs={8}></Grid>
-              <Grid xs={4}>
-                <img
-                  src="images/bar.png"
-                  height="90%"
-                  width="50%"
-                  style={{ marginLeft: "40%" }}
-                />
-              </Grid>
-            </Grid>
-            <Box
-              sx={{
-                background: color3,
-                borderRadius: 5,
-                ml: "3%",
-                mr: "3%",
-                mt: "4%",
-              }}
-            >
-              <Grid container spacing={2} sx={{ pt: 0.5 }}>
+              </Box>
+              <Grid container spacing={0} sx={{ mt: 1 }}>
                 <Grid
-                  xs={9}
+                  xs={2}
                   sx={{
-                    ml: "5%",
-                    display: "flex",
-                    justifyContent: "flex-start", // Aligns content horizontally to the start
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <Typography sx={{ color: color6, ml: 1, fontFamily: font2 }}>
-                    experiences.site
-                  </Typography>
-                </Grid>
-                <Grid xs={2}>
-                  <img
-                    src="images/search.png"
-                    height="90%"
-                    width="30%"
-                    style={{ marginLeft: "65%" }}
-                  />
-                </Grid>
-              </Grid>
-            </Box>
-            <Grid container spacing={-1}>
-              <Grid
-                xs={2}
-                sx={{
-                  marginLeft: "0%",
-                  display: "flex",
-                  justifyContent: "flex-end", // Aligns content horizontally to the start
-                  alignItems: "flex-end",
-                }}
-              >
-                {" "}
-                <img
-                  src="images/timeline.png"
-                  height="100%"
-                  width="30%"
-                  style={{
                     marginLeft: "0%",
-
                     display: "flex",
                     justifyContent: "flex-end", // Aligns content horizontally to the start
                     alignItems: "flex-end",
-                  }}
-                />
-              </Grid>
-              <Grid
-                xs={10}
-                // sx={{
-                //   display: "flex",
-                //   justifyContent: "flex-start", // Aligns content horizontally to the start
-                //   alignItems: "flex-start",
-                // }}
-              >
-                <Typography
-                  sx={{
-                    ml: 1,
-                    textAlign: "left",
-                    fontFamily: font2,
-                    fontWeight: "bold",
-                    mt: 0.5,
-                    fontSize: {
-                      xs: "0.5em",
-                      sm: "0.5em",
-                      md: "1em",
-                      lg: "1em",
-                    },
                   }}
                 >
                   {" "}
-                  March 2023 - June 2023
-                </Typography>
-                <br />
-                <Grid container spacing={2}>
-                  <Grid xs={3}>
-                    <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
-                      <img
-                        src="images/mapuaLogo.png"
-                        width="80%"
-                        height="80%"
-                      />
-                    </Box>
-                  </Grid>
-                  <Grid
-                    xs={9}
-                    // sx={{
-                    //   display: "flex",
-                    //   justifyContent: "flex-start", // Aligns content horizontally to the start
-                    //   alignItems: "flex-start",
-                    // }}
-                  >
-                    <Typography
-                      sx={{
-                        fontWeight: "bold",
-                        textAlign: "left",
-                        fontFamily: font2,
-                        fontSize: {
-                          xs: "0.5em",
-                          sm: "0.5em",
-                          md: "1em",
-                          lg: "1em",
-                        },
-                      }}
-                    >
-                      {" "}
-                      Questronix Corporation
-                    </Typography>
-                    <Typography
-                      sx={{
-                        fontSize: {
-                          xs: "0.5em",
-                          sm: "0.4em",
-                          md: "1em",
-                          lg: "1em",
-                        },
-                        textAlign: "left",
-                        fontFamily: font2,
-                      }}
-                    >
-                      Emerging Technologies Intern
-                    </Typography>
-                  </Grid>
+                  <img
+                    src="images/timeline.png"
+                    height="100%"
+                    width="35%"
+                    style={{
+                      marginLeft: "0%",
+
+                      display: "flex",
+                      justifyContent: "flex-end", // Aligns content horizontally to the start
+                      alignItems: "flex-end",
+                    }}
+                  />
                 </Grid>
-              </Grid>
-            </Grid>
-          </Box>
-        </Grid>
-        <Grid xs={12} sm={8}>
-          <Box
-            sx={{
-              background: color2,
-              borderRadius: 5,
-              ml: 5,
-              mr: 4,
-              pb: "5%",
-            }}
-          >
-            <Grid container spacing={2} sx={{ pt: 1 }}>
-              <Grid xs={8}></Grid>
-              <Grid xs={4}>
-                <img
-                  src="images/bar.png"
-                  height="90%"
-                  width="35%"
-                  style={{ marginLeft: "50%" }}
-                />
-              </Grid>
-            </Grid>
-            <Box
-              sx={{
-                background: color3,
-                borderRadius: 5,
-                ml: "3%",
-                mr: "3%",
-                mt: "3%",
-              }}
-            >
-              <Grid container spacing={2} sx={{ pt: 0.5 }}>
                 <Grid
-                  xs={9}
-                  sx={{
-                    ml: "5%",
-                    display: "flex",
-                    justifyContent: "flex-start", // Aligns content horizontally to the start
-                    alignItems: "flex-start",
-                  }}
+                  xs={10}
+                  // sx={{
+                  //   display: "flex",
+                  //   justifyContent: "flex-start", // Aligns content horizontally to the start
+                  //   alignItems: "flex-start",
+                  // }}
                 >
                   <Typography
-                    sx={{ color: color6, ml: 1, mt: 0.2, fontFamily: font2 }}
+                    sx={{
+                      ml: 1,
+                      textAlign: "left",
+                      fontFamily: font2,
+                      fontWeight: "bold",
+                      mt: 1,
+                      fontSize: {
+                        xs: "0.5em",
+                        sm: "0.5em",
+                        md: "1em",
+                        lg: "1em",
+                      },
+                    }}
                   >
-                    certifications.site
+                    August 2019 - January 2025 <br />
                   </Typography>
+                  <br />
+
+                  <Grid container spacing={2}>
+                    <Grid xs={3}>
+                      <Box sx={{ width: "100%", maxWidth: "70%", ml: "20%" }}>
+                        <img
+                          src="images/mapuaLogo.png"
+                          width="80%"
+                          height="80%"
+                        />
+                      </Box>
+                    </Grid>
+                    <Grid
+                      xs={9}
+                      // sx={{
+                      //   display: "flex",
+                      //   justifyContent: "flex-start", // Aligns content horizontally to the start
+                      //   alignItems: "flex-start",
+                      // }}
+                    >
+                      <Typography
+                        sx={{
+                          fontWeight: "bold",
+                          textAlign: "left",
+                          fontFamily: font2,
+                          fontSize: {
+                            xs: "0.5em",
+                            sm: "0.5em",
+                            md: "0.9em",
+                            lg: "0.9em",
+                          },
+                        }}
+                      >
+                        {" "}
+                        Mapua University - Makati
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "0.5em",
+                            sm: "0.4em",
+                            md: "0.8em",
+                            lg: "0.8em",
+                          },
+                          textAlign: "left",
+                          fontFamily: font2,
+                        }}
+                      >
+                        Bachelor of Science in Information Technology <br />
+                        Specialized in Application Development
+                      </Typography>
+                    </Grid>
+                  </Grid>
                 </Grid>
-                <Grid xs={2}>
+              </Grid>
+              <Grid container spacing={0}>
+                <Grid
+                  xs={2}
+                  sx={{
+                    marginLeft: "0%",
+                    display: "flex",
+                    justifyContent: "flex-end", // Aligns content horizontally to the start
+                    alignItems: "flex-end",
+                  }}
+                >
+                  {" "}
                   <img
-                    src="images/search.png"
-                    height="90%"
-                    width="20%"
-                    style={{ marginLeft: "65%" }}
+                    src="images/timeline.png"
+                    height="100%"
+                    width="30%"
+                    style={{
+                      marginLeft: "0%",
+
+                      display: "flex",
+                      justifyContent: "flex-end", // Aligns content horizontally to the start
+                      alignItems: "flex-end",
+                    }}
                   />
+                </Grid>
+                <Grid
+                  xs={10}
+                  // sx={{
+                  //   display: "flex",
+                  //   justifyContent: "flex-start", // Aligns content horizontally to the start
+                  //   alignItems: "flex-start",
+                  // }}
+                >
+                  <Typography
+                    sx={{
+                      ml: 1,
+                      textAlign: "left",
+                      fontFamily: font2,
+                      fontWeight: "bold",
+                      mt: 0.5,
+                      fontSize: {
+                        xs: "0.5em",
+                        sm: "0.5em",
+                        md: "1em",
+                        lg: "1em",
+                      },
+                    }}
+                  >
+                    2017 - 2019 <br />
+                  </Typography>
+                  <br />
+
+                  <Grid container spacing={2}>
+                    <Grid xs={3}>
+                      <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
+                        <img src="images/sti.png" width="80%" height="80%" />
+                      </Box>
+                    </Grid>
+                    <Grid
+                      xs={9}
+                      // sx={{
+                      //   display: "flex",
+                      //   justifyContent: "flex-start", // Aligns content horizontally to the start
+                      //   alignItems: "flex-start",
+                      // }}
+                    >
+                      <Typography
+                        sx={{
+                          fontWeight: "bold",
+                          textAlign: "left",
+                          fontFamily: font2,
+                          fontSize: {
+                            xs: "0.5em",
+                            sm: "0.5em",
+                            md: "0.9em",
+                            lg: "0.9em",
+                          },
+                        }}
+                      >
+                        {" "}
+                        STI College Santa Rosa
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "0.5em",
+                            sm: "0.4em",
+                            md: "0.8em",
+                            lg: "0.8em",
+                          },
+                          textAlign: "left",
+                          fontFamily: font2,
+                        }}
+                      >
+                        Technical Vocational Track
+                        <br />
+                        Information Communications Technology <br />
+                        (Mobile Application and Web Development)
+                      </Typography>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
             </Box>
-            <Grid container spacing={2}>
-              <Grid
-                item
-                xs={0}
-                sm={0}
-                md={1}
-                lg={1}
+
+            <Box
+              sx={{
+                background: color2,
+                borderRadius: 5,
+                ml: 5,
+                mr: 4,
+                pb: "10%",
+                mt: "5%",
+              }}
+            >
+              <Grid container spacing={2} sx={{ pt: 1 }}>
+                <Grid xs={8}></Grid>
+                <Grid xs={4}>
+                  <img
+                    src="images/bar.png"
+                    height="90%"
+                    width="50%"
+                    style={{ marginLeft: "40%" }}
+                  />
+                </Grid>
+              </Grid>
+              <Box
                 sx={{
-                  display: {
-                    xs: "none", // Hide on extra small screens
-                    sm: "none",
-                    md: "block", // Display on small screens and up
-                  },
+                  background: color3,
+                  borderRadius: 5,
+                  ml: "3%",
+                  mr: "3%",
+                  mt: "4%",
                 }}
               >
-                {/* <Button
+                <Grid container spacing={2} sx={{ pt: 0.5 }}>
+                  <Grid
+                    xs={9}
+                    sx={{
+                      ml: "5%",
+                      display: "flex",
+                      justifyContent: "flex-start", // Aligns content horizontally to the start
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <Typography
+                      sx={{ color: color6, ml: 1, fontFamily: font2 }}
+                    >
+                      experiences.site
+                    </Typography>
+                  </Grid>
+                  <Grid xs={2}>
+                    <img
+                      src="images/search.png"
+                      height="90%"
+                      width="30%"
+                      style={{ marginLeft: "65%" }}
+                    />
+                  </Grid>
+                </Grid>
+              </Box>
+              <Grid container spacing={-1}>
+                <Grid
+                  xs={2}
+                  sx={{
+                    marginLeft: "0%",
+                    display: "flex",
+                    justifyContent: "flex-end", // Aligns content horizontally to the start
+                    alignItems: "flex-end",
+                  }}
+                >
+                  {" "}
+                  <img
+                    src="images/timeline.png"
+                    height="100%"
+                    width="30%"
+                    style={{
+                      marginLeft: "0%",
+
+                      display: "flex",
+                      justifyContent: "flex-end", // Aligns content horizontally to the start
+                      alignItems: "flex-end",
+                    }}
+                  />
+                </Grid>
+                <Grid
+                  xs={10}
+                  // sx={{
+                  //   display: "flex",
+                  //   justifyContent: "flex-start", // Aligns content horizontally to the start
+                  //   alignItems: "flex-start",
+                  // }}
+                >
+                  <Typography
+                    sx={{
+                      ml: 1,
+                      textAlign: "left",
+                      fontFamily: font2,
+                      fontWeight: "bold",
+                      mt: 0.5,
+                      fontSize: {
+                        xs: "0.5em",
+                        sm: "0.5em",
+                        md: "1em",
+                        lg: "1em",
+                      },
+                    }}
+                  >
+                    {" "}
+                    March 2023 - June 2023
+                  </Typography>
+                  <br />
+                  <Grid container spacing={2}>
+                    <Grid xs={3}>
+                      <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
+                        <img
+                          src="images/mapuaLogo.png"
+                          width="80%"
+                          height="80%"
+                        />
+                      </Box>
+                    </Grid>
+                    <Grid
+                      xs={9}
+                      // sx={{
+                      //   display: "flex",
+                      //   justifyContent: "flex-start", // Aligns content horizontally to the start
+                      //   alignItems: "flex-start",
+                      // }}
+                    >
+                      <Typography
+                        sx={{
+                          fontWeight: "bold",
+                          textAlign: "left",
+                          fontFamily: font2,
+                          fontSize: {
+                            xs: "0.5em",
+                            sm: "0.5em",
+                            md: "0.9em",
+                            lg: "0.9em",
+                          },
+                        }}
+                      >
+                        {" "}
+                        Questronix Corporation
+                      </Typography>
+                      <Typography
+                        sx={{
+                          fontSize: {
+                            xs: "0.5em",
+                            sm: "0.4em",
+                            md: "0.8em",
+                            lg: "0.8em",
+                          },
+                          textAlign: "left",
+                          fontFamily: font2,
+                        }}
+                      >
+                        Emerging Technologies Intern
+                      </Typography>
+                    </Grid>
+                  </Grid>
+                </Grid>
+              </Grid>
+            </Box>
+          </motion.div>
+        </Grid>
+        <Grid xs={12} sm={8}>
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={isInView ? "visible" : "hidden"}
+            variants={rightVariants}
+          >
+            <Box
+              sx={{
+                background: color2,
+                borderRadius: 5,
+                ml: 5,
+                mr: 4,
+                pb: "5%",
+              }}
+            >
+              <Grid container spacing={2} sx={{ pt: 1 }}>
+                <Grid xs={8}></Grid>
+                <Grid xs={4}>
+                  <img
+                    src="images/bar.png"
+                    height="80%"
+                    width="25%"
+                    style={{ marginLeft: "50%" }}
+                  />
+                </Grid>
+              </Grid>
+              <Box
+                sx={{
+                  background: color3,
+                  borderRadius: 5,
+                  ml: "3%",
+                  mr: "3%",
+                  mt: "3%",
+                }}
+              >
+                <Grid container spacing={2} sx={{ pt: 0.5 }}>
+                  <Grid
+                    xs={9}
+                    sx={{
+                      ml: "5%",
+                      display: "flex",
+                      justifyContent: "flex-start", // Aligns content horizontally to the start
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <Typography
+                      sx={{ color: color6, ml: 1, mt: 0.2, fontFamily: font2 }}
+                    >
+                      certifications.site
+                    </Typography>
+                  </Grid>
+                  <Grid xs={2}>
+                    <img
+                      src="images/search.png"
+                      height="90%"
+                      width="20%"
+                      style={{ marginLeft: "65%" }}
+                    />
+                  </Grid>
+                </Grid>
+              </Box>
+              <Grid container spacing={2}>
+                <Grid
+                  item
+                  xs={0}
+                  sm={0}
+                  md={1}
+                  lg={1}
+                  sx={{
+                    display: {
+                      xs: "none", // Hide on extra small screens
+                      sm: "none",
+                      md: "block", // Display on small screens and up
+                    },
+                  }}
+                >
+                  {/* <Button
                   onClick={() => handlePrevC}
                   sx={{ mt: "235%", background: "#ffffff" }}
                 >
@@ -1062,43 +1118,43 @@ function AboutMe2() {
                     height="30px"
                   />
                 </Button> */}
-              </Grid>
-              <Grid item xs={12} sm={12} md={10}>
-                <Slider
-                  {...settings}
-                  ref={sliderRefC}
+                </Grid>
+                <Grid item xs={12} sm={12} md={10}>
+                  <Slider
+                    {...settings}
+                    ref={sliderRefC}
+                    sx={{
+                      color: "#000000",
+                      border: 1,
+                      borderColor: "#000000",
+                      ml: "30px",
+                      mr: "30px",
+                    }}
+                  >
+                    {certs.map((item, index) => (
+                      <Box key={index} onClick={() => handleSlideClick(item)}>
+                        {item}
+                      </Box>
+                    ))}
+                  </Slider>
+                </Grid>
+                <Grid
+                  item
+                  xs={0}
+                  sm={0}
+                  md={1}
+                  lg={1}
                   sx={{
-                    color: "#000000",
-                    border: 1,
-                    borderColor: "#000000",
-                    ml: "30px",
-                    mr: "30px",
+                    display: {
+                      xs: "none", // Hide on extra small screens
+                      sm: "none",
+                      md: "block", // Display on small screens and up
+                    },
                   }}
                 >
-                  {certs.map((item, index) => (
-                    <Box key={index} onClick={() => handleSlideClick(item)}>
-                      {item}
-                    </Box>
-                  ))}
-                </Slider>
-              </Grid>
-              <Grid
-                item
-                xs={0}
-                sm={0}
-                md={1}
-                lg={1}
-                sx={{
-                  display: {
-                    xs: "none", // Hide on extra small screens
-                    sm: "none",
-                    md: "block", // Display on small screens and up
-                  },
-                }}
-              >
-                {" "}
-                {/* Button container (adjust width as needed) */}
-                {/* <Button
+                  {" "}
+                  {/* Button container (adjust width as needed) */}
+                  {/* <Button
                   onClick={() => handleNextC}
                   sx={{ mt: "235%", background: "#ffffff" }}
                 >
@@ -1108,9 +1164,10 @@ function AboutMe2() {
                     height="30px"
                   />
                 </Button> */}
+                </Grid>
               </Grid>
-            </Grid>
-          </Box>
+            </Box>
+          </motion.div>
         </Grid>
       </Grid>
     </div>

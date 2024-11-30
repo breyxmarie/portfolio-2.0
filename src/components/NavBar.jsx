@@ -57,7 +57,8 @@ function NavBar() {
     color5,
     color6,
     color7,
-
+    setDarkMode,
+    setLightMode,
     font1,
     setBackgroundColor,
     setColor1,
@@ -68,6 +69,7 @@ function NavBar() {
     setColor6,
     setColor7,
 
+    toggleDarkMode,
     setFont1,
     font2,
     setFont2,
@@ -88,7 +90,23 @@ function NavBar() {
   const [checked, setChecked] = useState(false);
 
   const handleModeChange = (event) => {
+    console.log("slay");
     setChecked(event.target.checked);
+    console.log(event.target.checked);
+
+    if (event.target.checked === true) {
+      setDarkMode();
+    } else {
+      setLightMode();
+    }
+
+    // setColor1("#000000");
+    // setColor2("#000000");
+    // setColor3("#000000");
+    // setColor4("#000000");
+    // setColor5("#000000");
+    // setColor6("#000000");
+    // toggleDarkMode(true);
   };
 
   const MaterialUISwitch = styled(Switch)(({ theme }) => ({
@@ -117,7 +135,7 @@ function NavBar() {
       },
     },
     "& .MuiSwitch-thumb": {
-      backgroundColor: "#001e3c",
+      backgroundColor: "#001e3c", //? this the switch color for the dark mode stuff
       width: 32,
       height: 32,
       "&::before": {
@@ -269,7 +287,12 @@ function NavBar() {
     >
       <Container
         maxWidth="100%"
-        sx={{ backgroundColor: color7, paddingTop: 1, opacity: 1 }}
+        sx={{
+          background: color2,
+          paddingTop: 1,
+          opacity: 1,
+          //  marginTop: "-1.5%",
+        }}
       >
         <Toolbar disableGutters>
           <Typography
@@ -379,7 +402,7 @@ function NavBar() {
               borderRadius: 4,
               justifyContent: "space-between",
               alignItems: "center",
-              pl: 4,
+              pl: 1,
               ml: "0%",
               mr: "0%",
               fontSize: {
@@ -452,7 +475,12 @@ function NavBar() {
                 href={page.links}
                 onMouseOver={{ color: "blue" }}
                 onMouseDown={{ color: "red" }}
-                style={{ color: color6, fontFamily: font2, fontSize: "1.3em" }}
+                style={{
+                  paddingTop: 3,
+                  color: color6,
+                  fontFamily: font2,
+                  fontSize: "1.15em",
+                }}
               >
                 {page.names}
               </a>
@@ -471,8 +499,8 @@ function NavBar() {
               justifyContent: "space-between",
               alignItems: "center",
               px: 0,
-              ml: "10%",
-              mr: "0%",
+              ml: "8%",
+              mr: "-12%",
               fontSize: {
                 xs: "0.5em",
                 sm: "1em",
@@ -480,7 +508,7 @@ function NavBar() {
             }}
           >
             <Grid container spacing={2} sx={{ mt: "0%" }}>
-              <Grid xs={3} sx={{ mt: "1%" }}>
+              <Grid xs={2} sx={{ mt: "1%" }}>
                 <Tooltip title="More Links">
                   <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                     <Button
@@ -492,6 +520,8 @@ function NavBar() {
                         borderRadius: 4,
                         background: color1,
                         mr: "5px ",
+                        pt: "2%",
+                        pb: "2%",
                         fontSize: {
                           xs: "0.4em",
                           sm: "0.5em",
@@ -532,16 +562,19 @@ function NavBar() {
                   ))}
                 </Menu>
               </Grid>
-              <Grid xs={6}>
+              <Grid xs={5}>
                 <Box
                   sx={{
                     background: color3,
                     borderRadius: 5,
+                    mt: "2%",
                     pr: "70%",
                     py: "2.5%",
                     pl: "6%",
                     ml: "-5%",
                     mr: "7%",
+                    pt: "0.5%",
+                    pb: "0.5%",
                   }}
                 >
                   {links}
@@ -551,7 +584,14 @@ function NavBar() {
               <Grid xs={2}>
                 <Button
                   onClick={openLink}
-                  sx={{ background: color4, borderRadius: 10, mr: "100%" }}
+                  sx={{
+                    mt: "2%",
+                    pt: "0.5%",
+                    pb: "0.5%",
+                    background: color4,
+                    borderRadius: 10,
+                    mr: "100%",
+                  }}
                 >
                   <img src="images/search-icon.png" width="60%" height="50%" />
                 </Button>
@@ -571,7 +611,7 @@ function NavBar() {
               alignItems: "right",
               pr: 0,
               ml: "0%",
-              mr: "-6%",
+              mr: "-5%",
               fontSize: {
                 xs: "0.5em",
                 sm: "1em",
