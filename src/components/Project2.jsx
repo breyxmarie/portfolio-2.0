@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion, useInView } from "framer-motion";
 
-function Project1() {
+function Project2() {
   //? animation
   const [isShown, setIsShown] = useState(false);
   const ref = useRef(null);
@@ -66,7 +66,9 @@ function Project1() {
     },
     visible: {
       opacity: 1,
-      x: "0%", // Bring back into view
+      x: 0, // Bring back into view
+      y: 0,
+
       transition: {
         duration: 1.5, // Adjust speed of animation
         ease: [0.2, 0.8, 0.2, 1], // Smooth cubic-bezier curve
@@ -86,7 +88,8 @@ function Project1() {
     },
     visible: {
       opacity: 1,
-      x: "0%", // Bring it back to its final position
+      x: 0, // Bring it back to its final position
+      y: 0,
       transition: {
         duration: 3.5, // Slower animation
         ease: [0.2, 0.8, 0.2, 1],
@@ -146,7 +149,7 @@ function Project1() {
       style={{
         width: "100vw",
         // height: "100vh",
-        paddingTop: "5%",
+        paddingTop: "0%",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "5%",
         // display: "flex", // Flex to center content (optional)
@@ -186,25 +189,6 @@ function Project1() {
           // mt: "10%",
         }}
       >
-        <center>
-          <Typography
-            sx={{
-              color: color6,
-              fontSize: {
-                xs: "1em",
-                sm: "2em",
-                md: "3em",
-                lg: "4em",
-                xl: "5em",
-              },
-              fontWeight: "bold",
-              fontFamily: font2,
-              mb: { xs: "5%", sm: "0%" },
-            }}
-          >
-            Projects
-          </Typography>
-        </center>
         <motion.div
           ref={ref}
           variants={rightVariants}
@@ -826,4 +810,4 @@ function Project1() {
   );
 }
 
-export default Project1;
+export default Project2;

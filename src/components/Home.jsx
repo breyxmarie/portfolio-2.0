@@ -32,27 +32,83 @@ function Home() {
   } = useContext(ColorContext);
 
   const topVariants = {
-    hidden: { opacity: 1, y: "-100%" }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, y: 0 }, // Final position on-screen
-    transition: { duration: 500, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      y: "-100%", // Start off-screen
+      transition: {
+        duration: 3,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0, // End position
+      transition: {
+        duration: 3, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   const bottomVariants = {
-    hidden: { opacity: 1, y: "50%" }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, y: 0 }, // Final position on-screen
-    transition: { duration: 10, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      y: "50%", // Start off-screen
+      transition: {
+        duration: 3,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0, // End position
+      transition: {
+        duration: 3, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   const leftVariants = {
-    hidden: { opacity: 0, x: -100 }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, x: 0 }, // Final position on-screen
-    transition: { duration: 10, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      x: -100, // Start off-screen
+      transition: {
+        duration: 3,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      x: 0, // End position
+      transition: {
+        duration: 1.5, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   const rightVariants = {
-    hidden: { opacity: 1, x: 300 }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, x: 0 }, // Final position on-screen
-    transition: { duration: 10, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      x: 300, // Start off-screen
+      transition: {
+        duration: 4.5,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      x: 0, // End position
+      transition: {
+        duration: 1.5, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   return (
@@ -226,13 +282,7 @@ function Home() {
                   width="60%"
                   height="40%"
                 />
-              </motion.div>
-              <motion.div
-                ref={ref}
-                initial="hidden"
-                animate={isInView ? "visible" : "hidden"}
-                variants={bottomVariants}
-              >
+
                 <Typography
                   sx={{
                     fontFamily: font1,
@@ -286,8 +336,8 @@ function Home() {
                       fontSize: {
                         xs: "1em",
                         sm: "0.8em",
-                        md: "1.5em",
-                        lg: "1.5em",
+                        md: "1em",
+                        lg: "1.2em",
                       },
 
                       pl: 1,
@@ -316,8 +366,8 @@ function Home() {
                       fontSize: {
                         xs: "1em",
                         sm: "0.8em",
-                        md: "1.5em",
-                        lg: "1.5em",
+                        md: "1em",
+                        lg: "1.2em",
                       },
                       pl: 1,
                       pr: 6.5,
@@ -348,8 +398,8 @@ function Home() {
                       fontSize: {
                         xs: "1em",
                         sm: "0.8em",
-                        md: "1.5em",
-                        lg: "1.5em",
+                        md: "1em",
+                        lg: "1.2em",
                       },
                       pl: 1,
                       pr: 4.5,
@@ -390,8 +440,8 @@ function Home() {
                       fontSize: {
                         xs: "1em",
                         sm: "0.8em",
-                        md: "1.5em",
-                        lg: "1.5em",
+                        md: "1em",
+                        lg: "1.2em",
                       },
                       pl: 1,
                       pr: 4,
@@ -419,8 +469,8 @@ function Home() {
                       fontSize: {
                         xs: "1em",
                         sm: "0.8em",
-                        md: "1.5em",
-                        lg: "1.5em",
+                        md: "1em",
+                        lg: "1.2em",
                       },
                       pl: 1,
                       pr: 5.5,
@@ -449,8 +499,8 @@ function Home() {
                       fontSize: {
                         xs: "1em",
                         sm: "0.8em",
-                        md: "1.5em",
-                        lg: "1.5em",
+                        md: "1em",
+                        lg: "1.2em",
                       },
                       pl: 1,
                       pr: 5.5,

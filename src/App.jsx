@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import AboutMe1 from "./components/AboutMe1";
 import AboutMe2 from "./components/AboutMe2";
 import Project1 from "./components/Project1";
+import Project2 from "./components/Project2";
 import ContactMe from "./components/ContactMe";
 import NavBar from "./components/NavBar";
 import { ColorProvider } from "./components/ColorContext";
@@ -44,6 +45,8 @@ function App() {
         <AboutMe1 />
         <AboutMe2 />
         <Project1 />
+        <Project2 />
+
         <ContactMe />
       </ColorProvider>
     </Box>

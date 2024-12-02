@@ -17,33 +17,83 @@ function ContactMe() {
   const isInView = useInView(ref);
 
   const topVariants = {
-    hidden: { opacity: 1, y: "-100%" }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, y: 0 }, // Final position on-screen
-    transition: { duration: 500, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      y: "-100%", // Start off-screen
+      transition: {
+        duration: 3,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0, // End position
+      transition: {
+        duration: 3, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   const bottomVariants = {
-    hidden: { opacity: 1, y: "30%" }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, y: 0 }, // Final position on-screen
-    transition: { duration: 10, ease: "cubic-bezier(0.2, 0.8, 0.2, 1)" }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      y: "30%", // Start off-screen
+      transition: {
+        duration: 3,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      y: 0, // End position
+      transition: {
+        duration: 3, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   const leftVariants = {
-    hidden: { opacity: 0, x: -100 }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, x: 0 }, // Final position on-screen
-    transition: { duration: 1, ease: "easeInOut", delay: 0.5 }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      x: -150, // Start off-screen
+      transition: {
+        duration: 3,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      x: 0, // End position
+      transition: {
+        duration: 2, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
 
   const rightVariants = {
-    hidden: { opacity: 1, x: 800 }, // Initial position off-screen, 50 pixels above
-    visible: { opacity: 1, x: 0 }, // Final position on-screen
-    transition: {
-      duration: 1,
-      ease: "easeInOut",
-      delay: 1,
-      stiffness: 10,
-      damping: 45,
-    }, // Adjust the duration here
+    hidden: {
+      opacity: 0,
+      x: 800, // Start off-screen
+      transition: {
+        duration: 4.5,
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+      },
+    },
+    visible: {
+      opacity: 1,
+      x: 0, // End position
+      transition: {
+        duration: 1.5, // Slower animation
+        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        delay: 0, // Delay before animation starts
+      },
+    },
   };
   //?
   const {

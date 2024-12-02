@@ -289,8 +289,9 @@ function NavBar() {
         maxWidth="100%"
         sx={{
           background: color2,
-          paddingTop: 1,
+          paddingTop: 0,
           opacity: 1,
+          height: "10%",
           //  marginTop: "-1.5%",
         }}
       >
