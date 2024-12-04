@@ -809,7 +809,7 @@ function Project1() {
                   fontFamily: font2,
                 }}
               >
-                Skills Aquired
+                Skills Acquired
               </Typography>
               <Grid container spacing={2} sx={{ ml: "5%", mt: 1 }}>
                 <Grid xs={6} sm={6}>
