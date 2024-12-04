@@ -497,8 +497,8 @@ function NavBar() {
               border: 0,
               borderColor: "#000000",
               borderRadius: 4,
-              justifyContent: "space-between",
-              alignItems: "center",
+              // justifyContent: "space-between",
+              // alignItems: "center",
               px: 0,
               ml: "8%",
               mr: "-12%",
@@ -592,9 +592,10 @@ function NavBar() {
                     background: color4,
                     borderRadius: 10,
                     mr: "100%",
+                    width: "0%",
                   }}
                 >
-                  <img src="images/search-icon.png" width="60%" height="50%" />
+                  <img src="images/search-icon.png" width="50%" height="50%" />
                 </Button>
               </Grid>
             </Grid>

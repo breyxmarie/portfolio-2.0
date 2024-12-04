@@ -419,7 +419,8 @@ function AboutMe1() {
               borderRadius: 5,
               ml: "10%",
               mr: "6%",
-
+              mt: "4%",
+              pb: "3%",
               display: {
                 xs: "block", // Hide on extra small screens
                 sm: "none",
@@ -587,7 +588,7 @@ function AboutMe1() {
                       </Box>
                     </Grid>
                   </Grid>
-                  <Box
+                  {/* <Box
                     sx={{
                       background: color4,
                       borderRadius: 5,
@@ -630,11 +631,15 @@ function AboutMe1() {
                       aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                       ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </Typography>
-                  </Box>
+                  </Box> */}
                 </Box>
               </Grid>
             </Grid>
-            hi
+            <SpotifyPlayer
+              client_id="22b071825abe48bd80d4c9237876c073"
+              client_secret="d540a159c96e486384af97a635c125d6"
+              refresh_token="AQDozLqTkCUcR8365VrQq-PvYFcrKUoJsNbU8O7hCIx2yqvtaIwi7g3ZRdvOkFsT4LAyjofbBEXNWUQdlLDbg2VN5C_b2e3UQXls1XYnQGwkgXNLrUCMnuVVW8hWfH92I3Q"
+            />
           </Box>
         </Grid>
         <Grid xs={12} sm={7}>
@@ -651,6 +656,7 @@ function AboutMe1() {
                 ml: 5,
                 mr: 4,
                 pb: "4%",
+                mt: { xs: "7%", sm: "0%" },
               }}
             >
               <Grid container spacing={2} sx={{ pt: 1 }}>
@@ -677,7 +683,7 @@ function AboutMe1() {
                   <Grid
                     xs={9}
                     sx={{
-                      ml: "5%",
+                      ml: "6%",
                       display: "flex",
                       justifyContent: "flex-start", // Aligns content horizontally to the start
                       alignItems: "flex-start",
@@ -687,7 +693,7 @@ function AboutMe1() {
                       sx={{
                         color: color6,
                         fontSize: {
-                          xs: "0.5em",
+                          xs: "0.7em",
                           sm: "0.4em",
                           md: "0.8em",
                           lg: "1em",
@@ -710,7 +716,11 @@ function AboutMe1() {
               <br />
               <br />
 
-              <Grid container spacing={2} sx={{ ml: "0.5%" }}>
+              <Grid
+                container
+                spacing={2}
+                sx={{ ml: { xs: "-1.5%", sm: "0%" } }}
+              >
                 <Grid xs={1.7}>
                   <img src="images/python.png" width="50%" height="90%" />
                 </Grid>
@@ -1122,7 +1132,7 @@ function AboutMe1() {
                   sx={{
                     background: color2,
                     borderRadius: 5,
-                    ml: { xs: 8, sm: 5 },
+                    ml: { xs: "12.5%", sm: "8%" },
                     mr: 4,
                     pb: "3%",
                   }}
@@ -1274,9 +1284,9 @@ function AboutMe1() {
                       spacing={2}
                       sx={{
                         ml: 1,
-                        display: "flex",
-                        justifyContent: "flex-start", // Aligns content horizontally to the start
-                        alignItems: "flex-start",
+                        // display: "flex",
+                        // justifyContent: "flex-start", // Aligns content horizontally to the start
+                        // alignItems: "flex-start",
                       }}
                     >
                       <Grid sm={1}>
@@ -1308,6 +1318,8 @@ function AboutMe1() {
                       >
                         <Button
                           sx={{
+                            width: { xs: "22%", sm: "65%" },
+                            height: { xs: "52%", sm: "80%" },
                             ml: "5%",
                             mr: {
                               xs: "10%",
@@ -1333,13 +1345,47 @@ function AboutMe1() {
                             href="https://dl.acm.org/doi/abs/10.1145/3629378.3629415"
                             target="_blank"
                           >
-                            <img
-                              width="10%"
-                              height="10%"
-                              src="/images/link.png"
-                            />
+                            <Grid
+                              container
+                              spacing={2}
+                              sx={{ mt: { xs: "11%", sm: "6%" } }}
+                            >
+                              <Grid xs={3}>
+                                {" "}
+                                <Box
+                                  sx={{
+                                    width: { xs: "80%", sm: "80%" },
+                                    height: { xs: "70%", sm: "80%" },
+
+                                    // maxWidth: "70%",
+                                    ml: { xs: "80%", sm: "35%" },
+                                  }}
+                                >
+                                  <img
+                                    width="80%"
+                                    height="80%"
+                                    src="/images/link.png"
+                                  />
+                                </Box>
+                              </Grid>
+                              <Grid xs={6}>
+                                {" "}
+                                <Typography
+                                  sx={{
+                                    fontSize: {
+                                      xs: "0.5em",
+                                      sm: "0.5em",
+                                      md: "0.9em",
+                                      lg: "1em",
+                                    },
+                                    ml: { xs: "30%", sm: "15%" },
+                                  }}
+                                >
+                                  Publication
+                                </Typography>
+                              </Grid>
+                            </Grid>
                             {"      "}
-                            &nbsp; Publication
                           </a>{" "}
                         </Button>
                         {/* <a

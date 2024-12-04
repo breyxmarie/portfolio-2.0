@@ -99,11 +99,10 @@ function SpotifyPlayer(props) {
         style={{ color: color6 }}
       >
         <Box sx={{ border: 2, borderRadius: 4, mr: "7%", ml: "7%" }}>
-          <Grid container spacing={2} sx={{ mt: "4%" }}>
+          <Grid container spacing={2} sx={{ mt: "4%", mb: "2%" }}>
             <Grid xs={4}>
               {" "}
               <img width="55%" src={result.albumImageUrl}></img>
-              <br />
             </Grid>
             <Grid xs={5}>
               <Typography
@@ -184,12 +183,10 @@ function SpotifyPlayer(props) {
                 {Math.floor(Math.floor(result.timePlayed / 1000) / 60)} :
                 {Math.floor(result.timePlayed / 1000) % 60} /{" "}
                 {Math.floor(Math.floor(result.timeTotal / 1000) / 60)} :
-                {Math.floor(result.timeTotal / 1000) % 60} <br />
+                {Math.floor(result.timeTotal / 1000) % 60}
               </Typography>
             </Grid>
           </Grid>
-
-          <br />
         </Box>
       </a>
     </Box>
@@ -246,7 +243,6 @@ function SpotifyPlayer(props) {
             <Grid xs={4}>
               {" "}
               <img width="55%" src={result.albumImageUrl}></img>
-              <br />
             </Grid>
             <Grid xs={5}>
               <Typography
@@ -319,15 +315,13 @@ function SpotifyPlayer(props) {
                 {Math.floor(Math.floor(result.timePlayed / 1000) / 60)} :
                 {Math.floor(result.timePlayed / 1000) % 60} /{" "}
                 {Math.floor(Math.floor(result.timeTotal / 1000) / 60)} :
-                {Math.floor(result.timeTotal / 1000) % 60} <br />
+                {Math.floor(result.timeTotal / 1000) % 60}
               </Typography>
             </Grid>
             <Grid xs={3} sx={{ mt: "5%" }}>
               <AiOutlinePauseCircle size={65} />
             </Grid>
           </Grid>
-
-          <br />
         </Box>
       </a>
     </Box>
@@ -362,7 +356,6 @@ function SpotifyPlayer(props) {
             <Grid xs={4}>
               {" "}
               <img width="55%" src={result.albumImageUrl}></img>
-              <br />
             </Grid>
             <Grid xs={5} sx={{ mt: "2%" }}>
               <Typography
@@ -451,8 +444,6 @@ function SpotifyPlayer(props) {
               <AiOutlinePauseCircle size={"50%"} />
             </Grid>
           </Grid>
-
-          <br />
         </Box>
       </a>
     </Box>

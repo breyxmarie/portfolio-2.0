@@ -58,7 +58,7 @@ function Project1() {
   const leftVariants = {
     hidden: {
       opacity: 0,
-      x: "-100vw", // Move fully off-screen based on viewport width
+      x: "100vw", // Move fully off-screen based on viewport width
       transition: {
         duration: 3.5, // Duration for hiding animation
         ease: [0.2, 0.8, 0.2, 1], // Smooth cubic-bezier curve
@@ -78,7 +78,7 @@ function Project1() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: "100vw", // Fully off-screen to the right
+      x: "-100vw", // Fully off-screen to the right
       transition: {
         duration: 4.5, // Duration for the hidden state
         ease: [0.2, 0.8, 0.2, 1], // Smooth cubic-bezier curve
@@ -207,7 +207,7 @@ function Project1() {
         </center>
         <motion.div
           ref={ref}
-          variants={rightVariants}
+          variants={leftVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
         >
@@ -216,7 +216,7 @@ function Project1() {
               color: color6,
               textAlign: "left",
               fontSize: {
-                xs: "0.5em",
+                xs: "1.5em",
                 sm: "3em",
                 md: "3.5em",
                 lg: "4em",
@@ -235,7 +235,7 @@ function Project1() {
                 sm: "none",
               },
               background: color2,
-              mt: 0,
+              mt: 2.5,
               ml: "4%",
               mr: "6%",
               borderRadius: 4,
@@ -246,8 +246,8 @@ function Project1() {
               <Grid xs={12} sm={4}>
                 <img
                   src="images/nutrifyme.png"
-                  height="80%"
-                  width="40%"
+                  height="100%"
+                  width="50%"
                   style={{ marginLeft: "5%" }}
                 />
               </Grid>
@@ -272,7 +272,7 @@ function Project1() {
                       textAlign: "left",
                       fontFamily: font2,
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "1em",
                         md: "0.8em",
                         lg: "0.8em",
@@ -287,7 +287,150 @@ function Project1() {
                     Duis aute irure dolor in reprehenderit in voluptate velit
                     esse cillum dolore eu fugiat nulla pariatur. 
                   </Typography>
-                  <Typography
+                  <center>
+                    <Box
+                      sx={{
+                        display: "flex", // Enables flexbox
+                        justifyContent: "center", // Centers horizontally
+                        alignItems: "center", // Centers vertically
+                        // Optional: full viewport height
+                      }}
+                    >
+                      <Grid
+                        container
+                        spacing={2}
+                        sx={{
+                          mt: 0.5,
+                        }}
+                      >
+                        <Grid
+                          xs={2}
+                          // sx={{ alignItems: "right" }}
+                          // offset={6}
+                        >
+                          <Button
+                            sx={{
+                              // pr: {
+                              //   md: "25%",
+                              //   lg: "15%",
+                              // },
+                              // pl: {
+                              //   md: "20%",
+                              //   lg: "7%",
+                              // },
+                              ml: "25%",
+                              mr: "20%",
+                              height: "50%",
+                              background: color3,
+                              color: color6,
+                              borderRadius: 4,
+                            }}
+                          >
+                            <a
+                              style={{ color: color6 }}
+                              href="https://nutrify-me-eight.vercel.app"
+                              target="_blank"
+                            >
+                              <Grid container spacing={2} sx={{ mt: "0%" }}>
+                                <Grid xs={6}>
+                                  {" "}
+                                  &nbsp; &nbsp;
+                                  <img
+                                    width="40%"
+                                    height="40%"
+                                    src="/images/link.png"
+                                  />
+                                </Grid>
+                                <Grid xs={6} sx={{ mt: "9%" }}>
+                                  <Typography
+                                    sx={{
+                                      fontSize: {
+                                        xs: "0.5em",
+                                        sm: "1em",
+                                        md: "1.1em",
+                                        lg: "1em",
+                                        xl: "1.3em",
+                                      },
+                                      mt: "5%",
+                                    }}
+                                  >
+                                    link
+                                  </Typography>
+                                </Grid>
+                              </Grid>
+
+                              {"      "}
+                            </a>{" "}
+                          </Button>
+                        </Grid>
+                        <Grid xs={1}>
+                          <Button
+                            sx={{
+                              // pr: {
+                              //   sm: "0%",
+                              //   md: "25%",
+                              //   lg: "20%",
+                              // },
+                              // pl: {
+                              //   sm: "0%",
+                              //   md: "15%",
+                              //   lg: "7%",
+                              // },
+                              ml: "70%",
+                              mr: {
+                                sm: "0%",
+                                md: "35%",
+                                lg: "38%",
+                              },
+                              height: "50%",
+                              background: color3,
+                              color: color6,
+                              borderRadius: 4,
+                            }}
+                          >
+                            <a
+                              style={{ color: color6 }}
+                              href="https://github.com/breyxmarie/Nutrify-Me"
+                              target="_blank"
+                            >
+                              <Grid container spacing={2} sx={{ mt: "0%" }}>
+                                <Grid xs={6}>
+                                  {" "}
+                                  &nbsp; &nbsp;
+                                  <img
+                                    width="35%"
+                                    height="50%"
+                                    src="/images/github.png"
+                                  />
+                                </Grid>
+                                <Grid xs={6} sx={{ mt: "1%" }}>
+                                  <Typography
+                                    sx={{
+                                      fontSize: {
+                                        xs: "0.5em",
+                                        sm: "0.8em",
+                                        md: "1.1em",
+                                        lg: "1em",
+                                        xl: "1.3em",
+                                      },
+                                      mt: "20%",
+                                    }}
+                                  >
+                                    github
+                                  </Typography>
+                                </Grid>
+                              </Grid>
+
+                              {"      "}
+                            </a>{" "}
+                          </Button>
+                        </Grid>
+                        <Grid xs={4}></Grid>
+                      </Grid>
+                    </Box>
+                  </center>
+
+                  {/* <Typography
                     sx={{
                       textAlign: "left",
                       fontFamily: font2,
@@ -308,8 +451,8 @@ function Project1() {
                     >
                       https://nutrify-me-eight.vercel.app
                     </a>
-                  </Typography>
-                  <Typography
+                  </Typography> */}
+                  {/* <Typography
                     sx={{
                       textAlign: "left",
                       fontFamily: font2,
@@ -330,7 +473,7 @@ function Project1() {
                     >
                       https://github.com/breyxmarie/Nutrify-Me
                     </a>
-                  </Typography>
+                  </Typography> */}
                 </Box>
               </Grid>
             </Grid>
@@ -384,6 +527,7 @@ function Project1() {
                         lg: "1em",
                       },
                       mr: "5%",
+                      mt: "2.5%",
                     }}
                   >
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -434,7 +578,7 @@ function Project1() {
                     https://github.com/breyxmarie/Nutrify-Me
                   </a> */}
 
-                    <Grid container spacing={2} sx={{ mt: 3 }}>
+                    <Grid container spacing={2} sx={{ mt: "8%" }}>
                       <Grid xs={4} sx={{ alignItems: "right" }} offset={6}>
                         <Button
                           sx={{
@@ -454,7 +598,7 @@ function Project1() {
                               md: "15%",
                               lg: "5%",
                             },
-
+                            height: "80%",
                             background: color3,
                             color: color6,
                             borderRadius: 4,
@@ -519,6 +663,7 @@ function Project1() {
                               md: "35%",
                               lg: "38%",
                             },
+                            height: "80%",
 
                             background: color3,
                             color: color6,
@@ -530,18 +675,20 @@ function Project1() {
                             href="https://github.com/breyxmarie/Nutrify-Me"
                             target="_blank"
                           >
-                            <Grid container spacing={2} sx={{ mt: "5%" }}>
+                            <Grid container spacing={2} sx={{ mt: "10%" }}>
                               <Grid xs={6}>
                                 {" "}
+                                &nbsp; &nbsp;
                                 <img
                                   width="60%"
                                   height="70%"
                                   src="/images/github.png"
                                 />
                               </Grid>
-                              <Grid xs={6} sx={{ mt: "1%" }}>
+                              <Grid xs={6} sx={{ mt: "2%" }}>
                                 <Typography
                                   sx={{
+                                    ml: "10%",
                                     fontSize: {
                                       xs: "0.5em",
                                       sm: "0.8em",
@@ -568,9 +715,13 @@ function Project1() {
               <Grid xs={12} sm={6}>
                 <img
                   src="images/nutrifyme.png"
-                  height="130%"
+                  height="120%"
                   width="80%"
-                  style={{ marginLeft: "5%", marginTop: "-13%" }}
+                  style={{
+                    marginLeft: "5%",
+                    marginTop: "-8%",
+                    marginBottom: "-5%",
+                  }}
                 />
               </Grid>
             </Grid>
@@ -581,19 +732,19 @@ function Project1() {
           ref={ref}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          variants={leftVariants}
+          variants={rightVariants}
         >
           <Grid
             container
             spacing={0}
-            sx={{ ml: "0%", mt: { xs: "0%", sm: "-3%" } }}
+            sx={{ ml: "0%", mt: { xs: "-3%", sm: "-3%" } }}
           >
             <Grid xs={4} sm={4}>
               <Typography
                 sx={{
                   color: color6,
                   fontSize: {
-                    xs: "0.5em",
+                    xs: "0.8em",
                     sm: "2em",
                     md: "3em",
                     lg: "3.5em",
@@ -650,7 +801,7 @@ function Project1() {
                 sx={{
                   color: color6,
                   fontSize: {
-                    xs: "0.5em",
+                    xs: "0.8em",
                     sm: "2em",
                     md: "3em",
                     lg: "3.5em",
@@ -668,9 +819,11 @@ function Project1() {
                       color: color6,
                       background: color3,
                       borderRadius: 5,
-                      py: "2.5%",
+                      // px: { xs: "10%", sm: "0%" },
+
+                      py: { xs: "2.5%", sm: "2.5%" },
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "0.6em",
                         md: "0.9em",
                         lg: "1em",
@@ -692,7 +845,7 @@ function Project1() {
                       borderRadius: 5,
                       py: "2.5%",
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "0.6em",
                         md: "0.9em",
                         lg: "1em",
@@ -705,7 +858,11 @@ function Project1() {
                   </Box>
                 </Grid>
               </Grid>
-              <Grid container spacing={2} sx={{ ml: "5%", mt: 2 }}>
+              <Grid
+                container
+                spacing={2}
+                sx={{ ml: "5%", mt: { xs: 0.5, sm: 2 } }}
+              >
                 <Grid xs={6} sm={6}>
                   {" "}
                   <Box
@@ -715,7 +872,7 @@ function Project1() {
                       borderRadius: 5,
                       py: "2.5%",
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "0.6em",
                         md: "0.9em",
                         lg: "1em",
@@ -737,7 +894,7 @@ function Project1() {
                       borderRadius: 5,
                       py: "2.5%",
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "0.6em",
                         md: "0.9em",
                         lg: "1em",
@@ -750,7 +907,11 @@ function Project1() {
                   </Box>
                 </Grid>
               </Grid>
-              <Grid container spacing={2} sx={{ ml: "4.5%", mt: 2 }}>
+              <Grid
+                container
+                spacing={2}
+                sx={{ ml: "4.5%", mt: { xs: 0.5, sm: 2 } }}
+              >
                 <Grid xs={6} sm={6}>
                   {" "}
                   <Box
@@ -761,7 +922,7 @@ function Project1() {
                       borderRadius: 5,
                       py: "2.5%",
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "0.6em",
                         md: "0.9em",
                         lg: "1em",
@@ -783,7 +944,7 @@ function Project1() {
                       borderRadius: 5,
                       py: "2.5%",
                       fontSize: {
-                        xs: "0.5em",
+                        xs: "0.4em",
                         sm: "0.6em",
                         md: "0.9em",
                         lg: "1em",
@@ -805,7 +966,7 @@ function Project1() {
                 sx={{
                   color: color6,
                   fontSize: {
-                    xs: "0.5em",
+                    xs: "0.8em",
                     sm: "2em",
                     md: "3em",
                     lg: "3.5em",

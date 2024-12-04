@@ -245,7 +245,15 @@ function ContactMe() {
                 animate={isInView ? "visible" : "hidden"}
                 variants={rightVariants}
               >
-                <Box sx={{ background: color3, borderRadius: 3, pt: "3%" }}>
+                <Box
+                  sx={{
+                    background: color3,
+                    borderRadius: 3,
+                    pt: "3%",
+                    ml: { xs: "5%", sm: "0%" },
+                    mr: { xs: "0%", sm: "0%" },
+                  }}
+                >
                   <Box sx={{ ml: "2%", mr: "5%" }}>
                     <Grid container spacing={2} sx={{ mt: "2%" }}>
                       <Grid xs={6}>
@@ -268,12 +276,18 @@ function ContactMe() {
                         <TextField
                           size="small"
                           sx={{
+                            borderColor: color1,
                             height: "20%",
                             background: color5,
                             borderRadius: 2,
                             width: "70%",
                             ml: "15%",
                             mr: "50%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
                           }}
                         />
                         <Typography
@@ -300,6 +314,11 @@ function ContactMe() {
                             width: "70%",
                             ml: "15%",
                             mr: "50%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
                           }}
                         />
                         <Typography
@@ -326,6 +345,11 @@ function ContactMe() {
                             width: "70%",
                             ml: "15%",
                             mr: "50%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
                           }}
                         />
                       </Grid>
@@ -358,6 +382,11 @@ function ContactMe() {
                             width: "90%",
                             ml: "5%",
                             mr: "30%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
                           }}
                         />{" "}
                       </Grid>
@@ -403,7 +432,8 @@ function ContactMe() {
                     color: color4,
                     fontFamily: font2,
                     borderRadius: 4,
-                    ml: "0%",
+                    ml: { xs: "5%", sm: "0%" },
+
                     mr: "0%",
                     pb: "0%",
                     mt: 2.5,

@@ -660,8 +660,12 @@ function AboutMe2() {
               sx={{
                 background: color2,
                 borderRadius: 5,
-                ml: 5,
-                mr: 0,
+
+                ml: { xs: "9%", sm: "9%" },
+
+                mt: { xs: 3, sm: 0 },
+
+                mr: { xs: "8%", sm: 0 },
                 pb: "10%",
               }}
             >
@@ -923,10 +927,12 @@ function AboutMe2() {
               sx={{
                 background: color2,
                 borderRadius: 5,
-                ml: 5,
-                mr: 4,
+                ml: { xs: "9%", sm: "9%" },
+                mb: { xs: 3.5, sm: 0 },
+                mr: { xs: "8%", sm: 0 },
                 pb: "10%",
-                mt: "5%",
+
+                mt: { xs: "6%", sm: "5%" },
               }}
             >
               <Grid container spacing={2} sx={{ pt: 1 }}>
@@ -1092,8 +1098,9 @@ function AboutMe2() {
               sx={{
                 background: color2,
                 borderRadius: 5,
-                ml: 5,
-                mr: 4,
+                ml: { xs: "9%", sm: 5 },
+
+                mr: { xs: "7.5%", sm: 4 },
                 pb: "5%",
               }}
             >
@@ -1177,7 +1184,7 @@ function AboutMe2() {
                       color: "#000000",
                       border: 1,
                       borderColor: "#000000",
-                      ml: "30px",
+                      ml: { xs: "15%", sm: "10%" },
                       mr: "30px",
                     }}
                   >
@@ -1187,6 +1194,19 @@ function AboutMe2() {
                       </Box>
                     ))}
                   </Slider>
+                  <br />
+                  <Typography
+                    sx={{
+                      fontSize: "0.8em",
+                      mb: "0%",
+                      display: {
+                        xs: "block", // Hide on extra small screens
+                        sm: "none",
+                      },
+                    }}
+                  >
+                    Swipe to See More
+                  </Typography>
                 </Grid>
                 <Grid
                   item
