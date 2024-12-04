@@ -59,7 +59,8 @@ function ContactMe() {
   const leftVariants = {
     hidden: {
       opacity: 0,
-      x: -150, // Start off-screen
+      x: "100vw", // Move fully off-screen based on viewport width
+
       transition: {
         duration: 3,
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
@@ -79,7 +80,8 @@ function ContactMe() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: 800, // Start off-screen
+      x: "-100vw", // Fully off-screen to the right
+
       transition: {
         duration: 4.5,
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
