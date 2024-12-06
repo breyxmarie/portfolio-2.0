@@ -68,7 +68,7 @@ function NavBar() {
     setColor5,
     setColor6,
     setColor7,
-
+    searchImage,
     toggleDarkMode,
     setFont1,
     font2,
@@ -595,7 +595,7 @@ function NavBar() {
                     width: "0%",
                   }}
                 >
-                  <img src="images/search-icon.png" width="50%" height="50%" />
+                  <img src={searchImage} width="50%" height="50%" />
                 </Button>
               </Grid>
             </Grid>

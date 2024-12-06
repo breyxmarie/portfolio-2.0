@@ -8,6 +8,9 @@ import AboutMe1 from "./components/AboutMe1";
 import AboutMe2 from "./components/AboutMe2";
 import Project1 from "./components/Project1";
 import Project2 from "./components/Project2";
+import Project3 from "./components/Project3";
+import Project4 from "./components/Project4";
+
 import ContactMe from "./components/ContactMe";
 import NavBar from "./components/NavBar";
 import { ColorProvider } from "./components/ColorContext";
@@ -46,6 +49,8 @@ function App() {
         <AboutMe2 />
         <Project1 />
         <Project2 />
+        <Project3 />
+        <Project4 />
 
         <ContactMe />
       </ColorProvider>

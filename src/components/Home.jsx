@@ -111,6 +111,30 @@ function Home() {
     },
   };
 
+  //? navigation
+  const navigateLink = (links) => {
+    switch (links) {
+      case 0:
+        break;
+      case 1:
+        break;
+      case 2:
+        break;
+      case 3:
+        console.log("hello");
+        window.open("https://linkedin.com/in/aubreyquiatchon", "_blank");
+        break;
+      case 4:
+        window.open("https://github.com/breyxmarie", "_blank");
+        break;
+      case 5:
+        window.open("https://tinyurl.com/ysr6v67p", "_blank");
+        break;
+    }
+  };
+
+  //?
+
   return (
     <div
       className="content"
@@ -327,94 +351,98 @@ function Home() {
                   >
                     quick links
                   </Typography>
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      background: color1,
-                      color: "#ffffff",
-                      fontFamily: font1,
-                      fontSize: {
-                        xs: "1em",
-                        sm: "0.8em",
-                        md: "1em",
-                        lg: "1.2em",
-                      },
+                  <a href={"#about"}>
+                    <Button
+                      to={"#about"}
+                      sx={{
+                        textTransform: "none",
+                        background: color1,
+                        color: "#ffffff",
+                        fontFamily: font1,
+                        fontSize: {
+                          xs: "1em",
+                          sm: "0.8em",
+                          md: "1em",
+                          lg: "1.2em",
+                        },
 
-                      pl: 1,
-                      pr: 5.5,
-                      "&:hover": {
-                        backgroundColor: backgroundColor,
-                        color: color1,
-                        border: 1,
+                        pl: 1,
+                        pr: 5.5,
+                        "&:hover": {
+                          backgroundColor: backgroundColor,
+                          color: color1,
+                          border: 1,
 
-                        borderColor: color1,
-                      },
-                    }}
-                  >
-                    {" "}
-                    about me &nbsp; &nbsp; {">"}
-                  </Button>
+                          borderColor: color1,
+                        },
+                      }}
+                    >
+                      {" "}
+                      about me &nbsp; &nbsp; {">"}
+                    </Button>
+                  </a>
                   <br />
                   <br />
+                  <a href={"#project"}>
+                    <Button
+                      sx={{
+                        textTransform: "none",
+                        background: color1,
+                        color: "#ffffff",
+                        fontFamily: font1,
+                        fontSize: {
+                          xs: "1em",
+                          sm: "0.8em",
+                          md: "1em",
+                          lg: "1.2em",
+                        },
+                        pl: 1,
+                        pr: 6.5,
 
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      background: color1,
-                      color: "#ffffff",
-                      fontFamily: font1,
-                      fontSize: {
-                        xs: "1em",
-                        sm: "0.8em",
-                        md: "1em",
-                        lg: "1.2em",
-                      },
-                      pl: 1,
-                      pr: 6.5,
+                        "&:hover": {
+                          backgroundColor: backgroundColor,
+                          color: color1,
+                          border: 1,
 
-                      "&:hover": {
-                        backgroundColor: backgroundColor,
-                        color: color1,
-                        border: 1,
-
-                        borderColor: color1,
-                      },
-                    }}
-                  >
-                    {" "}
-                    projects &nbsp; &nbsp;
-                    <Typography sx={{ textAlign: "right" }}>{">"}</Typography>
-                  </Button>
-
+                          borderColor: color1,
+                        },
+                      }}
+                    >
+                      {" "}
+                      projects &nbsp; &nbsp;
+                      <Typography sx={{ textAlign: "right" }}>{">"}</Typography>
+                    </Button>
+                  </a>
                   <br />
                   <br />
+                  <a href={"#contact"}>
+                    <Button
+                      sx={{
+                        textTransform: "none",
+                        background: color1,
+                        color: "#ffffff",
+                        fontFamily: font1,
+                        fontSize: {
+                          xs: "1em",
+                          sm: "0.8em",
+                          md: "1em",
+                          lg: "1.2em",
+                        },
+                        pl: 1,
+                        pr: 4.5,
+                        "&:hover": {
+                          backgroundColor: backgroundColor,
+                          color: color1,
+                          border: 1,
 
-                  <Button
-                    sx={{
-                      textTransform: "none",
-                      background: color1,
-                      color: "#ffffff",
-                      fontFamily: font1,
-                      fontSize: {
-                        xs: "1em",
-                        sm: "0.8em",
-                        md: "1em",
-                        lg: "1.2em",
-                      },
-                      pl: 1,
-                      pr: 4.5,
-                      "&:hover": {
-                        backgroundColor: backgroundColor,
-                        color: color1,
-                        border: 1,
-
-                        borderColor: color1,
-                      },
-                    }}
-                  >
-                    {" "}
-                    contact me &nbsp; &nbsp; {">"}
-                  </Button>
+                          borderColor: color1,
+                        },
+                      }}
+                    >
+                      {" "}
+                      contact me &nbsp; &nbsp; {">"}
+                    </Button>
+                  </a>
                 </Grid>
                 <Grid sm={6} sx={{ mt: "0%" }}>
                   <Typography
@@ -432,6 +460,7 @@ function Home() {
                     quick links
                   </Typography>
                   <Button
+                    onClick={() => navigateLink(3)}
                     sx={{
                       textTransform: "none",
                       background: color1,
@@ -461,6 +490,7 @@ function Home() {
                   <br />
 
                   <Button
+                    onClick={() => navigateLink(4)}
                     sx={{
                       textTransform: "none",
                       background: color1,
@@ -491,6 +521,7 @@ function Home() {
                   <br />
 
                   <Button
+                    onClick={() => navigateLink(5)}
                     sx={{
                       textTransform: "none",
                       background: color1,
@@ -693,6 +724,7 @@ function Home() {
               </Button>
               <br />
               <Button
+                onClick={() => navigateLink(5)}
                 sx={{
                   textTransform: "none",
                   background: color1,

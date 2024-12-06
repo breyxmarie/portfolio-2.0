@@ -110,7 +110,10 @@ function AboutMe2() {
     color4,
     color5,
     color6,
-
+    linkImage,
+    githubImage,
+    barImage,
+    searchImage,
     font1,
     setBackgroundColor,
     setColor1,
@@ -671,7 +674,7 @@ function AboutMe2() {
                 <Grid xs={8}></Grid>
                 <Grid xs={4}>
                   <img
-                    src="images/bar.png"
+                    src={barImage}
                     height="90%"
                     width="50%"
                     style={{ marginLeft: "40%" }}
@@ -705,7 +708,7 @@ function AboutMe2() {
                   </Grid>
                   <Grid xs={2}>
                     <img
-                      src="images/search.png"
+                      src={searchImage}
                       height="90%"
                       width="30%"
                       style={{ marginLeft: "65%" }}
@@ -937,7 +940,7 @@ function AboutMe2() {
                 <Grid xs={8}></Grid>
                 <Grid xs={4}>
                   <img
-                    src="images/bar.png"
+                    src={barImage}
                     height="90%"
                     width="50%"
                     style={{ marginLeft: "40%" }}
@@ -971,7 +974,7 @@ function AboutMe2() {
                   </Grid>
                   <Grid xs={2}>
                     <img
-                      src="images/search.png"
+                      src={searchImage}
                       height="90%"
                       width="30%"
                       style={{ marginLeft: "65%" }}
@@ -1106,7 +1109,7 @@ function AboutMe2() {
                 <Grid xs={8}></Grid>
                 <Grid xs={4}>
                   <img
-                    src="images/bar.png"
+                    src={barImage}
                     height="80%"
                     width="25%"
                     style={{ marginLeft: "50%" }}
@@ -1140,7 +1143,7 @@ function AboutMe2() {
                   </Grid>
                   <Grid xs={2}>
                     <img
-                      src="images/search.png"
+                      src={searchImage}
                       height="90%"
                       width="20%"
                       style={{ marginLeft: "65%" }}

@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion, useInView } from "framer-motion";
 
-function Project2() {
+function Project4() {
   //? animation
   const [isShown, setIsShown] = useState(false);
   const ref = useRef(null);
@@ -211,7 +211,7 @@ function Project2() {
               fontFamily: font2,
             }}
           >
-            MP3 Player
+            Dog Adoption Application
           </Typography>
           <Box
             sx={{
@@ -266,8 +266,7 @@ function Project2() {
                     }}
                   >
                     A group project that I was a part of for my Application
-                    Development 1 subject. We are tasked to create a MP3 player
-                    desktop application. I was in charge in the UI,
+                    Development 1 subject. I was in charge in the UI,
                     functionality development and database administration of the
                     MP3 player. The Model-View-Controller (MVC) was used in
                     developing the overall software artchitecture of the MP3
@@ -501,7 +500,7 @@ function Project2() {
                       lg: "20%",
                       xl: "10%",
                     },
-                    mt: { xs: "0%", sm: "10%", md: "3%", lg: "6%", xl: "8%" },
+                    mt: { xs: "0%", sm: "10%", md: "5%", lg: "8%", xl: "10%" },
                   }}
                 >
                   <Typography
@@ -520,8 +519,7 @@ function Project2() {
                     }}
                   >
                     A group project that I was a part of for my Application
-                    Development 1 subject. We are tasked to create a MP3 player
-                    desktop application. I was in charge in the UI,
+                    Development 1 subject. I was in charge in the UI,
                     functionality development and database administration of the
                     MP3 player. The Model-View-Controller (MVC) was used in
                     developing the overall software artchitecture of the MP3
@@ -898,4 +896,4 @@ function Project2() {
   );
 }
 
-export default Project2;
+export default Project4;

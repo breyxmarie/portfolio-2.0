@@ -14,6 +14,12 @@ const ColorContext = createContext({
 
   font1: "Lobster Two",
   font2: "Caladea",
+
+  linkImage: "/images/link.png",
+  githubImage: "/images/github.png",
+  barImage: "images/bar.png",
+  searchImage: "images/search.png",
+
   setBackgroundColor: () => {},
   setColor1: () => {},
   setColor2: () => {},
@@ -24,7 +30,10 @@ const ColorContext = createContext({
   setColor7: () => {},
   setDarkMode: () => {},
   setLightMode: () => {},
-
+  setLinkImage: () => {},
+  setGithubImage: () => {},
+  setBarImage: () => {},
+  setSearchImage: () => {},
   setFont1: () => {},
   setFont2: () => {},
 });
@@ -43,6 +52,11 @@ const ColorProvider = ({ children }) => {
   const [font1, setFont1] = useState("Lobster Two");
   const [font2, setFont2] = useState("Caladea");
 
+  const [linkImage, setLinkImage] = useState("/images/link.png");
+  const [githubImage, setGithubImage] = useState("/images/github.png");
+  const [barImage, setBarImage] = useState("images/bar.png");
+  const [searchImage, setSearchImage] = useState("images/search.png");
+
   const setDarkMode = () => {
     setBackgroundColor("#484844"), setColor1("#000000");
     setColor2("#000000");
@@ -50,6 +64,11 @@ const ColorProvider = ({ children }) => {
     setColor4("#000000");
     setColor5("#000000");
     setColor6("#000000");
+
+    setLinkImage("/images/link.png");
+    setGithubImage("/images/github.png");
+    setBarImage("images/nutrifyme.png");
+    setSearchImage("images/nutrifyme.png");
   };
 
   const setLightMode = () => {
@@ -60,6 +79,11 @@ const ColorProvider = ({ children }) => {
     setColor5("#EBD5D5");
     setColor6("#2C2C2C");
     setColor7("#FDFDFD");
+
+    setLinkImage("/images/link.png");
+    setGithubImage("/images/github.png");
+    setBarImage("images/bar.png");
+    setSearchImage("images/search.png");
   };
 
   const toggleDarkMode = () => {
@@ -79,6 +103,10 @@ const ColorProvider = ({ children }) => {
     toggleDarkMode,
     font1,
     font2,
+    linkImage,
+    githubImage,
+    barImage,
+    searchImage,
 
     setBackgroundColor,
     setColor1,
@@ -93,6 +121,11 @@ const ColorProvider = ({ children }) => {
 
     setFont1,
     setFont2,
+
+    setLinkImage,
+    setGithubImage,
+    setBarImage,
+    setSearchImage,
   };
 
   return (

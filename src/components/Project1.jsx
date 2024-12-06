@@ -123,6 +123,10 @@ function Project1() {
     color4,
     color5,
     color6,
+    linkImage,
+    githubImage,
+    barImage,
+    searchImage,
 
     font1,
     setBackgroundColor,
@@ -146,9 +150,9 @@ function Project1() {
       style={{
         width: "100vw",
         // height: "100vh",
-        paddingTop: "5%",
+        paddingTop: "1%",
         backgroundColor: backgroundColor, // Replace with the color you need
-        paddingBottom: "5%",
+        paddingBottom: "0%",
         // display: "flex", // Flex to center content (optional)
         // justifyContent: "center",
         // alignItems: "center",
@@ -246,9 +250,9 @@ function Project1() {
               <Grid xs={12} sm={4}>
                 <img
                   src="images/nutrifyme.png"
-                  height="100%"
-                  width="50%"
-                  style={{ marginLeft: "5%" }}
+                  height="80%"
+                  width="45%"
+                  style={{ marginLeft: "5%", marginTop: "2%" }}
                 />
               </Grid>
               <Grid
@@ -263,7 +267,7 @@ function Project1() {
                 <Box
                   sx={{
                     ml: "10%",
-                    mt: { xs: "0%", sm: "4%", md: "5%", lg: "5%", xl: "8%" },
+                    mt: { xs: "-5%", sm: "4%", md: "5%", lg: "5%", xl: "8%" },
                   }}
                 >
                   <Typography
@@ -338,7 +342,7 @@ function Project1() {
                                   <img
                                     width="40%"
                                     height="40%"
-                                    src="/images/link.png"
+                                    src={linkImage}
                                   />
                                 </Grid>
                                 <Grid xs={6} sx={{ mt: "9%" }}>
@@ -400,7 +404,7 @@ function Project1() {
                                   <img
                                     width="35%"
                                     height="50%"
-                                    src="/images/github.png"
+                                    src={githubImage}
                                   />
                                 </Grid>
                                 <Grid xs={6} sx={{ mt: "1%" }}>
@@ -486,7 +490,7 @@ function Project1() {
                 sm: "block",
               },
               background: color2,
-              mt: 0,
+              mt: "0.3%",
               ml: "4%",
               mr: "6%",
               borderRadius: 4,
@@ -512,10 +516,11 @@ function Project1() {
                       lg: "20%",
                       xl: "10%",
                     },
-                    mt: { xs: "0%", sm: "10%", md: "5%", lg: "8%", xl: "10%" },
+                    mt: { xs: "0%", sm: "10%", md: "4%", lg: "6%", xl: "8%" },
                   }}
                 >
                   <Typography
+                    align="justify"
                     sx={{
                       color: color6,
                       textAlign: "left",
@@ -530,12 +535,15 @@ function Project1() {
                       mt: "2.5%",
                     }}
                   >
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. 
+                    A web application that served as our system submission for
+                    our undergraduate thesis. I am the solo programmer and was
+                    assigned to do the front-end, back-end development and
+                    database management of the whole web application. Nutrify Me
+                    is an all in one web application which is composed of a
+                    telemedicine, e-commerce, meal plan generator and food
+                    journal that focuses for the user to have a healthy diet.
+                    This web application also has a specialization on managing
+                    users who have Hypertension.
                   </Typography>
                   <Typography
                     sx={{
@@ -578,16 +586,16 @@ function Project1() {
                     https://github.com/breyxmarie/Nutrify-Me
                   </a> */}
 
-                    <Grid container spacing={2} sx={{ mt: "8%" }}>
+                    <Grid container spacing={2} sx={{ mt: "5%" }}>
                       <Grid xs={4} sx={{ alignItems: "right" }} offset={6}>
                         <Button
                           sx={{
                             pr: {
-                              md: "25%",
+                              md: "15%",
                               lg: "15%",
                             },
                             pl: {
-                              md: "20%",
+                              md: "7%",
                               lg: "7%",
                             },
                             ml: {
@@ -595,13 +603,20 @@ function Project1() {
                               lg: "45%",
                             },
                             mr: {
-                              md: "15%",
+                              md: "5%",
                               lg: "5%",
                             },
                             height: "80%",
                             background: color3,
                             color: color6,
                             borderRadius: 4,
+                            "&:hover": {
+                              backgroundColor: color4,
+                              color: backgroundColor,
+                              border: 2,
+
+                              borderColor: color3,
+                            },
                           }}
                         >
                           <a
@@ -613,11 +628,7 @@ function Project1() {
                               <Grid xs={6}>
                                 {" "}
                                 &nbsp; &nbsp;
-                                <img
-                                  width="50%"
-                                  height="60%"
-                                  src="/images/link.png"
-                                />
+                                <img width="50%" height="60%" src={linkImage} />
                               </Grid>
                               <Grid xs={6} sx={{ mt: "1%" }}>
                                 <Typography
@@ -625,7 +636,7 @@ function Project1() {
                                     fontSize: {
                                       xs: "0.5em",
                                       sm: "1em",
-                                      md: "1.1em",
+                                      md: "0.9em",
                                       lg: "1em",
                                       xl: "1.3em",
                                     },
@@ -645,12 +656,12 @@ function Project1() {
                           sx={{
                             pr: {
                               sm: "5%",
-                              md: "25%",
+                              md: "18%",
                               lg: "20%",
                             },
                             pl: {
                               sm: "5%",
-                              md: "15%",
+                              md: "6%",
                               lg: "7%",
                             },
                             ml: {
@@ -668,6 +679,13 @@ function Project1() {
                             background: color3,
                             color: color6,
                             borderRadius: 4,
+                            "&:hover": {
+                              backgroundColor: color4,
+                              color: backgroundColor,
+                              border: 2,
+
+                              borderColor: color3,
+                            },
                           }}
                         >
                           <a
@@ -682,7 +700,7 @@ function Project1() {
                                 <img
                                   width="60%"
                                   height="70%"
-                                  src="/images/github.png"
+                                  src={githubImage}
                                 />
                               </Grid>
                               <Grid xs={6} sx={{ mt: "2%" }}>
@@ -692,7 +710,7 @@ function Project1() {
                                     fontSize: {
                                       xs: "0.5em",
                                       sm: "0.8em",
-                                      md: "1.1em",
+                                      md: "0.9em",
                                       lg: "1em",
                                       xl: "1.3em",
                                     },
@@ -760,42 +778,74 @@ function Project1() {
                   background: color1,
                   borderRadius: 3,
                   pt: "5%",
-                  ml: "16%",
-                  pl: 2,
+                  ml: "13%",
+                  pl: 0,
                   display: "flex",
                   justifyContent: "flex-start", // Aligns content horizontally to the start
                   alignItems: "flex-start",
-                  pb: "18%",
+                  pb: "16%",
                 }}
               >
                 {" "}
-                <img
-                  src="images/react.png"
-                  width="18%"
-                  height="50%"
-                  style={{ marginLeft: "2%" }}
-                />
-                <img
-                  src="images/django.png"
-                  width="18%"
-                  height="50%"
-                  style={{ marginLeft: " 5%" }}
-                />
-                <img
-                  src="images/sql.png"
-                  width="18%"
-                  height="50%"
-                  style={{ marginLeft: " 5%" }}
-                />
-                <img
-                  src="images/restapi.png"
-                  width="18%"
-                  height="50%"
-                  style={{ marginLeft: " 5%" }}
-                />
+                <motion.div
+                  whileHover={{
+                    scale: 1.5,
+                    //  borderRadius: "10px",
+                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                >
+                  <img
+                    src="images/react.png"
+                    width="60%"
+                    height="52%"
+                    style={{ marginLeft: "5%" }}
+                  />
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.5,
+                    //  borderRadius: "10px",
+                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                >
+                  <img
+                    src="images/django.png"
+                    width="65%"
+                    height="50%"
+                    style={{ marginLeft: " 2%" }}
+                  />
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.5,
+                    //  borderRadius: "10px",
+                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                >
+                  <img
+                    src="images/sql.png"
+                    width="48%"
+                    height="50%"
+                    style={{ marginLeft: " -20%" }}
+                  />
+                </motion.div>
+                <motion.div
+                  whileHover={{
+                    scale: 1.5,
+                    //  borderRadius: "10px",
+                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
+                  }}
+                >
+                  <img
+                    src="images/restapi.png"
+                    width="98%"
+                    height="50%"
+                    style={{ marginLeft: " -80%" }}
+                  />
+                </motion.div>
               </Box>
             </Grid>
-            <Grid xs={4} sm={4}>
+            <Grid xs={4.5} sm={4.5}>
               {" "}
               <Typography
                 sx={{
@@ -828,8 +878,8 @@ function Project1() {
                         md: "0.9em",
                         lg: "1em",
                       },
-                      ml: "7%",
-                      mr: "15%",
+                      ml: "0%",
+                      mr: "0%",
                       fontFamily: font2,
                     }}
                   >
@@ -877,8 +927,8 @@ function Project1() {
                         md: "0.9em",
                         lg: "1em",
                       },
-                      ml: "7%",
-                      mr: "2%",
+                      ml: "0%",
+                      mr: "0%",
                       fontFamily: font2,
                     }}
                   >
@@ -927,8 +977,8 @@ function Project1() {
                         md: "0.9em",
                         lg: "1em",
                       },
-                      ml: "8%",
-                      mr: "20%",
+                      ml: "0%",
+                      mr: "0%",
                       fontFamily: font2,
                     }}
                   >
@@ -950,7 +1000,7 @@ function Project1() {
                         lg: "1em",
                       },
                       ml: "5%",
-                      mr: "40%",
+                      mr: "0%",
                       fontFamily: font2,
                     }}
                   >
@@ -960,7 +1010,7 @@ function Project1() {
               </Grid>
             </Grid>
 
-            <Grid xs={4} sm={4}>
+            <Grid xs={3.5} sm={3.5}>
               {" "}
               <Typography
                 sx={{

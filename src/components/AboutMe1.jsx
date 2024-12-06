@@ -106,6 +106,10 @@ function AboutMe1() {
     color4,
     color5,
     color6,
+    linkImage,
+    githubImage,
+    barImage,
+    searchImage,
 
     font1,
     setBackgroundColor,
@@ -125,13 +129,17 @@ function AboutMe1() {
 
   //?
 
+  const openIg = () => {
+    window.open("https://www.instagram.com/breyxmarie/", "_blank");
+  };
+
   return (
     <div
       id="about"
       //  className="content"
       style={{
         width: "100vw",
-        paddingTop: "7%",
+        paddingTop: "5%",
         // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "5%",
@@ -169,7 +177,7 @@ function AboutMe1() {
                 <Grid sm={8}></Grid>
                 <Grid sm={4}>
                   <img
-                    src="images/bar.png"
+                    src={barImage}
                     height="100%"
                     width="30%"
                     style={{ marginLeft: "65%" }}
@@ -211,7 +219,7 @@ function AboutMe1() {
                   </Grid>
                   <Grid sm={2}>
                     <img
-                      src="images/search.png"
+                      src={searchImage}
                       height="90%"
                       width="20%"
                       style={{ marginLeft: "65%" }}
@@ -431,7 +439,7 @@ function AboutMe1() {
               <Grid xs={8}></Grid>
               <Grid xs={4}>
                 <img
-                  src="images/bar.png"
+                  src={barImage}
                   height="70%"
                   width="30%"
                   style={{ marginLeft: "60%" }}
@@ -475,7 +483,7 @@ function AboutMe1() {
                 </Grid>
                 <Grid xs={2}>
                   <img
-                    src="images/search.png"
+                    src={searchImage}
                     height="70%"
                     width="20%"
                     style={{ marginLeft: "65%", marginBottom: "5%" }}
@@ -663,7 +671,7 @@ function AboutMe1() {
                 <Grid xs={8}></Grid>
                 <Grid xs={4}>
                   <img
-                    src="images/bar.png"
+                    src={barImage}
                     height="90%"
                     width="30%"
                     style={{ marginLeft: "65%" }}
@@ -705,7 +713,7 @@ function AboutMe1() {
                   </Grid>
                   <Grid xs={2}>
                     <img
-                      src="images/search.png"
+                      src={searchImage}
                       height="80%"
                       width="20%"
                       style={{ marginLeft: "65%" }}
@@ -816,7 +824,7 @@ function AboutMe1() {
                     <Grid xs={8}></Grid>
                     <Grid xs={4}>
                       <img
-                        src="images/bar.png"
+                        src={barImage}
                         height="90%"
                         width="50%"
                         style={{ marginLeft: "45%" }}
@@ -862,7 +870,7 @@ function AboutMe1() {
                       </Grid>
                       <Grid xs={2}>
                         <img
-                          src="images/search.png"
+                          src={searchImage}
                           height="90%"
                           width="40%"
                           style={{ marginLeft: "65%" }}
@@ -908,6 +916,7 @@ function AboutMe1() {
                       </Typography>
 
                       <Button
+                        onClick={openIg}
                         sx={{
                           display: "flex",
                           justifyContent: "flex-start", // Aligns content horizontally to the start
@@ -1008,7 +1017,7 @@ function AboutMe1() {
                   <Grid xs={8}></Grid>
                   <Grid xs={4}>
                     <img
-                      src="images/bar.png"
+                      src={barImage}
                       height="90%"
                       width="50%"
                       style={{ marginLeft: "45%" }}
@@ -1053,7 +1062,7 @@ function AboutMe1() {
                     </Grid>
                     <Grid xs={2}>
                       <img
-                        src="images/search.png"
+                        src={searchImage}
                         height="90%"
                         width="40%"
                         style={{ marginLeft: "65%" }}
@@ -1142,7 +1151,7 @@ function AboutMe1() {
                     <Grid xs={4}>
                       <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
                         <img
-                          src="images/bar.png"
+                          src={barImage}
                           height="90%"
                           width="50%"
                           style={{ marginLeft: "40%" }}
@@ -1189,7 +1198,7 @@ function AboutMe1() {
                       <Grid xs={2}>
                         <Box sx={{ width: "100%", maxWidth: "90%", ml: "25%" }}>
                           <img
-                            src="images/search.png"
+                            src={searchImage}
                             height="50%"
                             width="30%"
                             style={{ marginLeft: "65%" }}

@@ -129,10 +129,11 @@ function ContactMe() {
       className="content"
       style={{
         width: "100vw",
-        paddingTop: "0%",
+        paddingTop: "3%",
+
         //  height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
-        paddingBottom: "0%",
+        paddingBottom: "1.5%",
         // display: "flex", // Flex to center content (optional)
         // justifyContent: "center",
         // alignItems: "center",
