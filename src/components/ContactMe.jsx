@@ -59,7 +59,8 @@ function ContactMe() {
   const leftVariants = {
     hidden: {
       opacity: 0,
-      x: "-100vw", // Move fully off-screen based on viewport width
+      // x: -80, // Start off-screen
+      x: "-20vw", // Move fully off-screen based on viewport width
 
       transition: {
         duration: 3,
@@ -70,7 +71,7 @@ function ContactMe() {
       opacity: 1,
       x: 0, // End position
       transition: {
-        duration: 2, // Slower animation
+        duration: 1.5, // Slower animation
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
         delay: 0, // Delay before animation starts
       },
@@ -80,11 +81,12 @@ function ContactMe() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: "100vw", // Fully off-screen to the right
+      //    x: 500, // Start off-screen
+      x: "30vw", // Move fully off-screen based on viewport width
 
       transition: {
-        duration: 4.5,
-        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        duration: 5.5,
+        //  ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
       },
     },
     visible: {

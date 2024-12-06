@@ -59,7 +59,7 @@ function AboutMe2() {
     hidden: {
       opacity: 0,
       // x: -80, // Start off-screen
-      x: "-100vw", // Move fully off-screen based on viewport width
+      x: "-20vw", // Move fully off-screen based on viewport width
 
       transition: {
         duration: 3,
@@ -81,7 +81,7 @@ function AboutMe2() {
     hidden: {
       opacity: 0,
       //    x: 500, // Start off-screen
-      x: "100vw", // Move fully off-screen based on viewport width
+      x: "30vw", // Move fully off-screen based on viewport width
 
       transition: {
         duration: 5.5,
