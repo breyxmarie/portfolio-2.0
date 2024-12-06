@@ -74,7 +74,7 @@ function AboutMe2() {
       opacity: 1,
       x: 0, // End position
       transition: {
-        duration: 1.5, // Slower animation
+        duration: 2.5, // Slower animation
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
         delay: 0, // Delay before animation starts
       },
@@ -84,9 +84,9 @@ function AboutMe2() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: 800, // Start off-screen
+      x: 1100, // Start off-screen
       transition: {
-        duration: 4.5,
+        duration: 5.5,
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
       },
     },
