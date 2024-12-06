@@ -64,7 +64,8 @@ function AboutMe2() {
   const leftVariants = {
     hidden: {
       opacity: 0,
-      x: "100vw", // Move fully off-screen based on viewport width
+      //  x: "-100vw", // Move fully off-screen based on viewport width
+      x: -80, // Start off-screen
 
       transition: {
         duration: 3,
@@ -85,7 +86,8 @@ function AboutMe2() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: "-100vw", // Fully off-screen to the right
+      //  x: "100vw", // Fully off-screen to the right
+      x: 800, // Start off-screen
 
       transition: {
         duration: 4.5,
