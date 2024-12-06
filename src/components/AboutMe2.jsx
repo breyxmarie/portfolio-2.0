@@ -12,11 +12,6 @@ import { motion, useInView } from "framer-motion";
 import { useSpring, animated } from "@react-spring/web";
 
 function AboutMe2() {
-  const props = useSpring({
-    from: { opacity: 0, scale: 0.8 },
-    to: { opacity: 1, scale: 1 },
-    config: { mass: 1, tension: 200, friction: 20 }, // Adjust these values for slower animations
-  });
   //? animation
   const ref = useRef(null);
   const isInView = useInView(ref);
@@ -60,7 +55,6 @@ function AboutMe2() {
       },
     },
   };
-
   const leftVariants = {
     hidden: {
       opacity: 0,
@@ -74,7 +68,7 @@ function AboutMe2() {
       opacity: 1,
       x: 0, // End position
       transition: {
-        duration: 2.5, // Slower animation
+        duration: 1.5, // Slower animation
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
         delay: 0, // Delay before animation starts
       },
@@ -84,10 +78,10 @@ function AboutMe2() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: 1100, // Start off-screen
+      x: 500, // Start off-screen
       transition: {
         duration: 5.5,
-        ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
+        //  ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
       },
     },
     visible: {
