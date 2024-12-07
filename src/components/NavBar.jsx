@@ -367,8 +367,9 @@ function NavBar() {
                     //   component={Link}
                     to={page.links}
                     // selected={page.links === path}
+
                     //! changes per notif style
-                    sx={{ color: "#000000" }}
+                    sx={{ color: "#00000" }}
                   >
                     <Typography textAlign="center">{page.names}</Typography>
                   </MenuItem>
@@ -480,7 +481,7 @@ function NavBar() {
                   paddingTop: 3,
                   color: color6,
                   fontFamily: font2,
-                  fontSize: "1.15em",
+                  fontSize: "120%",
                 }}
               >
                 {page.names}
@@ -576,6 +577,7 @@ function NavBar() {
                     mr: "7%",
                     pt: "0.5%",
                     pb: "0.5%",
+                    width: "30%",
                   }}
                 >
                   {links}
@@ -589,7 +591,7 @@ function NavBar() {
                     mt: "2%",
                     pt: "0.5%",
                     pb: "0.5%",
-                    background: color4,
+                    // background: color4,
                     borderRadius: 10,
                     mr: "100%",
                     width: "0%",
@@ -613,7 +615,7 @@ function NavBar() {
               alignItems: "right",
               pr: 0,
               ml: "0%",
-              mr: "-5%",
+              mr: "0%",
               fontSize: {
                 xs: "0.5em",
                 sm: "1em",

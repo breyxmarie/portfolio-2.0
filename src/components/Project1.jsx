@@ -281,24 +281,30 @@ function Project1() {
                         md: "0.8em",
                         lg: "0.8em",
                       },
-                      mr: "5%",
+                      mr: "6%",
+                      ml: "6%",
                     }}
                   >
-                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. 
+                    A web application that served as our system submission for
+                    our undergraduate thesis. I am the solo programmer and was
+                    assigned to do the full-stack development and database
+                    management of the whole web application. Nutrify Me is an
+                    all in one web application which is composed of a
+                    telemedicine, e-commerce, meal plan generator and food
+                    journal that focuses for the user to have a healthy diet.
+                    This web application also has a feature that focuses on
+                    managing users who have Hypertension.
                   </Typography>
                   <center>
                     <Box
-                      sx={{
-                        display: "flex", // Enables flexbox
-                        justifyContent: "center", // Centers horizontally
-                        alignItems: "center", // Centers vertically
-                        // Optional: full viewport height
-                      }}
+                      sx={
+                        {
+                          // display: "flex", // Enables flexbox
+                          // justifyContent: "center", // Centers horizontally
+                          // alignItems: "center", // Centers vertically
+                          // Optional: full viewport height
+                        }
+                      }
                     >
                       <Grid
                         container
@@ -322,7 +328,7 @@ function Project1() {
                               //   md: "20%",
                               //   lg: "7%",
                               // },
-                              ml: "25%",
+                              ml: "65%",
                               mr: "20%",
                               height: "50%",
                               background: color3,
@@ -380,7 +386,7 @@ function Project1() {
                               //   md: "15%",
                               //   lg: "7%",
                               // },
-                              ml: "70%",
+                              ml: "235%",
                               mr: {
                                 sm: "0%",
                                 md: "35%",
@@ -537,13 +543,13 @@ function Project1() {
                   >
                     A web application that served as our system submission for
                     our undergraduate thesis. I am the solo programmer and was
-                    assigned to do the front-end, back-end development and
-                    database management of the whole web application. Nutrify Me
-                    is an all in one web application which is composed of a
+                    assigned to do the full-stack development and database
+                    management of the whole web application. Nutrify Me is an
+                    all in one web application which is composed of a
                     telemedicine, e-commerce, meal plan generator and food
                     journal that focuses for the user to have a healthy diet.
-                    This web application also has a specialization on managing
-                    users who have Hypertension.
+                    This web application also has a feature that focuses on
+                    managing users who have Hypertension.
                   </Typography>
                   <Typography
                     sx={{

@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion, useInView } from "framer-motion";
 
-function Project4() {
+function Project7() {
   //? animation
   const [isShown, setIsShown] = useState(false);
   const ref = useRef(null);
@@ -211,7 +211,7 @@ function Project4() {
               fontFamily: font2,
             }}
           >
-            Dog Adoption Application
+            Book Tracker
           </Typography>
           <Box
             sx={{
@@ -230,9 +230,9 @@ function Project4() {
             <Grid container spacing={4} sx={{}}>
               <Grid xs={12} sm={4}>
                 <img
-                  src="images/doggapp.png"
+                  src="images/booktracker.png"
                   height="80%"
-                  width="15%"
+                  width="45%"
                   style={{ marginLeft: "5%", marginTop: "2%" }}
                 />
               </Grid>
@@ -378,7 +378,7 @@ function Project4() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://github.com/breyxmarie/Dog-Adoption-Application"
+                              href="https://github.com/breyxmarie/Book-Tracker"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
@@ -518,13 +518,12 @@ function Project4() {
                       mt: "2.5%",
                     }}
                   >
-                    A group finals projects that I was a part of for my
-                    Application Development 3 specialization subject. I was
-                    assigned in the back-end development and database
-                    management. We are tasked to create dog adoption mobile
-                    application. The concept of this mobile application is to
-                    provide an application for users who would like to adopt a
-                    dog at the local animal shelter.
+                    A group finals projects that I was a part of for my Systems
+                    Integration subject. I was assigned in the back-end
+                    development and database management. We are tasked to create
+                    a Java application using spring boot and rest api. We
+                    decided to create a book tracker to track the books being
+                    read by the user.
                   </Typography>
                   <Typography
                     sx={{
@@ -674,7 +673,7 @@ function Project4() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://github.com/breyxmarie/Dog-Adoption-Application"
+                            href="https://github.com/breyxmarie/Book-Tracker"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "10%" }}>
@@ -716,12 +715,12 @@ function Project4() {
               </Grid>
               <Grid xs={12} sm={6}>
                 <img
-                  src="images/doggapp.png"
-                  height="140%"
-                  width="28%"
+                  src="images/booktracker.png"
+                  height="120%"
+                  width="80%"
                   style={{
                     marginLeft: "5%",
-                    marginTop: "-12%",
+                    marginTop: "-8%",
                     marginBottom: "-5%",
                   }}
                 />
@@ -868,7 +867,7 @@ function Project4() {
                       fontFamily: font2,
                     }}
                   >
-                    MOBILE APPLICATION DEVELOPMENT
+                    JAVA PROGRAMMING
                   </Box>
                 </Grid>
                 <Grid xs={6} sm={6}>
@@ -960,7 +959,7 @@ function Project4() {
               >
                 Tools
                 <br />
-                <img src="images/android.png" width="15%" height="50%" />{" "}
+                <img src="images/eclipse.png" width="15%" height="50%" />{" "}
                 <img
                   src="images/mysql.png"
                   width="15%"
@@ -977,4 +976,4 @@ function Project4() {
   );
 }
 
-export default Project4;
+export default Project7;

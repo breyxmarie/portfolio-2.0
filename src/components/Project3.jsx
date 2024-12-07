@@ -230,7 +230,7 @@ function Project3() {
             <Grid container spacing={4} sx={{}}>
               <Grid xs={12} sm={4}>
                 <img
-                  src="images/mp3.png"
+                  src="images/takeout.png"
                   height="80%"
                   width="45%"
                   style={{ marginLeft: "5%", marginTop: "2%" }}
@@ -262,25 +262,26 @@ function Project3() {
                         md: "0.8em",
                         lg: "0.8em",
                       },
-                      mr: "5%",
+                      mr: "6%",
+                      ml: "6%",
                     }}
                   >
-                    A group project that I was a part of for my Application
-                    Development 1 subject. I was in charge in the UI,
-                    functionality development and database administration of the
-                    MP3 player. The Model-View-Controller (MVC) was used in
-                    developing the overall software artchitecture of the MP3
-                    player. Through the use of this architecture it makes it
-                    easier to implement the needed feature and to fetch the data
-                    from the data to the frontend at ease.
+                    A solo finals project for my Event Driven/GUI Programming
+                    subject. We are tasked to create a java application that
+                    utilizes different event driven functions. I created a Java
+                    desktop application called "Takeout Dash" based on the
+                    famous "Diner Dash" game. The gameplay is pretty similar but
+                    this time instead of dine in, it focuses on serving take out
+                    foods.
                   </Typography>
                   <center>
                     <Box
                       sx={{
-                        display: "flex", // Enables flexbox
-                        justifyContent: "center", // Centers horizontally
-                        alignItems: "center", // Centers vertically
+                        // display: "flex", // Enables flexbox
+                        // justifyContent: "center", // Centers horizontally
+                        // alignItems: "center", // Centers vertically
                         // Optional: full viewport height
+                        ml: "7%",
                       }}
                     >
                       <Grid
@@ -291,7 +292,7 @@ function Project3() {
                         }}
                       >
                         <Grid
-                          xs={2}
+                          xs={3.5}
                           // sx={{ alignItems: "right" }}
                           // offset={6}
                         >
@@ -306,8 +307,8 @@ function Project3() {
                               //   lg: "7%",
                               // },
                               ml: "25%",
-                              mr: "10%",
-                              width: "115%",
+                              mr: "15%",
+                              width: "105%",
                               height: "50%",
                               background: color3,
                               color: color6,
@@ -316,7 +317,7 @@ function Project3() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://youtu.be/75TCmuWFAcI"
+                              href="https://youtu.be/XE6zXk_okRY"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
@@ -364,7 +365,7 @@ function Project3() {
                               //   md: "15%",
                               //   lg: "7%",
                               // },
-                              ml: "100%",
+                              ml: "150%",
                               mr: {
                                 sm: "0%",
                                 md: "35%",
@@ -378,11 +379,11 @@ function Project3() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://github.com/breyxmarie/MP3-Player"
+                              href="https://github.com/breyxmarie/Takeout-Dash"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
-                                <Grid xs={6}>
+                                <Grid xs={6} sx={{ mt: "2%" }}>
                                   {" "}
                                   &nbsp; &nbsp;
                                   <img
@@ -518,14 +519,13 @@ function Project3() {
                       mt: "2.5%",
                     }}
                   >
-                    A group project that I was a part of for my Application
-                    Development 1 subject. I was in charge in the UI,
-                    functionality development and database administration of the
-                    MP3 player. The Model-View-Controller (MVC) was used in
-                    developing the overall software artchitecture of the MP3
-                    player. Through the use of this architecture it makes it
-                    easier to implement the needed feature and to fetch the data
-                    from the data to the frontend at ease.
+                    A solo finals project for my Event Driven/GUI Programming
+                    subject. We are tasked to create a java application that
+                    utilizes different event driven functions. I created a Java
+                    desktop application called "Takeout Dash" based on the
+                    famous "Diner Dash" game. The gameplay is pretty similar but
+                    this time instead of dine in, it focuses on serving take out
+                    foods.
                   </Typography>
                   <Typography
                     sx={{
@@ -588,8 +588,8 @@ function Project3() {
                               md: "5%",
                               lg: "25%",
                             },
-                            height: "55%",
-                            width: "70%",
+                            height: "70%",
+                            width: "60%",
 
                             background: color3,
                             color: color6,
@@ -605,7 +605,7 @@ function Project3() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://youtu.be/75TCmuWFAcI"
+                            href="https://youtu.be/XE6zXk_okRY"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "8%" }}>
@@ -659,7 +659,7 @@ function Project3() {
                               md: "35%",
                               lg: "38%",
                             },
-                            height: "55%",
+                            height: "75%",
 
                             background: color3,
                             color: color6,
@@ -675,7 +675,7 @@ function Project3() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://github.com/breyxmarie/MP3-Player"
+                            href="https://github.com/breyxmarie/Takeout-Dash"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "10%" }}>
@@ -717,7 +717,7 @@ function Project3() {
               </Grid>
               <Grid xs={12} sm={6}>
                 <img
-                  src="images/mp3.png"
+                  src="images/takeout.png"
                   height="120%"
                   width="80%"
                   style={{
@@ -781,23 +781,9 @@ function Project3() {
                 >
                   <img
                     src="images/java.png"
-                    width="30%"
+                    width="15%"
                     height="2%"
-                    style={{ marginLeft: "-35%", marginTop: "-2%" }}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.5,
-                    //  borderRadius: "10px",
-                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <img
-                    src="images/sql.png"
-                    width="35%"
-                    height="50%"
-                    style={{ marginLeft: "-130%", marginTop: "1%" }}
+                    style={{ marginRight: "65%", marginTop: "-2%" }}
                   />
                 </motion.div>
               </Box>
@@ -842,7 +828,7 @@ function Project3() {
                       fontFamily: font2,
                     }}
                   >
-                    FRONT-END DEVELOPMENT
+                    JAVA PROGRAMMING
                   </Box>
                 </Grid>
                 <Grid xs={6} sm={6}>
@@ -863,7 +849,7 @@ function Project3() {
                       fontFamily: font2,
                     }}
                   >
-                    DATABASE MANAGEMENT
+                    GUI PROGRAMMING
                   </Box>
                 </Grid>
               </Grid>
@@ -886,7 +872,6 @@ function Project3() {
                 Tools
                 <br />
                 <img src="images/netbeans.png" width="15%" height="50%" />{" "}
-                <img src="images/mysql.png" width="15%" height="50%" />
               </Typography>
             </Grid>
           </Grid>

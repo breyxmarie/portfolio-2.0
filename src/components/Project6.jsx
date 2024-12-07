@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion, useInView } from "framer-motion";
 
-function Project4() {
+function Project6() {
   //? animation
   const [isShown, setIsShown] = useState(false);
   const ref = useRef(null);
@@ -211,7 +211,7 @@ function Project4() {
               fontFamily: font2,
             }}
           >
-            Dog Adoption Application
+            Vending Machine
           </Typography>
           <Box
             sx={{
@@ -230,9 +230,9 @@ function Project4() {
             <Grid container spacing={4} sx={{}}>
               <Grid xs={12} sm={4}>
                 <img
-                  src="images/doggapp.png"
+                  src="images/vending.png"
                   height="80%"
-                  width="15%"
+                  width="45%"
                   style={{ marginLeft: "5%", marginTop: "2%" }}
                 />
               </Grid>
@@ -266,13 +266,11 @@ function Project4() {
                       ml: "6%",
                     }}
                   >
-                    A group finals projects that I was a part of for my
-                    Application Development 3 specialization subject. I was
-                    assigned in the back-end development and database
-                    management. We are tasked to create dog adoption mobile
-                    application. The concept of this mobile application is to
-                    provide an application for users who would like to adopt a
-                    dog at the local animal shelter.
+                    A solo midterms project for my Event Driven Programming
+                    subject. We are tasked to create a Java application using
+                    event driven functionalities. I created a simple vending
+                    machine application which functions liek a real life vending
+                    machine.
                   </Typography>
                   <center>
                     <Box
@@ -291,11 +289,11 @@ function Project4() {
                         }}
                       >
                         <Grid
-                          xs={2}
+                          xs={3.5}
                           // sx={{ alignItems: "right" }}
                           // offset={6}
                         >
-                          {/*  <Button
+                          <Button
                             sx={{
                               // pr: {
                               //   md: "25%",
@@ -305,9 +303,9 @@ function Project4() {
                               //   md: "20%",
                               //   lg: "7%",
                               // },
-                              ml: "25%",
-                              mr: "10%",
-                              width: "115%",
+                              ml: "45%",
+                              mr: "15%",
+                              width: "95%",
                               height: "50%",
                               background: color3,
                               color: color6,
@@ -316,7 +314,7 @@ function Project4() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://youtu.be/75TCmuWFAcI"
+                              href="https://youtu.be/aFEmG_NXvGw"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
@@ -349,7 +347,7 @@ function Project4() {
 
                               {"      "}
                             </a>{" "}
-                          </Button>  */}
+                          </Button>
                         </Grid>
                         <Grid xs={1}>
                           <Button
@@ -364,7 +362,7 @@ function Project4() {
                               //   md: "15%",
                               //   lg: "7%",
                               // },
-                              ml: "100%",
+                              ml: "170%",
                               mr: {
                                 sm: "0%",
                                 md: "35%",
@@ -378,11 +376,11 @@ function Project4() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://github.com/breyxmarie/Dog-Adoption-Application"
+                              href="https://github.com/breyxmarie/Vending-Machine"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
-                                <Grid xs={6}>
+                                <Grid xs={6} sx={{ marginTop: "3%" }}>
                                   {" "}
                                   &nbsp; &nbsp;
                                   <img
@@ -518,13 +516,11 @@ function Project4() {
                       mt: "2.5%",
                     }}
                   >
-                    A group finals projects that I was a part of for my
-                    Application Development 3 specialization subject. I was
-                    assigned in the back-end development and database
-                    management. We are tasked to create dog adoption mobile
-                    application. The concept of this mobile application is to
-                    provide an application for users who would like to adopt a
-                    dog at the local animal shelter.
+                    A solo midterms project for my Event Driven Programming
+                    subject. We are tasked to create a Java application using
+                    event driven functionalities. I created a simple vending
+                    machine application which functions liek a real life vending
+                    machine.
                   </Typography>
                   <Typography
                     sx={{
@@ -568,8 +564,8 @@ function Project4() {
                   </a> */}
 
                     <Grid container spacing={2} sx={{ mt: "5%" }}>
-                      <Grid xs={1} sx={{ alignItems: "right" }} offset={6}>
-                        {/*   <Button
+                      <Grid xs={5.5} sx={{ alignItems: "right" }} offset={6}>
+                        <Button
                           sx={{
                             pr: {
                               md: "15%",
@@ -587,7 +583,7 @@ function Project4() {
                               md: "5%",
                               lg: "25%",
                             },
-                            height: "55%",
+                            height: "70%",
                             width: "70%",
 
                             background: color3,
@@ -604,7 +600,7 @@ function Project4() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://youtu.be/75TCmuWFAcI"
+                            href="https://youtu.be/aFEmG_NXvGw"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "8%" }}>
@@ -632,8 +628,8 @@ function Project4() {
                             </Grid>
 
                             {"      "}
-                          </a>{" "} 
-                        </Button> */}
+                          </a>{" "}
+                        </Button>
                       </Grid>
                       <Grid xs={4}>
                         <Button
@@ -674,7 +670,7 @@ function Project4() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://github.com/breyxmarie/Dog-Adoption-Application"
+                            href="https://github.com/breyxmarie/Vending-Machine"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "10%" }}>
@@ -716,12 +712,12 @@ function Project4() {
               </Grid>
               <Grid xs={12} sm={6}>
                 <img
-                  src="images/doggapp.png"
-                  height="140%"
-                  width="28%"
+                  src="images/vending.png"
+                  height="120%"
+                  width="80%"
                   style={{
                     marginLeft: "5%",
-                    marginTop: "-12%",
+                    marginTop: "-8%",
                     marginBottom: "-5%",
                   }}
                 />
@@ -779,51 +775,9 @@ function Project4() {
                 >
                   <img
                     src="images/java.png"
-                    width="45%"
-                    height="52%"
-                    style={{ marginLeft: "5%" }}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.5,
-                    //  borderRadius: "10px",
-                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <img
-                    src="images/springboot.png"
-                    width="40%"
-                    height="50%"
-                    style={{ marginLeft: "-50%" }}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.5,
-                    //  borderRadius: "10px",
-                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <img
-                    src="images/sql.png"
-                    width="58%"
-                    height="50%"
-                    style={{ marginLeft: "-95%" }}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.5,
-                    //  borderRadius: "10px",
-                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <img
-                    src="images/restapi.png"
-                    width="120%"
-                    height="50%"
-                    style={{ marginLeft: "-120%" }}
+                    width="15%"
+                    height="2%"
+                    style={{ marginRight: "65%", marginTop: "-2%" }}
                   />
                 </motion.div>
               </Box>
@@ -868,7 +822,7 @@ function Project4() {
                       fontFamily: font2,
                     }}
                   >
-                    MOBILE APPLICATION DEVELOPMENT
+                    EVENT DRIVEN PROGRAMMING
                   </Box>
                 </Grid>
                 <Grid xs={6} sm={6}>
@@ -889,56 +843,7 @@ function Project4() {
                       fontFamily: font2,
                     }}
                   >
-                    DATABASE MANAGEMENT
-                  </Box>
-                </Grid>
-              </Grid>
-              <Grid
-                container
-                spacing={2}
-                sx={{ ml: "5%", mt: { xs: 0.5, sm: 2 } }}
-              >
-                <Grid xs={6} sm={6}>
-                  {" "}
-                  <Box
-                    sx={{
-                      color: color6,
-                      background: color3,
-                      borderRadius: 5,
-                      py: "2.5%",
-                      fontSize: {
-                        xs: "0.4em",
-                        sm: "0.6em",
-                        md: "0.9em",
-                        lg: "1em",
-                      },
-                      ml: "0%",
-                      mr: "0%",
-                      fontFamily: font2,
-                    }}
-                  >
-                    BACK-END DEVELOPMENT
-                  </Box>
-                </Grid>
-                <Grid xs={6} sm={6}>
-                  {" "}
-                  <Box
-                    sx={{
-                      color: color6,
-                      background: color3,
-                      borderRadius: 5,
-                      py: "2.5%",
-                      fontSize: {
-                        xs: "0.4em",
-                        sm: "0.6em",
-                        md: "0.9em",
-                        lg: "1em",
-                      },
-                      ml: "5%",
-                      fontFamily: font2,
-                    }}
-                  >
-                    REST API
+                    JAVA PROGRAMMING
                   </Box>
                 </Grid>
               </Grid>
@@ -960,14 +865,7 @@ function Project4() {
               >
                 Tools
                 <br />
-                <img src="images/android.png" width="15%" height="50%" />{" "}
-                <img
-                  src="images/mysql.png"
-                  width="15%"
-                  height="50%"
-                  style={{ marginRight: "3%" }}
-                />
-                <img src="images/intelij.png" width="15%" height="50%" />
+                <img src="images/netbeans.png" width="15%" height="50%" />{" "}
               </Typography>
             </Grid>
           </Grid>
@@ -977,4 +875,4 @@ function Project4() {
   );
 }
 
-export default Project4;
+export default Project6;

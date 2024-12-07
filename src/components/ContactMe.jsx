@@ -1,6 +1,7 @@
 import { useState, useEffect, useContext, useRef } from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
+import { useForm } from "react-hook-form";
 import { Grid2, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
 import ColorContext from "./ColorContext"; // Import the context
@@ -10,6 +11,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Modal from "react-modal";
 import TextField from "@mui/material/TextField";
 import { motion, useInView } from "framer-motion";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { PhoneInput } from "react-international-phone";
 
 function ContactMe() {
   //? animation
@@ -122,6 +128,60 @@ function ContactMe() {
     font2,
     setFont2,
   } = useContext(ColorContext);
+
+  //! email stuff
+
+  const schema = yup.object({
+    name: yup.string().required("Name is a required field"),
+    number: yup.string().required("Phone Number is a required field"),
+    email: yup.string().required("Email is a required field"),
+    message: yup.string().required("Message is a required field"),
+  });
+
+  const defaultValues = {
+    name: "",
+  };
+
+  const { handleSubmit, control } = useForm({
+    defaultValues: defaultValues,
+    resolver: yupResolver(schema),
+  });
+  const form = useRef();
+  const [phone, setPhone] = useState("");
+  const [names, setNames] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const sendEmail = (e) => {
+    //e.preventDefault();
+    // const newLogo = "/images/snacks.png"; // Replace with actual new logo path
+    // setLogo(newLogo);
+    // // setLogo("/images/snacks.png");
+    // console.log(logo);
+    // setPrimaryColor("blue");
+    // console.log(primaryColor);
+    // .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", form.current, {
+    //   publicKey: "YOUR_PUBLIC_KEY",
+    // })
+    emailjs
+      .sendForm("service_qx814ut", "template_ymi9h08", form.current, {
+        publicKey: "2O1JoBGq5AIm9uy1W",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          toast.success("Message Sent!");
+          setNames("");
+          setEmail("");
+
+          setMessage("");
+          setPhone("");
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
+  };
+  //!
 
   return (
     <div
@@ -279,6 +339,35 @@ function ContactMe() {
                           Name
                         </Typography>
                         <TextField
+                          sx={{
+                            borderColor: color1,
+                            height: "20%",
+                            background: color5,
+                            borderRadius: 2,
+                            width: "70%",
+                            ml: "15%",
+                            mr: "50%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
+                          }}
+                          // value={value}
+                          // id="outlined-basic"
+                          // label={label}
+                          // variant="standard"
+                          size="small"
+                          id="outlined-basic"
+                          value={names}
+                          onChange={(e) => setNames(e.target.value)}
+                          // label="Outlined"
+                          variant="outlined"
+                          name="from_name"
+                          // error={!!error}
+                          // helperText={error?.message}
+                        />
+                        {/* <TextField
                           size="small"
                           sx={{
                             borderColor: color1,
@@ -294,7 +383,7 @@ function ContactMe() {
                               },
                             },
                           }}
-                        />
+                        /> */}
                         <Typography
                           sx={{
                             fontSize: {
@@ -309,8 +398,29 @@ function ContactMe() {
                           }}
                         >
                           Email
-                        </Typography>
+                        </Typography>{" "}
                         <TextField
+                          sx={{
+                            height: "20%",
+                            background: color5,
+                            borderRadius: 2,
+                            width: "70%",
+                            ml: "15%",
+                            mr: "50%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
+                          }}
+                          id="outlined-basic"
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          variant="outlined"
+                          size="small"
+                          name="from_email"
+                        />
+                        {/* <TextField
                           size="small"
                           sx={{
                             height: "20%",
@@ -325,7 +435,7 @@ function ContactMe() {
                               },
                             },
                           }}
-                        />
+                        /> */}
                         <Typography
                           sx={{
                             fontSize: {
@@ -341,8 +451,19 @@ function ContactMe() {
                         >
                           Contact Number
                         </Typography>
-                        <TextField
+                        <PhoneInput
+                          style={{ width: "80%" }}
+                          defaultCountry="ph"
+                          value={phone}
+                          onChange={(phone) => setPhone(phone)}
+                          name="from_number"
+                        />
+                        {/* <TextField
                           size="small"
+                          value={phone}
+                          onChange={(phone) => setPhone(phone)}
+                          variant="outlined"
+                          name="from_number"
                           sx={{
                             height: "20%",
                             background: color5,
@@ -356,7 +477,7 @@ function ContactMe() {
                               },
                             },
                           }}
-                        />
+                        /> */}
                       </Grid>
 
                       <Grid xs={6}>
@@ -377,6 +498,28 @@ function ContactMe() {
                           Message:{" "}
                         </Typography>
                         <TextField
+                          id="outlined-multiline-flexible"
+                          sx={{
+                            height: "60%",
+                            background: color5,
+                            borderRadius: 2,
+                            width: "90%",
+                            ml: "5%",
+                            mr: "30%",
+                            "& .MuiOutlinedInput-root": {
+                              "& fieldset": {
+                                border: "none", // Removes the border
+                              },
+                            },
+                          }}
+                          multiline
+                          rows={4}
+                          placeholder="Type message here"
+                          name="message"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                        />
+                        {/* <TextField
                           multiline
                           rows={4}
                           size="small"
@@ -393,12 +536,13 @@ function ContactMe() {
                               },
                             },
                           }}
-                        />{" "}
+                        />{" "} */}
                       </Grid>
                     </Grid>
                   </Box>
 
                   <Button
+                    onClick={sendEmail}
                     sx={{
                       textTransform: "none",
                       background: color1,

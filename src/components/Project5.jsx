@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion, useInView } from "framer-motion";
 
-function Project4() {
+function Project5() {
   //? animation
   const [isShown, setIsShown] = useState(false);
   const ref = useRef(null);
@@ -211,7 +211,7 @@ function Project4() {
               fontFamily: font2,
             }}
           >
-            Dog Adoption Application
+            Hospital Management System
           </Typography>
           <Box
             sx={{
@@ -230,9 +230,9 @@ function Project4() {
             <Grid container spacing={4} sx={{}}>
               <Grid xs={12} sm={4}>
                 <img
-                  src="images/doggapp.png"
+                  src="images/hospital.png"
                   height="80%"
-                  width="15%"
+                  width="45%"
                   style={{ marginLeft: "5%", marginTop: "2%" }}
                 />
               </Grid>
@@ -266,13 +266,13 @@ function Project4() {
                       ml: "6%",
                     }}
                   >
-                    A group finals projects that I was a part of for my
-                    Application Development 3 specialization subject. I was
-                    assigned in the back-end development and database
-                    management. We are tasked to create dog adoption mobile
-                    application. The concept of this mobile application is to
-                    provide an application for users who would like to adopt a
-                    dog at the local animal shelter.
+                    A group finals projects that I was a part of for my Object
+                    Oriented Programming subject. We are tasked to create a
+                    Hospital Management System using the concept of Object
+                    Oriented Programming and different design patterns to
+                    optimize the codes of the application.I was assigned in the
+                    gui and functionality development of the Java desktop
+                    application.
                   </Typography>
                   <center>
                     <Box
@@ -291,11 +291,11 @@ function Project4() {
                         }}
                       >
                         <Grid
-                          xs={2}
+                          xs={3.5}
                           // sx={{ alignItems: "right" }}
                           // offset={6}
                         >
-                          {/*  <Button
+                          <Button
                             sx={{
                               // pr: {
                               //   md: "25%",
@@ -305,9 +305,9 @@ function Project4() {
                               //   md: "20%",
                               //   lg: "7%",
                               // },
-                              ml: "25%",
-                              mr: "10%",
-                              width: "115%",
+                              ml: "45%",
+                              mr: "15%",
+                              width: "95%",
                               height: "50%",
                               background: color3,
                               color: color6,
@@ -316,7 +316,7 @@ function Project4() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://youtu.be/75TCmuWFAcI"
+                              href="https://youtu.be/nPkctjN0GQ4"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
@@ -349,7 +349,7 @@ function Project4() {
 
                               {"      "}
                             </a>{" "}
-                          </Button>  */}
+                          </Button>
                         </Grid>
                         <Grid xs={1}>
                           <Button
@@ -364,7 +364,7 @@ function Project4() {
                               //   md: "15%",
                               //   lg: "7%",
                               // },
-                              ml: "100%",
+                              ml: "170%",
                               mr: {
                                 sm: "0%",
                                 md: "35%",
@@ -378,11 +378,11 @@ function Project4() {
                           >
                             <a
                               style={{ color: color6 }}
-                              href="https://github.com/breyxmarie/Dog-Adoption-Application"
+                              href="https://github.com/breyxmarie/Hospital-Management-System"
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
-                                <Grid xs={6}>
+                                <Grid xs={6} sx={{ marginTop: "3%" }}>
                                   {" "}
                                   &nbsp; &nbsp;
                                   <img
@@ -518,13 +518,13 @@ function Project4() {
                       mt: "2.5%",
                     }}
                   >
-                    A group finals projects that I was a part of for my
-                    Application Development 3 specialization subject. I was
-                    assigned in the back-end development and database
-                    management. We are tasked to create dog adoption mobile
-                    application. The concept of this mobile application is to
-                    provide an application for users who would like to adopt a
-                    dog at the local animal shelter.
+                    A group finals projects that I was a part of for my Object
+                    Oriented Programming subject. We are tasked to create a
+                    Hospital Management System using the concept of Object
+                    Oriented Programming and different design patterns to
+                    optimize the codes of the application. I was assigned in the
+                    gui and functionality development of the Java desktop
+                    application.
                   </Typography>
                   <Typography
                     sx={{
@@ -568,8 +568,8 @@ function Project4() {
                   </a> */}
 
                     <Grid container spacing={2} sx={{ mt: "5%" }}>
-                      <Grid xs={1} sx={{ alignItems: "right" }} offset={6}>
-                        {/*   <Button
+                      <Grid xs={5.5} sx={{ alignItems: "right" }} offset={6}>
+                        <Button
                           sx={{
                             pr: {
                               md: "15%",
@@ -587,8 +587,8 @@ function Project4() {
                               md: "5%",
                               lg: "25%",
                             },
-                            height: "55%",
-                            width: "70%",
+                            height: "70%",
+                            width: "65%",
 
                             background: color3,
                             color: color6,
@@ -604,7 +604,7 @@ function Project4() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://youtu.be/75TCmuWFAcI"
+                            href="https://youtu.be/nPkctjN0GQ4"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "8%" }}>
@@ -632,8 +632,8 @@ function Project4() {
                             </Grid>
 
                             {"      "}
-                          </a>{" "} 
-                        </Button> */}
+                          </a>{" "}
+                        </Button>
                       </Grid>
                       <Grid xs={4}>
                         <Button
@@ -664,7 +664,7 @@ function Project4() {
                             color: color6,
                             borderRadius: 4,
                             "&:hover": {
-                              backgroundColor: color4,
+                              backgroundColor: backgroundColor,
                               color: backgroundColor,
                               border: 2,
 
@@ -674,7 +674,7 @@ function Project4() {
                         >
                           <a
                             style={{ color: color6 }}
-                            href="https://github.com/breyxmarie/Dog-Adoption-Application"
+                            href="https://github.com/breyxmarie/Hospital-Management-System"
                             target="_blank"
                           >
                             <Grid container spacing={2} sx={{ mt: "10%" }}>
@@ -716,12 +716,12 @@ function Project4() {
               </Grid>
               <Grid xs={12} sm={6}>
                 <img
-                  src="images/doggapp.png"
-                  height="140%"
-                  width="28%"
+                  src="images/hospital.png"
+                  height="120%"
+                  width="80%"
                   style={{
-                    marginLeft: "5%",
-                    marginTop: "-12%",
+                    marginLeft: "10%",
+                    marginTop: "-8%",
                     marginBottom: "-5%",
                   }}
                 />
@@ -779,23 +779,9 @@ function Project4() {
                 >
                   <img
                     src="images/java.png"
-                    width="45%"
-                    height="52%"
-                    style={{ marginLeft: "5%" }}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.5,
-                    //  borderRadius: "10px",
-                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <img
-                    src="images/springboot.png"
-                    width="40%"
-                    height="50%"
-                    style={{ marginLeft: "-50%" }}
+                    width="30%"
+                    height="2%"
+                    style={{ marginLeft: "-35%", marginTop: "-2%" }}
                   />
                 </motion.div>
                 <motion.div
@@ -807,23 +793,9 @@ function Project4() {
                 >
                   <img
                     src="images/sql.png"
-                    width="58%"
+                    width="35%"
                     height="50%"
-                    style={{ marginLeft: "-95%" }}
-                  />
-                </motion.div>
-                <motion.div
-                  whileHover={{
-                    scale: 1.5,
-                    //  borderRadius: "10px",
-                    //   boxShadow: "0px 5px 10px rgba(0, 0, 0, 0.2)",
-                  }}
-                >
-                  <img
-                    src="images/restapi.png"
-                    width="120%"
-                    height="50%"
-                    style={{ marginLeft: "-120%" }}
+                    style={{ marginLeft: "-130%", marginTop: "1%" }}
                   />
                 </motion.div>
               </Box>
@@ -960,14 +932,13 @@ function Project4() {
               >
                 Tools
                 <br />
-                <img src="images/android.png" width="15%" height="50%" />{" "}
+                <img src="images/netbeans.png" width="15%" height="50%" />{" "}
                 <img
                   src="images/mysql.png"
                   width="15%"
                   height="50%"
                   style={{ marginRight: "3%" }}
                 />
-                <img src="images/intelij.png" width="15%" height="50%" />
               </Typography>
             </Grid>
           </Grid>
@@ -977,4 +948,4 @@ function Project4() {
   );
 }
 
-export default Project4;
+export default Project5;

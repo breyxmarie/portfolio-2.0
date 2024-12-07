@@ -252,6 +252,7 @@ function Project2() {
                   }}
                 >
                   <Typography
+                    align="justify"
                     sx={{
                       color: color6,
                       textAlign: "left",
@@ -262,7 +263,8 @@ function Project2() {
                         md: "0.8em",
                         lg: "0.8em",
                       },
-                      mr: "5%",
+                      mr: "6%",
+                      ml: "6%",
                     }}
                   >
                     A group project that I was a part of for my Application
@@ -277,12 +279,14 @@ function Project2() {
                   </Typography>
                   <center>
                     <Box
-                      sx={{
-                        display: "flex", // Enables flexbox
-                        justifyContent: "center", // Centers horizontally
-                        alignItems: "center", // Centers vertically
-                        // Optional: full viewport height
-                      }}
+                      sx={
+                        {
+                          // display: "flex", // Enables flexbox
+                          // justifyContent: "center", // Centers horizontally
+                          // alignItems: "center", // Centers vertically
+                          // Optional: full viewport height
+                        }
+                      }
                     >
                       <Grid
                         container
@@ -292,7 +296,7 @@ function Project2() {
                         }}
                       >
                         <Grid
-                          xs={2}
+                          xs={3.5}
                           // sx={{ alignItems: "right" }}
                           // offset={6}
                         >
@@ -306,9 +310,9 @@ function Project2() {
                               //   md: "20%",
                               //   lg: "7%",
                               // },
-                              ml: "25%",
-                              mr: "10%",
-                              width: "115%",
+                              ml: "45%",
+                              mr: "15%",
+                              width: "95%",
                               height: "50%",
                               background: color3,
                               color: color6,
@@ -365,7 +369,7 @@ function Project2() {
                               //   md: "15%",
                               //   lg: "7%",
                               // },
-                              ml: "100%",
+                              ml: "170%",
                               mr: {
                                 sm: "0%",
                                 md: "35%",
@@ -383,7 +387,7 @@ function Project2() {
                               target="_blank"
                             >
                               <Grid container spacing={2} sx={{ mt: "0%" }}>
-                                <Grid xs={6}>
+                                <Grid xs={6} sx={{ marginTop: "3%" }}>
                                   {" "}
                                   &nbsp; &nbsp;
                                   <img
@@ -590,7 +594,7 @@ function Project2() {
                               md: "5%",
                               lg: "25%",
                             },
-                            height: "55%",
+                            height: "70%",
                             width: "70%",
 
                             background: color3,
@@ -661,7 +665,7 @@ function Project2() {
                               md: "35%",
                               lg: "38%",
                             },
-                            height: "55%",
+                            height: "70%",
 
                             background: color3,
                             color: color6,
@@ -844,7 +848,7 @@ function Project2() {
                       fontFamily: font2,
                     }}
                   >
-                    FRONT-END DEVELOPMENT
+                    JAVA PROGRAMMING
                   </Box>
                 </Grid>
                 <Grid xs={6} sm={6}>

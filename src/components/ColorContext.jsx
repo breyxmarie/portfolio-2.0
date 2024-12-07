@@ -58,12 +58,13 @@ const ColorProvider = ({ children }) => {
   const [searchImage, setSearchImage] = useState("images/search.png");
 
   const setDarkMode = () => {
-    setBackgroundColor("#484844"), setColor1("#000000");
-    setColor2("#000000");
-    setColor3("#000000");
+    setBackgroundColor("#484844"), setColor1("#93C4B8");
+    setColor2("#D3D3D3");
+    setColor3("#2A7180");
     setColor4("#000000");
-    setColor5("#000000");
-    setColor6("#000000");
+    setColor5("#D3D3D3");
+    setColor6("#D3D3D3");
+    setColor7("#D3D3D3");
 
     setLinkImage("/images/link.png");
     setGithubImage("/images/github.png");

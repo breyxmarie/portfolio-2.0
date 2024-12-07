@@ -74,7 +74,9 @@ function Home() {
   const leftVariants = {
     hidden: {
       opacity: 0,
-      x: -100, // Start off-screen
+      //  x: -100, // Start off-screen
+      x: "20vw", // Move fully off-screen based on viewport width
+
       transition: {
         duration: 3,
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
@@ -94,17 +96,19 @@ function Home() {
   const rightVariants = {
     hidden: {
       opacity: 0,
-      x: 300, // Start off-screen
+      // x: 300, // Start off-screen
+      x: "-30vw", // Move fully off-screen based on viewport width
+
       transition: {
         duration: 4.5,
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
       },
     },
     visible: {
-      opacity: 1,
+      opacity: 1.3,
       x: 0, // End position
       transition: {
-        duration: 1.5, // Slower animation
+        duration: 1, // Slower animation
         ease: [0.2, 0.8, 0.2, 1], // Correct format for cubic-bezier
         delay: 0, // Delay before animation starts
       },
@@ -180,7 +184,7 @@ function Home() {
               ref={ref}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              variants={leftVariants}
+              variants={rightVariants}
             >
               <img
                 style={{ borderRadius: 10, marginTop: "100%" }}
@@ -225,10 +229,10 @@ function Home() {
                         display: "flex",
                         justifyContent: "flex-end", // Aligns content horizontally to the start
                         alignItems: "flex-end",
-                        mt: "25%",
+                        mt: { sm: "25%", md: "5%" },
                         fontSize: {
                           xs: "7em",
-                          sm: "5em",
+                          sm: "4em",
                           md: "5em",
                           lg: "6em",
                         },
@@ -247,7 +251,7 @@ function Home() {
                         alignItems: "flex-end",
                         fontSize: {
                           xs: "7em",
-                          sm: "5em",
+                          sm: "4em",
                           md: "5em",
                           lg: "6em",
                         },
@@ -274,14 +278,14 @@ function Home() {
                         alignItems: "flex-start",
                         mt: {
                           xs: "0%",
-                          sm: "40%",
-                          md: "28%",
+                          sm: "38%",
+                          md: "17%",
                         },
 
                         ml: "9%",
                         fontSize: {
                           xs: "7em",
-                          sm: "6em",
+                          sm: "5em",
                           md: "7em",
                           lg: "8.5em",
                         },
@@ -321,6 +325,15 @@ function Home() {
                   {" "}
                   a software developer
                 </Typography>
+                <br />
+                <br />
+
+                <img
+                  src="images/nutrifyme.png"
+                  height="50%"
+                  width="25%"
+                  style={{ marginLeft: "5%", marginTop: "0%" }}
+                />
               </motion.div>
             </Box>
           </Grid>
@@ -329,7 +342,7 @@ function Home() {
               ref={ref}
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
-              variants={rightVariants}
+              variants={leftVariants}
             >
               <Grid
                 container
