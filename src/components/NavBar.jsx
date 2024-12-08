@@ -577,7 +577,7 @@ function NavBar() {
                     mr: "7%",
                     pt: "0.5%",
                     pb: "0.5%",
-                    width: "30%",
+                    width: "25%",
                   }}
                 >
                   {links}
@@ -597,7 +597,7 @@ function NavBar() {
                     width: "0%",
                   }}
                 >
-                  <img src={searchImage} width="50%" height="50%" />
+                  <img src={searchImage} width="80%" height="50%" />
                 </Button>
               </Grid>
             </Grid>

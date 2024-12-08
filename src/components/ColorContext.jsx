@@ -19,6 +19,7 @@ const ColorContext = createContext({
   githubImage: "/images/github.png",
   barImage: "images/bar.png",
   searchImage: "images/search.png",
+  timelineImage: "images/timeline.png",
 
   setBackgroundColor: () => {},
   setColor1: () => {},
@@ -34,6 +35,8 @@ const ColorContext = createContext({
   setGithubImage: () => {},
   setBarImage: () => {},
   setSearchImage: () => {},
+  setTimelineImage: () => {},
+
   setFont1: () => {},
   setFont2: () => {},
 });
@@ -56,20 +59,22 @@ const ColorProvider = ({ children }) => {
   const [githubImage, setGithubImage] = useState("/images/github.png");
   const [barImage, setBarImage] = useState("images/bar.png");
   const [searchImage, setSearchImage] = useState("images/search.png");
+  const [timelineImage, setTimelineImage] = useState("images/timeline.png");
 
   const setDarkMode = () => {
-    setBackgroundColor("#484844"), setColor1("#93C4B8");
-    setColor2("#D3D3D3");
-    setColor3("#2A7180");
-    setColor4("#000000");
+    setBackgroundColor("#050912"), setColor1("#909bca");
+    setColor2("#3f415a");
+    setColor3("#242532");
+    setColor4("#1a1b25");
     setColor5("#D3D3D3");
-    setColor6("#D3D3D3");
-    setColor7("#D3D3D3");
+    setColor6("#D4D4D4");
+    setColor7("#130F06");
 
     setLinkImage("/images/link.png");
     setGithubImage("/images/github.png");
-    setBarImage("images/nutrifyme.png");
-    setSearchImage("images/nutrifyme.png");
+    setBarImage("images/bar dark.png");
+    setSearchImage("images/search dark.png");
+    setTimelineImage("images/timeline dark.png");
   };
 
   const setLightMode = () => {
@@ -81,10 +86,19 @@ const ColorProvider = ({ children }) => {
     setColor6("#2C2C2C");
     setColor7("#FDFDFD");
 
+    // setBackgroundColor("#912F40"), setColor1("#EBD4CB");
+    // setColor2("#702632");
+    // setColor3("#DA9F93");
+    // setColor4("#FFFFFF");
+    // setColor5("#64A6BD");
+    // setColor6("#2C2C2C");
+    // setColor7("#FDFDFD");
+
     setLinkImage("/images/link.png");
     setGithubImage("/images/github.png");
     setBarImage("images/bar.png");
     setSearchImage("images/search.png");
+    setTimelineImage("images/timeline.png");
   };
 
   const toggleDarkMode = () => {
@@ -108,6 +122,7 @@ const ColorProvider = ({ children }) => {
     githubImage,
     barImage,
     searchImage,
+    timelineImage,
 
     setBackgroundColor,
     setColor1,
@@ -127,6 +142,7 @@ const ColorProvider = ({ children }) => {
     setGithubImage,
     setBarImage,
     setSearchImage,
+    setTimelineImage,
   };
 
   return (

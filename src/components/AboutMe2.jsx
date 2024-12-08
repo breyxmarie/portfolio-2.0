@@ -114,6 +114,7 @@ function AboutMe2() {
     githubImage,
     barImage,
     searchImage,
+    timelineImage,
     font1,
     setBackgroundColor,
     setColor1,
@@ -728,7 +729,7 @@ function AboutMe2() {
                 >
                   {" "}
                   <img
-                    src="images/timeline.png"
+                    src={timelineImage}
                     height="100%"
                     width="35%"
                     style={{
@@ -832,9 +833,9 @@ function AboutMe2() {
                 >
                   {" "}
                   <img
-                    src="images/timeline.png"
+                    src={timelineImage}
                     height="100%"
-                    width="30%"
+                    width="35%"
                     style={{
                       marginLeft: "0%",
 
@@ -994,7 +995,7 @@ function AboutMe2() {
                 >
                   {" "}
                   <img
-                    src="images/timeline.png"
+                    src={timelineImage}
                     height="100%"
                     width="30%"
                     style={{

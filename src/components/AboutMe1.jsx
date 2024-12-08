@@ -306,7 +306,7 @@ function AboutMe1() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.3em",
-                            md: "0.5em",
+                            md: "0.8em",
                             lg: "1em",
                           },
                         }}
@@ -1231,10 +1231,11 @@ function AboutMe1() {
                         fontFamily: font2,
                         textAlign: "left",
                         fontWeight: "bold",
+                        mr: "1%",
                         fontSize: {
                           xs: "0.5em",
                           sm: "0.5em",
-                          md: "0.8em",
+                          md: "0.7em",
                           lg: "1em",
                         },
                       }}
@@ -1260,7 +1261,7 @@ function AboutMe1() {
                             fontSize: {
                               xs: "0.5em",
                               sm: "0.5em",
-                              md: "0.8em",
+                              md: "0.7em",
                               lg: "0.9em",
                             },
                           }}
@@ -1277,7 +1278,7 @@ function AboutMe1() {
                             fontSize: {
                               xs: "0.5em",
                               sm: "0.5em",
-                              md: "0.8em",
+                              md: "0.7em",
                               lg: "0.9em",
                             },
                           }}
