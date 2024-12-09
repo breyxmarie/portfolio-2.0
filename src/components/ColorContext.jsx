@@ -20,6 +20,7 @@ const ColorContext = createContext({
   barImage: "images/bar.png",
   searchImage: "images/search.png",
   timelineImage: "images/timeline.png",
+  scrollImage: "imagesscroll down.png",
 
   setBackgroundColor: () => {},
   setColor1: () => {},
@@ -36,6 +37,7 @@ const ColorContext = createContext({
   setBarImage: () => {},
   setSearchImage: () => {},
   setTimelineImage: () => {},
+  setScrollImage: () => {},
 
   setFont1: () => {},
   setFont2: () => {},
@@ -60,6 +62,7 @@ const ColorProvider = ({ children }) => {
   const [barImage, setBarImage] = useState("images/bar.png");
   const [searchImage, setSearchImage] = useState("images/search.png");
   const [timelineImage, setTimelineImage] = useState("images/timeline.png");
+  const [scrollImage, setScrollImage] = useState("images/scroll down.gif");
 
   const setDarkMode = () => {
     setBackgroundColor("#050912"), setColor1("#909bca");
@@ -75,6 +78,7 @@ const ColorProvider = ({ children }) => {
     setBarImage("images/bar dark.png");
     setSearchImage("images/search dark.png");
     setTimelineImage("images/timeline dark.png");
+    setScrollImage("images/scroll down dark.gif");
   };
 
   const setLightMode = () => {
@@ -99,6 +103,7 @@ const ColorProvider = ({ children }) => {
     setBarImage("images/bar.png");
     setSearchImage("images/search.png");
     setTimelineImage("images/timeline.png");
+    setScrollImage("images/scroll down.gif");
   };
 
   const toggleDarkMode = () => {
@@ -123,7 +128,7 @@ const ColorProvider = ({ children }) => {
     barImage,
     searchImage,
     timelineImage,
-
+    scrollImage,
     setBackgroundColor,
     setColor1,
     setColor2,
@@ -134,7 +139,7 @@ const ColorProvider = ({ children }) => {
     setColor7,
     setDarkMode,
     setLightMode,
-
+    setScrollImage,
     setFont1,
     setFont2,
 

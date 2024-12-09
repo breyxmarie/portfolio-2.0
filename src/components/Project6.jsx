@@ -269,7 +269,7 @@ function Project6() {
                     A solo midterms project for my Event Driven Programming
                     subject. We are tasked to create a Java application using
                     event driven functionalities. I created a simple vending
-                    machine application which functions liek a real life vending
+                    machine application which functions like a real life vending
                     machine.
                   </Typography>
                   <center>
@@ -519,7 +519,7 @@ function Project6() {
                     A solo midterms project for my Event Driven Programming
                     subject. We are tasked to create a Java application using
                     event driven functionalities. I created a simple vending
-                    machine application which functions liek a real life vending
+                    machine application which functions like a real life vending
                     machine.
                   </Typography>
                   <Typography

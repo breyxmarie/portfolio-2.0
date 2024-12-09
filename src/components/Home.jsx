@@ -18,6 +18,7 @@ function Home() {
     color4,
     color5,
     color6,
+    scrollImage,
     font1,
     setBackgroundColor,
     setColor1,
@@ -326,12 +327,11 @@ function Home() {
                   a software developer
                 </Typography>
                 <br />
-                <br />
 
                 <img
-                  src="images/nutrifyme.png"
+                  src={scrollImage}
                   height="50%"
-                  width="25%"
+                  width="18%"
                   style={{ marginLeft: "5%", marginTop: "0%" }}
                 />
               </motion.div>
@@ -578,7 +578,7 @@ function Home() {
           },
         }}
       >
-        <Typography
+        {/* <Typography
           sx={{
             color: color6,
             fontFamily: font1,
@@ -594,7 +594,102 @@ function Home() {
           }}
         >
           hello! i'm aubrey
-        </Typography>
+        </Typography> */}
+        {/* <Typography
+          sx={{
+            fontFamily: font1,
+            // display: "flex",
+            // justifyContent: "flex-end", // Aligns content horizontally to the start
+            // alignItems: "flex-end",
+            //mt: { sm: "0%", md: "5%" },
+            fontSize: {
+              xs: "1em",
+              sm: "4em",
+              md: "5em",
+              lg: "6em",
+            },
+            color: color6,
+            //lineHeight: 1,
+          }}
+        >
+          hello
+        </Typography> */}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <Grid container spacing={2}>
+          <Grid xs={6}>
+            {" "}
+            <Typography
+              sx={{
+                fontFamily: font1,
+                display: "flex",
+                justifyContent: "flex-end", // Aligns content horizontally to the start
+                alignItems: "flex-end",
+                //  mt: { sm: "0%", md: "5%" },
+                fontSize: {
+                  xs: "2.5em",
+                  sm: "4em",
+                  md: "5em",
+                  lg: "6em",
+                },
+                color: color6,
+                //lineHeight: 1,
+              }}
+            >
+              hello
+            </Typography>
+            <Typography
+              sx={{
+                fontFamily: font1,
+                display: "flex",
+                justifyContent: "flex-end", // Aligns content horizontally to the start
+                alignItems: "flex-end",
+                fontSize: {
+                  xs: "2.5em",
+                  sm: "4em",
+                  md: "5em",
+                  lg: "6em",
+                },
+                lineHeight: 1,
+                color: color6,
+              }}
+            >
+              i'm
+            </Typography>
+          </Grid>
+          <Grid xs={6}>
+            {" "}
+            <Typography
+              sx={{
+                fontFamily: font1,
+                display: "flex",
+                justifyContent: "flex-start", // Aligns content horizontally to the start
+                alignItems: "flex-start",
+                mt: {
+                  xs: "20%",
+                  sm: "38%",
+                  md: "17%",
+                },
+
+                ml: "0%",
+                fontSize: {
+                  xs: "3em",
+                  sm: "5em",
+                  md: "7em",
+                  lg: "8.5em",
+                },
+                //  lineHeight: 1,
+                color: color6,
+              }}
+            >
+              aubrey
+            </Typography>
+          </Grid>
+        </Grid>
 
         <img
           style={{ borderRadius: 10, marginTop: "0%", lineHeight: 1 }}
@@ -602,7 +697,20 @@ function Home() {
           width="55%"
           height="15%"
         />
-
+        <Typography
+          sx={{
+            fontFamily: font1,
+            display: "flex",
+            justifyContent: "flex-start", // Aligns content horizontally to the start
+            alignItems: "flex-start",
+            ml: "20%",
+            fontSize: "1em",
+            color: color6,
+          }}
+        >
+          {" "}
+          a software developer
+        </Typography>
         <Box sx={{ ml: 2, mr: 1.5, mt: 3 }}>
           <Grid container spacing={2}>
             <Grid xs={4}>
@@ -763,6 +871,12 @@ function Home() {
               </Button>
             </Grid>
           </Grid>
+          <img
+            src={scrollImage}
+            height="50%"
+            width="18%"
+            style={{ marginLeft: "5%", marginTop: "0%" }}
+          />
         </Box>
       </Box>
     </div>
