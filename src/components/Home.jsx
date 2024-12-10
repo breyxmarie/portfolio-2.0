@@ -625,7 +625,7 @@ function Home() {
             // alignItems: "flex-end",
             //  mt: { sm: "0%", md: "5%" },
             fontSize: {
-              xs: "5.5em",
+              xs: "3.5em",
               sm: "4em",
               md: "5em",
               lg: "6em",
