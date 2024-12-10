@@ -569,7 +569,7 @@ function Home() {
       </Box>
       <Box
         sx={{
-          pb: "0%",
+          pb: "9%",
           display: {
             xs: "block", // Hide on extra small screens
             sm: "none",
