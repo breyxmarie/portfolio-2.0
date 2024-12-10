@@ -569,7 +569,7 @@ function Home() {
       </Box>
       <Box
         sx={{
-          pb: "10%",
+          pb: "0%",
           display: {
             xs: "block", // Hide on extra small screens
             sm: "none",
@@ -614,88 +614,88 @@ function Home() {
         >
           hello
         </Typography> */}
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
 
-        <Grid container spacing={2}>
-          <Grid xs={6}>
-            {" "}
-            <Typography
-              sx={{
-                fontFamily: font1,
-                display: "flex",
-                justifyContent: "flex-end", // Aligns content horizontally to the start
-                alignItems: "flex-end",
-                //  mt: { sm: "0%", md: "5%" },
-                fontSize: {
-                  xs: "2.5em",
-                  sm: "4em",
-                  md: "5em",
-                  lg: "6em",
-                },
-                color: color6,
-                //lineHeight: 1,
-              }}
-            >
-              hello
-            </Typography>
-            <Typography
-              sx={{
-                fontFamily: font1,
-                display: "flex",
-                justifyContent: "flex-end", // Aligns content horizontally to the start
-                alignItems: "flex-end",
-                fontSize: {
-                  xs: "2.5em",
-                  sm: "4em",
-                  md: "5em",
-                  lg: "6em",
-                },
-                lineHeight: 1,
-                color: color6,
-              }}
-            >
-              i'm
-            </Typography>
-          </Grid>
-          <Grid xs={6}>
-            {" "}
-            <Typography
-              sx={{
-                fontFamily: font1,
-                display: "flex",
-                justifyContent: "flex-start", // Aligns content horizontally to the start
-                alignItems: "flex-start",
-                mt: {
-                  xs: "20%",
-                  sm: "38%",
-                  md: "17%",
-                },
+        <Typography
+          sx={{
+            fontFamily: "Kiwi Maru",
 
-                ml: "0%",
-                fontSize: {
-                  xs: "3em",
-                  sm: "5em",
-                  md: "7em",
-                  lg: "8.5em",
-                },
-                //  lineHeight: 1,
-                color: color6,
-              }}
-            >
-              aubrey
-            </Typography>
-          </Grid>
-        </Grid>
+            //fontFamily: font1,
+            // display: "flex",
+            // justifyContent: "flex-end", // Aligns content horizontally to the start
+            // alignItems: "flex-end",
+            //  mt: { sm: "0%", md: "5%" },
+            fontSize: {
+              xs: "5.5em",
+              sm: "4em",
+              md: "5em",
+              lg: "6em",
+            },
+            color: color6,
+            mr: "55%",
+            //ml: "110%",
+            mt: "8%",
+            //lineHeight: 1,
+          }}
+        >
+          HELLO!
+        </Typography>
+        {/* <Typography
+          sx={{
+            fontFamily: "Kiwi Maru",
+            //fontFamily: font1,
+            // display: "flex",
+            // justifyContent: "flex-end", // Aligns content horizontally to the start
+            // alignItems: "flex-end",
+            //  mt: { sm: "0%", md: "5%" },
+            fontSize: {
+              xs: "5.5em",
+              sm: "4em",
+              md: "5em",
+              lg: "6em",
+            },
+            color: color6,
+            mr: "40%",
+            //ml: "110%",
+            mt: "-15%",
+            //lineHeight: 1,
+          }}
+        >
+          LLO!
+        </Typography> */}
+        <Typography
+          sx={{
+            fontFamily: "Kiwi Maru",
+            // fontFamily: font1,
+            // display: "flex",
+            // justifyContent: "flex-start", // Aligns content horizontally to the start
+            // alignItems: "flex-start",
+            // mt: {
+            //   xs: "20%",
+            //   sm: "38%",
+            //   md: "17%",
+            // },
+            mr: "0%",
 
+            mt: "-5%",
+            mb: "2%",
+            ml: "0%",
+            fontSize: {
+              xs: "3.5em",
+              sm: "5em",
+              md: "7em",
+              lg: "8.5em",
+            },
+            //  lineHeight: 1,
+            color: color6,
+          }}
+        >
+          i'm aubrey
+        </Typography>
         <img
-          style={{ borderRadius: 10, marginTop: "0%", lineHeight: 1 }}
+          style={{ borderRadius: 10, marginTop: "-5%", lineHeight: 1 }}
           src="images/homeImage.jpg"
-          width="55%"
-          height="15%"
+          width="105%"
+          height="55%"
         />
         <Typography
           sx={{
@@ -710,6 +710,21 @@ function Home() {
         >
           {" "}
           a software developer
+        </Typography>
+        <br />
+        <Typography
+          sx={{
+            ml: "8%",
+            fontFamily: font1,
+            display: "flex",
+            justifyContent: "flex-start", // Aligns content horizontally to the start
+            alignItems: "flex-start",
+            fontSize: "1em",
+            mb: 1,
+            color: color6,
+          }}
+        >
+          quick links
         </Typography>
         <Box sx={{ ml: 2, mr: 1.5, mt: 3 }}>
           <Grid container spacing={2}>
@@ -871,6 +886,9 @@ function Home() {
               </Button>
             </Grid>
           </Grid>
+          <br />
+          <br />
+
           <img
             src={scrollImage}
             height="50%"

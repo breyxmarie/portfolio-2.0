@@ -12,7 +12,7 @@ const ColorContext = createContext({
   color6: "#2C2C2C",
   color7: "#D5C4A1",
 
-  font1: "Lobster Two",
+  font1: "Kiwi Maru",
   font2: "Caladea",
 
   linkImage: "/images/link.png",
@@ -54,7 +54,7 @@ const ColorProvider = ({ children }) => {
   const [color6, setColor6] = useState("#2C2C2C");
   const [color7, setColor7] = useState("#FDFDFD");
 
-  const [font1, setFont1] = useState("Lobster Two");
+  const [font1, setFont1] = useState("Kiwi Maru");
   const [font2, setFont2] = useState("Caladea");
 
   const [linkImage, setLinkImage] = useState("/images/link.png");
