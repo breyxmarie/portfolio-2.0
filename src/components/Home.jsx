@@ -174,7 +174,7 @@ function Home() {
         justifyContent: "center",
         alignItems: "center",
         overflow: "hidden", // Prevent overflow, useful for full-screen layouts
-        paddingBottom: "0%",
+        paddingBottom: "0.5%",
         paddingTop: "0px",
         // display: 'flex',
         // justifyContent: 'center',

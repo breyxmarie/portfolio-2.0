@@ -139,7 +139,7 @@ function AboutMe1() {
       //  className="content"
       style={{
         width: "100vw",
-        paddingTop: "5%",
+        paddingTop: "7%",
         // height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "5%",
@@ -309,7 +309,7 @@ function AboutMe1() {
                             xs: "0.5em",
                             sm: "0.3em",
                             md: "0.8em",
-                            lg: "1em",
+                            lg: "0.9em",
                           },
                         }}
                       >
@@ -353,7 +353,7 @@ function AboutMe1() {
                             xs: "0.5em",
                             sm: "0.3em",
                             md: "0.8em",
-                            lg: "1em",
+                            lg: "0.9em",
                           },
                         }}
                       >
@@ -1153,7 +1153,7 @@ function AboutMe1() {
                     borderRadius: 5,
                     ml: { xs: "12.5%", sm: "8%" },
                     mr: 4,
-                    pb: "3%",
+                    pb: "1%",
                   }}
                 >
                   <Grid container spacing={2} sx={{ pt: 0.5 }}>
@@ -1203,7 +1203,7 @@ function AboutMe1() {
                             ml: 2,
                           }}
                         >
-                          journals.site
+                          Publications.site
                         </Typography>
                       </Grid>
                       <Grid xs={2}>
@@ -1220,7 +1220,7 @@ function AboutMe1() {
                   </Box>
 
                   <Box sx={{ ml: 3 }}>
-                    <Typography
+                    {/* <Typography
                       sx={{
                         color: color6,
                         fontFamily: font2,
@@ -1235,9 +1235,11 @@ function AboutMe1() {
                       }}
                     >
                       Publications
-                    </Typography>
+                    </Typography> */}
+
                     <Typography
                       sx={{
+                        mt: "3%",
                         color: color6,
                         fontFamily: font2,
                         textAlign: "left",
