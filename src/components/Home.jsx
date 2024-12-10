@@ -569,7 +569,7 @@ function Home() {
       </Box>
       <Box
         sx={{
-          pb: "9%",
+          pb: "12%",
           display: {
             xs: "block", // Hide on extra small screens
             sm: "none",
@@ -614,31 +614,37 @@ function Home() {
         >
           hello
         </Typography> */}
-
-        <Typography
-          sx={{
-            fontFamily: "Kiwi Maru",
-
-            //fontFamily: font1,
-            // display: "flex",
-            // justifyContent: "flex-end", // Aligns content horizontally to the start
-            // alignItems: "flex-end",
-            //  mt: { sm: "0%", md: "5%" },
-            fontSize: {
-              xs: "3.5em",
-              sm: "4em",
-              md: "5em",
-              lg: "6em",
-            },
-            color: color6,
-            mr: "50%",
-            ml: "5%",
-            mt: "8%",
-            //lineHeight: 1,
-          }}
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={rightVariants}
         >
-          HELLO!
-        </Typography>
+          <Typography
+            sx={{
+              fontFamily: "Kiwi Maru",
+
+              //fontFamily: font1,
+              // display: "flex",
+              // justifyContent: "flex-end", // Aligns content horizontally to the start
+              // alignItems: "flex-end",
+              //  mt: { sm: "0%", md: "5%" },
+              fontSize: {
+                xs: "3em",
+                sm: "4em",
+                md: "5em",
+                lg: "6em",
+              },
+              color: color6,
+              mr: "50%",
+              ml: "0%",
+              mt: "8%",
+              //lineHeight: 1,
+            }}
+          >
+            hello!
+          </Typography>
+        </motion.div>
         {/* <Typography
           sx={{
             fontFamily: "Kiwi Maru",
@@ -662,240 +668,267 @@ function Home() {
         >
           LLO!
         </Typography> */}
-        <Typography
-          sx={{
-            fontFamily: "Kiwi Maru",
-            // fontFamily: font1,
-            display: "flex",
-            justifyContent: "flex-end", // Aligns content horizontally to the start
-            alignItems: "flexend",
-            // mt: {
-            //   xs: "20%",
-            //   sm: "38%",
-            //   md: "17%",
-            // },
-            mr: "0%",
-
-            mt: "-5%",
-            mb: "6%",
-            ml: "0%",
-            mr: "5%",
-
-            fontSize: {
-              xs: "3em",
-              sm: "5em",
-              md: "7em",
-              lg: "8.5em",
-            },
-            //  lineHeight: 1,
-            color: color6,
-          }}
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={leftVariants}
         >
-          i'm aubrey
-        </Typography>
-        <img
-          style={{ borderRadius: 10, marginTop: "-5%", lineHeight: 1 }}
-          src="images/homeImage.jpg"
-          width="105%"
-          height="55%"
-        />
-        <Typography
-          sx={{
-            fontFamily: font1,
-            display: "flex",
-            justifyContent: "flex-start", // Aligns content horizontally to the start
-            alignItems: "flex-start",
-            ml: "5%",
-            fontSize: "1em",
-            color: color6,
-          }}
+          <Typography
+            sx={{
+              fontFamily: "Kiwi Maru",
+              // fontFamily: font1,
+              display: "flex",
+              justifyContent: "flex-end", // Aligns content horizontally to the start
+              alignItems: "flexend",
+              // mt: {
+              //   xs: "20%",
+              //   sm: "38%",
+              //   md: "17%",
+              // },
+
+              mt: "-5%",
+              mb: "6%",
+              ml: "0%",
+              mr: "5%",
+
+              fontSize: {
+                xs: "2.5em",
+                sm: "5em",
+                md: "7em",
+                lg: "8.5em",
+              },
+              //  lineHeight: 1,
+              color: color6,
+            }}
+          >
+            i'm aubrey
+          </Typography>
+        </motion.div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={leftVariants}
         >
-          {" "}
-          a software developer
-        </Typography>
-        <br />
-        <Typography
-          sx={{
-            ml: "8%",
-            fontFamily: font1,
-            display: "flex",
-            justifyContent: "flex-start", // Aligns content horizontally to the start
-            alignItems: "flex-start",
-            fontSize: "1em",
-            mb: 1,
-            color: color6,
-          }}
-        >
-          quick links
-        </Typography>
-        <Box sx={{ ml: 2, mr: 1.5, mt: 3 }}>
-          <Grid container spacing={2}>
-            <Grid xs={4}>
-              {" "}
-              <Button
-                sx={{
-                  textTransform: "none",
-                  background: color1,
-                  color: "#ffffff",
-                  fontFamily: font1,
-                  fontSize: {
-                    xs: "0.5em",
-                  },
-
-                  pl: 0,
-                  pr: 0,
-                  "&:hover": {
-                    backgroundColor: backgroundColor,
-                    color: color1,
-                    border: 1,
-
-                    borderColor: color1,
-                  },
-                }}
-              >
-                {" "}
-                about me &nbsp; &nbsp; {">"}
-              </Button>
-              <br />
-              <Button
-                sx={{
-                  textTransform: "none",
-                  background: color1,
-                  color: "#ffffff",
-                  fontFamily: font1,
-                  fontSize: {
-                    xs: "0.5em",
-                  },
-
-                  pl: 0,
-                  pr: 0,
-                  "&:hover": {
-                    backgroundColor: backgroundColor,
-                    color: color1,
-                    border: 1,
-
-                    borderColor: color1,
-                  },
-                }}
-              >
-                {" "}
-                linked in &nbsp; &nbsp; {">"}
-              </Button>
-            </Grid>
-            <Grid xs={4}>
-              {" "}
-              <Button
-                sx={{
-                  textTransform: "none",
-                  background: color1,
-                  color: "#ffffff",
-                  fontFamily: font1,
-                  fontSize: {
-                    xs: "0.5em",
-                  },
-
-                  pl: 0,
-                  pr: 0,
-                  "&:hover": {
-                    backgroundColor: backgroundColor,
-                    color: color1,
-                    border: 1,
-
-                    borderColor: color1,
-                  },
-                }}
-              >
-                {" "}
-                about me &nbsp; &nbsp; {">"}
-              </Button>
-              <br />
-              <Button
-                sx={{
-                  textTransform: "none",
-                  background: color1,
-                  color: "#ffffff",
-                  fontFamily: font1,
-                  fontSize: {
-                    xs: "0.5em",
-                  },
-
-                  pl: 0,
-                  pr: 0,
-                  "&:hover": {
-                    backgroundColor: backgroundColor,
-                    color: color1,
-                    border: 1,
-
-                    borderColor: color1,
-                  },
-                }}
-              >
-                {" "}
-                github &nbsp; &nbsp; {">"}
-              </Button>
-            </Grid>
-            <Grid xs={4}>
-              {" "}
-              <Button
-                sx={{
-                  textTransform: "none",
-                  background: color1,
-                  color: "#ffffff",
-                  fontFamily: font1,
-                  fontSize: {
-                    xs: "0.5em",
-                  },
-
-                  pl: 0,
-                  pr: 0,
-                  "&:hover": {
-                    backgroundColor: backgroundColor,
-                    color: color1,
-                    border: 1,
-
-                    borderColor: color1,
-                  },
-                }}
-              >
-                {" "}
-                contact me &nbsp; &nbsp; {">"}
-              </Button>
-              <br />
-              <Button
-                onClick={() => navigateLink(5)}
-                sx={{
-                  textTransform: "none",
-                  background: color1,
-                  color: "#ffffff",
-                  fontFamily: font1,
-                  fontSize: {
-                    xs: "0.5em",
-                  },
-
-                  pl: 0,
-                  pr: 0,
-                  "&:hover": {
-                    backgroundColor: backgroundColor,
-                    color: color1,
-                    border: 1,
-
-                    borderColor: color1,
-                  },
-                }}
-              >
-                {" "}
-                resume &nbsp; &nbsp; {">"}
-              </Button>
-            </Grid>
-          </Grid>
-
           <img
-            src={scrollImage}
-            height="50%"
-            width="18%"
-            style={{ marginLeft: "5%", marginTop: "0%" }}
+            style={{ borderRadius: 10, marginTop: "-5%", lineHeight: 1 }}
+            src="images/homeImage.jpg"
+            width="105%"
+            height="55%"
           />
-        </Box>
+        </motion.div>
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={leftVariants}
+        >
+          <Typography
+            sx={{
+              fontFamily: font1,
+              display: "flex",
+              justifyContent: "flex-start", // Aligns content horizontally to the start
+              alignItems: "flex-start",
+              ml: "5%",
+              fontSize: "1em",
+              color: color6,
+            }}
+          >
+            {" "}
+            a software developer
+          </Typography>
+        </motion.div>
+        <br />
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={bottomVariants}
+        >
+          <Typography
+            sx={{
+              ml: "8%",
+              fontFamily: font1,
+              display: "flex",
+              justifyContent: "flex-start", // Aligns content horizontally to the start
+              alignItems: "flex-start",
+              fontSize: "1em",
+              mb: 1,
+              color: color6,
+            }}
+          >
+            quick links
+          </Typography>
+          <Box sx={{ ml: 2, mr: 1.5, mt: 3 }}>
+            <Grid container spacing={2}>
+              <Grid xs={4}>
+                {" "}
+                <Button
+                  sx={{
+                    textTransform: "none",
+                    background: color1,
+                    color: "#ffffff",
+                    fontFamily: font1,
+                    fontSize: {
+                      xs: "0.5em",
+                    },
+
+                    pl: 0,
+                    pr: 0,
+                    "&:hover": {
+                      backgroundColor: backgroundColor,
+                      color: color1,
+                      border: 1,
+
+                      borderColor: color1,
+                    },
+                  }}
+                >
+                  {" "}
+                  about me &nbsp; &nbsp; {">"}
+                </Button>
+                <br />
+                <Button
+                  sx={{
+                    textTransform: "none",
+                    background: color1,
+                    color: "#ffffff",
+                    fontFamily: font1,
+                    fontSize: {
+                      xs: "0.5em",
+                    },
+
+                    pl: 0,
+                    pr: 0,
+                    "&:hover": {
+                      backgroundColor: backgroundColor,
+                      color: color1,
+                      border: 1,
+
+                      borderColor: color1,
+                    },
+                  }}
+                >
+                  {" "}
+                  linked in &nbsp; &nbsp; {">"}
+                </Button>
+              </Grid>
+              <Grid xs={4}>
+                {" "}
+                <Button
+                  sx={{
+                    textTransform: "none",
+                    background: color1,
+                    color: "#ffffff",
+                    fontFamily: font1,
+                    fontSize: {
+                      xs: "0.5em",
+                    },
+
+                    pl: 0,
+                    pr: 0,
+                    "&:hover": {
+                      backgroundColor: backgroundColor,
+                      color: color1,
+                      border: 1,
+
+                      borderColor: color1,
+                    },
+                  }}
+                >
+                  {" "}
+                  about me &nbsp; &nbsp; {">"}
+                </Button>
+                <br />
+                <Button
+                  sx={{
+                    textTransform: "none",
+                    background: color1,
+                    color: "#ffffff",
+                    fontFamily: font1,
+                    fontSize: {
+                      xs: "0.5em",
+                    },
+
+                    pl: 0,
+                    pr: 0,
+                    "&:hover": {
+                      backgroundColor: backgroundColor,
+                      color: color1,
+                      border: 1,
+
+                      borderColor: color1,
+                    },
+                  }}
+                >
+                  {" "}
+                  github &nbsp; &nbsp; {">"}
+                </Button>
+              </Grid>
+              <Grid xs={4}>
+                {" "}
+                <Button
+                  sx={{
+                    textTransform: "none",
+                    background: color1,
+                    color: "#ffffff",
+                    fontFamily: font1,
+                    fontSize: {
+                      xs: "0.5em",
+                    },
+
+                    pl: 0,
+                    pr: 0,
+                    "&:hover": {
+                      backgroundColor: backgroundColor,
+                      color: color1,
+                      border: 1,
+
+                      borderColor: color1,
+                    },
+                  }}
+                >
+                  {" "}
+                  contact me &nbsp; &nbsp; {">"}
+                </Button>
+                <br />
+                <Button
+                  onClick={() => navigateLink(5)}
+                  sx={{
+                    textTransform: "none",
+                    background: color1,
+                    color: "#ffffff",
+                    fontFamily: font1,
+                    fontSize: {
+                      xs: "0.5em",
+                    },
+
+                    pl: 0,
+                    pr: 0,
+                    "&:hover": {
+                      backgroundColor: backgroundColor,
+                      color: color1,
+                      border: 1,
+
+                      borderColor: color1,
+                    },
+                  }}
+                >
+                  {" "}
+                  resume &nbsp; &nbsp; {">"}
+                </Button>
+              </Grid>
+            </Grid>
+
+            <img
+              src={scrollImage}
+              height="50%"
+              width="18%"
+              style={{ marginLeft: "5%", marginTop: "0%" }}
+            />
+          </Box>
+        </motion.div>
       </Box>
     </div>
   );
