@@ -205,6 +205,7 @@ function AboutMe1() {
                   >
                     <Typography
                       sx={{
+                        fontFamily: font2,
                         color: color6,
                         fontSize: {
                           xs: "0.5em",
@@ -232,8 +233,9 @@ function AboutMe1() {
                   {" "}
                   <Box sx={{ width: "100%", maxWidth: "70%", ml: "5%" }}>
                     <img
-                      src="images/profilepic.png"
+                      src="images/profilepic.jpg"
                       style={{
+                        borderRadius: 5,
                         width: "100%",
                         height: "auto",
                         marginLeft: "20%",
@@ -311,11 +313,12 @@ function AboutMe1() {
                           },
                         }}
                       >
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
+                        Hello, I'm Aubrey, a dedicated software developer with a
+                        passion for crafting innovative solutions. I'm committed
+                        to delivering high-quality code and continuously
+                        learning new technologies. With a strong work ethic and
+                        a keen eye for detail, I strive to contribute to
+                        projects that make a difference.
                       </Typography>
                     </Box>
 
@@ -354,11 +357,12 @@ function AboutMe1() {
                           },
                         }}
                       >
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit, sed do eiusmod tempor incididunt ut labore et
-                        dolore magna aliqua. Ut enim ad minim veniam, quis
-                        nostrud exercitation ullamco laboris nisi ut aliquip ex
-                        ea commodo consequat.
+                        When I'm not immersed in code, I enjoy unwinding with a
+                        good book or a binge-worthy TV series like Gilmore
+                        Girls, New Girl, or Friends. I'm also a passionate
+                        animal lover, particularly drawn to the companionship of
+                        dogs and cats. While I've had to adjust my caffeine
+                        intake, I still appreciate a good cup of decaf coffee.
                       </Typography>
                     </Box>
                     {/* 
@@ -494,14 +498,14 @@ function AboutMe1() {
             <Grid container spacing={2} sx={{ mt: 3 }}>
               <Grid xs={12}>
                 {" "}
-                <Box sx={{ width: "100%", maxWidth: "70%", ml: "5%" }}>
+                <Box sx={{ width: "100%", maxWidth: "70%", ml: "2%" }}>
                   <img
-                    src="images/profilepic1.png"
+                    src="images/profilepic1.jpg"
                     style={{
                       width: "100%",
                       height: "auto",
                       marginLeft: "20%",
-
+                      borderRadius: 5,
                       display: "flex",
                       justifyContent: "flex-start", // Aligns content horizontally to the start
                       alignItems: "flex-start",
@@ -534,7 +538,7 @@ function AboutMe1() {
                           align="justify"
                           sx={{
                             color: color6,
-
+                            fontFamily: font2,
                             ml: 2,
                             mr: 2,
                             py: 1.5,
@@ -546,11 +550,12 @@ function AboutMe1() {
                             },
                           }}
                         >
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
+                          Hello, I'm Aubrey, a dedicated software developer with
+                          a passion for crafting innovative solutions. I'm
+                          committed to delivering high-quality code and
+                          continuously learning new technologies. With a strong
+                          work ethic and a keen eye for detail, I strive to
+                          contribute to projects that make a difference.
                         </Typography>
                       </Box>
                     </Grid>
@@ -576,6 +581,7 @@ function AboutMe1() {
                           align="justify"
                           sx={{
                             color: color6,
+                            fontFamily: font2,
                             ml: 2,
                             mr: 2,
                             py: 1.5,
@@ -587,11 +593,12 @@ function AboutMe1() {
                             },
                           }}
                         >
-                          "Lorem ipsum dolor sit amet, consectetur adipiscing
-                          elit, sed do eiusmod tempor incididunt ut labore et
-                          dolore magna aliqua. Ut enim ad minim veniam, quis
-                          nostrud exercitation ullamco laboris nisi ut aliquip
-                          ex ea commodo consequat.
+                          When I'm not immersed in code, I enjoy unwinding with
+                          a good book or a binge-worthy TV series like Gilmore
+                          Girls, New Girl, or Friends. I'm also a passionate
+                          animal lover, particularly drawn to the companionship
+                          of dogs and cats. While I've had to adjust my caffeine
+                          intake, I still appreciate a good cup of decaf coffee.
                         </Typography>
                       </Box>
                     </Grid>
@@ -699,13 +706,14 @@ function AboutMe1() {
                   >
                     <Typography
                       sx={{
+                        fontFamily: font2,
                         color: color6,
-                        fontSize: {
-                          xs: "0.7em",
-                          sm: "0.4em",
-                          md: "0.8em",
-                          lg: "1em",
-                        },
+                        // fontSize: {
+                        //   xs: "0.7em",
+                        //   sm: "0.4em",
+                        //   md: "0.8em",
+                        //   lg: "1em",
+                        // },
                       }}
                     >
                       TechSkills.site
@@ -736,10 +744,10 @@ function AboutMe1() {
                   <img src="images/java.png" width="50%" height="90%" />
                 </Grid>
                 <Grid xs={1.7}>
-                  <img src="images/c++.png" width="50%" height="90%" />
+                  <img src="images/csharp.png" width="100%" height="90%" />
                 </Grid>
                 <Grid xs={1.7}>
-                  <img src="images/c#.png" width="50%" height="90%" />
+                  <img src="images/c++.png" width="45%" height="80%" />
                 </Grid>
                 <Grid xs={1.7}>
                   <img src="images/html.png" width="50%" height="90%" />
@@ -854,6 +862,7 @@ function AboutMe1() {
                       >
                         <Typography
                           xs={{
+                            fontFamily: font2,
                             fontSize: {
                               xs: "0.5em",
                               sm: "0.4em",
@@ -1046,6 +1055,7 @@ function AboutMe1() {
                     >
                       <Typography
                         xs={{
+                          fontFamily: font2,
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.4em",
@@ -1182,12 +1192,13 @@ function AboutMe1() {
                       >
                         <Typography
                           sx={{
-                            fontSize: {
-                              xs: "0.5em",
-                              sm: "0.4em",
-                              md: "0.8em",
-                              lg: "1em",
-                            },
+                            fontFamily: font2,
+                            // fontSize: {
+                            //   xs: "0.5em",
+                            //   sm: "0.4em",
+                            //   md: "0.8em",
+                            //   lg: "1em",
+                            // },
                             color: color6,
                             ml: 2,
                           }}

@@ -282,25 +282,32 @@ function ContactMe() {
 
             <Box
               sx={{
+                mt: "5%",
+                mb: "-4%",
                 background: color2,
                 borderRadius: 5,
-                ml: "10%",
-                display: { sx: "block", sm: "none" },
+                ml: "8%",
+                mr: "5%",
+                pb: "5%",
+                //  / height: "100%",
+                display: { xs: "block", sm: "none" },
               }}
             >
               <Typography
                 sx={{
                   fontSize: {
-                    xs: "0.5em",
+                    xs: "1em",
                   },
                   fontFamily: font2,
                   textAlign: "center",
                   ml: "0%",
+                  pt: "5%",
                 }}
               >
                 let's get in touch
               </Typography>
             </Box>
+            <br />
           </Grid>
           <Grid sm={7}>
             <Box sx={{ mr: "5%", ml: "4%" }}>
@@ -314,6 +321,7 @@ function ContactMe() {
                   sx={{
                     background: color3,
                     borderRadius: 3,
+                    color: color5,
                     pt: "3%",
                     ml: { xs: "5%", sm: "0%" },
                     mr: { xs: "0%", sm: "0%" },
@@ -451,17 +459,17 @@ function ContactMe() {
                         >
                           Contact Number
                         </Typography>
-                        <PhoneInput
+                        {/* <PhoneInput
                           style={{ width: "80%" }}
                           defaultCountry="ph"
                           value={phone}
                           onChange={(phone) => setPhone(phone)}
                           name="from_number"
-                        />
-                        {/* <TextField
+                        /> */}
+                        <TextField
                           size="small"
-                          value={phone}
-                          onChange={(phone) => setPhone(phone)}
+                          // value={phone}
+                          // onChange={(phone) => setPhone(phone)}
                           variant="outlined"
                           name="from_number"
                           sx={{
@@ -477,7 +485,7 @@ function ContactMe() {
                               },
                             },
                           }}
-                        /> */}
+                        />
                       </Grid>
 
                       <Grid xs={6}>
@@ -549,7 +557,8 @@ function ContactMe() {
                       color: "#ffffff",
                       fontFamily: font2,
                       fontSize: {
-                        xs: "0.8em",
+                        xs: "0.5em",
+                        sm: "0.9em",
                       },
                       mb: 1,
                       pl: 0,
@@ -594,7 +603,7 @@ function ContactMe() {
                         sx={{
                           textAlign: "left",
                           fontFamily: font2,
-                          ml: "20%",
+                          ml: { xs: "30%", sm: "20%" },
                           fontSize: {
                             xs: "0.5em",
                             sm: "1em",
@@ -610,7 +619,12 @@ function ContactMe() {
                       </Typography>
 
                       <br />
-                      <img src="images/ig3.png" width="70%" height="70%" />
+                      <img
+                        src="images/ig3.png"
+                        width="70%"
+                        height="auto"
+                        style={{ marginLeft: "0%" }}
+                      />
                     </Grid>
                     <Grid xs={8}>
                       <br />
@@ -794,7 +808,7 @@ function ContactMe() {
                     sx={{
                       mt: { xs: "3%", md: "0%" },
                       ml: {
-                        xs: "30%",
+                        xs: "55%",
                         sm: "60%",
                       },
                       mr: "50%",
@@ -803,91 +817,115 @@ function ContactMe() {
                       //   alignItems: "flex-end",
                     }}
                   >
-                    <Grid xs={2} sm={1}>
+                    {/* <Grid xs={2} sm={1}>
                       <Button
                         sx={{
                           background: color2,
                           // ml: "0%",
                           // mr: "50%",
+                          width: { xs: "30%", sm: "10%" },
                           height: { xs: "50%", sm: "80%" },
-                          width: { xs: "5%", sm: "50%" },
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
+
+                          // display: "flex",
+                          // justifyContent: "center",
+                          // alignItems: "center",
                         }}
-                      >
+                      > 
+                      <a href="">
                         <img
+                          width="40%"
+                          height="auto"
                           src="images/linkedin.png"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain", // Adjust as needed
-                          }}
+                          // style={{
+                          //   height: "20%",
+                          //   width: "60%",
+
+                          //   //  objectFit: "contain", // Adjust as needed
+                          // }}
                         />
-                      </Button>
-                    </Grid>
-                    <Grid xs={2} sm={1}>
+                      </a>
+                      </Button> 
+                    </Grid> */}
+                    <Grid xs={1} sm={1}>
                       {" "}
-                      <Button
+                      {/* <Button
                         sx={{
                           background: color2,
                           // ml: "0%",
                           // mr: "50%",
                           height: { xs: "50%", sm: "80%" },
                           width: { xs: "5%", sm: "50%" },
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
+                          // display: "flex",
+                          // justifyContent: "center",
+                          // alignItems: "center",
                         }}
+                      > */}
+                      <a
+                        href="https://linkedin.com/in/aubreyquiatchon"
+                        target="_blank"
                       >
                         <img
                           src="images/linkedin.png"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain", // Adjust as needed
-                          }}
+                          width="80%"
+                          height="auto"
+                          // style={{
+                          //   width: "40%",
+                          //   height: "50%",
+                          //   objectFit: "contain", // Adjust as needed
+                          // }}
                         />
-                      </Button>
+                      </a>
+                      {/* </Button> */}
                     </Grid>
 
-                    <Grid xs={2} sm={1}>
+                    <Grid xs={1} sm={1}>
                       {" "}
-                      <Button
+                      {/* <Button
                         sx={{
                           background: color2,
                           // ml: "0%",
                           // mr: "50%",
                           height: { xs: "50%", sm: "80%" },
                           width: { xs: "5%", sm: "50%" },
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "center",
+                          // display: "flex",
+                          // justifyContent: "center",
+                          // alignItems: "center",
                         }}
-                      >
+                      > */}
+                      <a href="https://github.com/breyxmarie" target="_blank">
                         <img
                           src="images/github.png"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "contain", // Adjust as needed
-                          }}
+                          width="80%"
+                          height="auto"
+                          // style={{
+                          //   width: "100%",
+                          //   height: "100%",
+                          //   objectFit: "contain", // Adjust as needed
+                          // }}
                         />
-                      </Button>
+                      </a>
+                      {/* </Button> */}
                     </Grid>
-                    <Grid xs={3} sm={1}>
+                    <Grid xs={1} sm={1}>
                       {" "}
-                      <Button
+                      {/* <Button
                         sx={{
-                          height: { xs: "50%", sm: "80%" },
+                          height: { xs: "40%", sm: "80%" },
                           width: { xs: "5%", sm: "50%" },
                           background: color2,
                           ml: "0%",
                           mr: "50%",
                         }}
-                      >
-                        Resume
-                      </Button>
+                      > */}
+                      <a href="https://tinyurl.com/ysr6v67p" target="_blank">
+                        <Typography
+                          sx={{ color: color4, fontFamily: font2, mt: "20%" }}
+                        >
+                          {" "}
+                          Resume
+                        </Typography>
+                      </a>
+                      {/* </Button> */}
                     </Grid>
                   </Grid>
                 </Box>

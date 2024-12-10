@@ -328,7 +328,7 @@ function NavBar() {
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
               color="inherit"
-              sx={{ color: "#E66253", border: 2 }}
+              sx={{ color: color3, border: 2 }}
             >
               <MenuIcon />
             </IconButton>
@@ -352,6 +352,7 @@ function NavBar() {
                 display: {
                   xs: "block",
                   md: "none",
+                  //  background: "#ffffff",
                   color: "#000000",
                   border: 2,
                 },
@@ -369,15 +370,35 @@ function NavBar() {
                     // selected={page.links === path}
 
                     //! changes per notif style
-                    sx={{ color: "#00000" }}
+                    sx={{ color: "#000000" }}
                   >
-                    <Typography textAlign="center">{page.names}</Typography>
+                    <a
+                      href={page.links}
+                      onMouseOver={{ color: "blue" }}
+                      onMouseDown={{ color: "red" }}
+                      style={{
+                        paddingTop: 3,
+                        color: color6,
+                        fontFamily: font2,
+                        fontSize: "120%",
+                      }}
+                    >
+                      <Typography textAlign="center">{page.names}</Typography>
+                    </a>
                   </MenuItem>
                 )
               )}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
+          <Box
+            sx={{
+              display: { xs: "block", sm: "none" },
+              ml: { xs: "65%", md: "0%" },
+            }}
+          >
+            <MaterialUISwitch checked={checked} onChange={handleModeChange} />
+          </Box>
+          {/* <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
@@ -623,7 +644,9 @@ function NavBar() {
             }}
           >
             {/* <PinkSwitch defaultChecked /> */}
-            <MaterialUISwitch checked={checked} onChange={handleModeChange} />
+            <Box sx={{ mr: { xs: "40%", sm: "0%" } }}>
+              <MaterialUISwitch checked={checked} onChange={handleModeChange} />
+            </Box>
           </Box>
           {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open Notifications">
