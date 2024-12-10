@@ -840,7 +840,7 @@ function Project5() {
                       fontFamily: font2,
                     }}
                   >
-                    MOBILE APPLICATION DEVELOPMENT
+                    JAVA PROGRAMMING
                   </Box>
                 </Grid>
                 <Grid xs={6} sm={6}>
@@ -865,7 +865,7 @@ function Project5() {
                   </Box>
                 </Grid>
               </Grid>
-              <Grid
+              {/* <Grid
                 container
                 spacing={2}
                 sx={{ ml: "5%", mt: { xs: 0.5, sm: 2 } }}
@@ -913,7 +913,7 @@ function Project5() {
                     REST API
                   </Box>
                 </Grid>
-              </Grid>
+              </Grid>*/}
             </Grid>
 
             <Grid xs={3.5} sm={3.5}>

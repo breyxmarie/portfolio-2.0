@@ -193,7 +193,7 @@ function ContactMe() {
         marginTop: "5%",
         //  height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
-        paddingBottom: "0%",
+        paddingBottom: "2%",
         // display: "flex", // Flex to center content (optional)
         // justifyContent: "center",
         // alignItems: "center",
