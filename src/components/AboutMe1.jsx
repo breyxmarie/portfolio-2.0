@@ -358,11 +358,11 @@ function AboutMe1() {
                         }}
                       >
                         When I'm not immersed in code, I enjoy unwinding with a
-                        good book or a binge-worthy TV series like Gilmore
-                        Girls, New Girl, or Friends. I'm also a passionate
-                        animal lover, particularly drawn to the companionship of
-                        dogs and cats. While I've had to adjust my caffeine
-                        intake, I still appreciate a good cup of decaf coffee.
+                        binge-worthy TV series like Gilmore Girls, New Girl, or
+                        Friends. I'm also a passionate animal lover,
+                        particularly drawn to the companionship of dogs and
+                        cats. While I've had to adjust my caffeine intake, I
+                        still appreciate a good cup of decaf coffee.
                       </Typography>
                     </Box>
                     {/* 
@@ -594,11 +594,11 @@ function AboutMe1() {
                           }}
                         >
                           When I'm not immersed in code, I enjoy unwinding with
-                          a good book or a binge-worthy TV series like Gilmore
-                          Girls, New Girl, or Friends. I'm also a passionate
-                          animal lover, particularly drawn to the companionship
-                          of dogs and cats. While I've had to adjust my caffeine
-                          intake, I still appreciate a good cup of decaf coffee.
+                          a binge-worthy TV series like Gilmore Girls, New Girl,
+                          or Friends. I'm also a passionate animal lover,
+                          particularly drawn to the companionship of dogs and
+                          cats. While I've had to adjust my caffeine intake, I
+                          still appreciate a good cup of decaf coffee.
                         </Typography>
                       </Box>
                     </Grid>
@@ -833,7 +833,7 @@ function AboutMe1() {
                     <Grid xs={4}>
                       <img
                         src={barImage}
-                        height="90%"
+                        height="80%"
                         width="50%"
                         style={{ marginLeft: "45%" }}
                       />
@@ -1162,8 +1162,8 @@ function AboutMe1() {
                       <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
                         <img
                           src={barImage}
-                          height="90%"
-                          width="50%"
+                          height="100%"
+                          width="55%"
                           style={{ marginLeft: "40%" }}
                         />
                       </Box>
@@ -1176,7 +1176,7 @@ function AboutMe1() {
                       borderRadius: 5,
                       ml: "3%",
                       mr: "3%",
-                      mt: "4%",
+                      mt: "3%",
                       height: "20%",
                     }}
                   >

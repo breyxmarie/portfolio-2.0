@@ -189,11 +189,11 @@ function ContactMe() {
       className="content"
       style={{
         width: "100vw",
-        paddingTop: "3%",
-
+        paddingTop: "0%",
+        marginTop: "5%",
         //  height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
-        paddingBottom: "1.5%",
+        paddingBottom: "0%",
         // display: "flex", // Flex to center content (optional)
         // justifyContent: "center",
         // alignItems: "center",
@@ -875,6 +875,7 @@ function ContactMe() {
                           // }}
                         />
                       </a>
+                      &nbsp;
                       {/* </Button> */}
                     </Grid>
 

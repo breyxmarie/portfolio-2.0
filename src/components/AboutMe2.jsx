@@ -1038,7 +1038,7 @@ function AboutMe2() {
                     <Grid xs={3}>
                       <Box sx={{ width: "100%", maxWidth: "70%", ml: "25%" }}>
                         <img
-                          src="images/mapuaLogo.png"
+                          src="images/questronix.png"
                           width="80%"
                           height="80%"
                         />
