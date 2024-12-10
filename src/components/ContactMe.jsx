@@ -189,8 +189,8 @@ function ContactMe() {
       className="content"
       style={{
         width: "100vw",
-        paddingTop: "0%",
-        marginTop: "5%",
+        paddingTop: "5%",
+        //marginTop: "5%",
         //  height: "100vh",
         backgroundColor: backgroundColor, // Replace with the color you need
         paddingBottom: "2%",

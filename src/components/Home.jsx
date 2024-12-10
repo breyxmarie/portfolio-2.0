@@ -823,7 +823,7 @@ function Home() {
                   fontSize: {
                     xs: "0.5em",
                   },
-
+                  mt: "8%",
                   pl: 0,
                   pr: 0,
                   "&:hover": {
@@ -871,6 +871,7 @@ function Home() {
               <Button
                 onClick={() => navigateLink(4)}
                 sx={{
+                  mt: "8%",
                   textTransform: "none",
                   background: color1,
                   color: "#ffffff",
@@ -933,7 +934,7 @@ function Home() {
                   fontSize: {
                     xs: "0.5em",
                   },
-
+                  mt: "8%",
                   pl: 0,
                   pr: 0,
                   "&:hover": {
