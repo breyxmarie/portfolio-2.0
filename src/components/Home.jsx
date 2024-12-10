@@ -705,7 +705,7 @@ function Home() {
             display: "flex",
             justifyContent: "flex-start", // Aligns content horizontally to the start
             alignItems: "flex-start",
-            ml: "20%",
+            ml: "5%",
             fontSize: "1em",
             color: color6,
           }}
