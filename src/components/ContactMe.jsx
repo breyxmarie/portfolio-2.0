@@ -667,7 +667,7 @@ function ContactMe() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
                             lg: "0.9em",
                             xl: "1em",
                           },
@@ -698,7 +698,7 @@ function ContactMe() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
                             lg: "0.9em",
                             xl: "1em",
                           },
@@ -728,7 +728,8 @@ function ContactMe() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
+
                             lg: "0.9em",
                             xl: "1em",
                           },
@@ -758,7 +759,8 @@ function ContactMe() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
+
                             lg: "0.9em",
                             xl: "1em",
                           },
@@ -788,7 +790,8 @@ function ContactMe() {
                           fontSize: {
                             xs: "0.5em",
                             sm: "0.5em",
-                            md: "1em",
+                            md: "0.8em",
+
                             lg: "0.9em",
                             xl: "1em",
                           },
@@ -797,7 +800,7 @@ function ContactMe() {
                         }}
                       >
                         {" "}
-                        Date of Issued: 2024
+                        Issued Year: 2024
                       </Typography>
                     </Grid>
                   </Grid>
@@ -808,8 +811,8 @@ function ContactMe() {
                     sx={{
                       mt: { xs: "3%", md: "0%" },
                       ml: {
-                        xs: "55%",
-                        sm: "60%",
+                        xs: "70%",
+                        sm: "75%",
                       },
                       mr: "50%",
                       //   display: "flex",
@@ -866,7 +869,7 @@ function ContactMe() {
                       >
                         <img
                           src="images/linkedin.png"
-                          width="80%"
+                          width="50%"
                           height="auto"
                           // style={{
                           //   width: "40%",
@@ -896,7 +899,7 @@ function ContactMe() {
                       <a href="https://github.com/breyxmarie" target="_blank">
                         <img
                           src="images/github.png"
-                          width="80%"
+                          width="50%"
                           height="auto"
                           // style={{
                           //   width: "100%",
@@ -919,12 +922,22 @@ function ContactMe() {
                         }}
                       > */}
                       <a href="https://tinyurl.com/ysr6v67p" target="_blank">
-                        <Typography
+                        {/* <Typography
                           sx={{ color: color4, fontFamily: font2, mt: "20%" }}
                         >
                           {" "}
                           Resume
-                        </Typography>
+                        </Typography> */}
+                        <img
+                          src="images/document.png"
+                          width="50%"
+                          height="auto"
+                          // style={{
+                          //   width: "100%",
+                          //   height: "100%",
+                          //   objectFit: "contain", // Adjust as needed
+                          // }}
+                        />
                       </a>
                       {/* </Button> */}
                     </Grid>
