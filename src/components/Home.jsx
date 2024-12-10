@@ -631,8 +631,8 @@ function Home() {
               lg: "6em",
             },
             color: color6,
-            mr: "55%",
-            //ml: "110%",
+            mr: "50%",
+            ml: "5%",
             mt: "8%",
             //lineHeight: 1,
           }}
@@ -666,9 +666,9 @@ function Home() {
           sx={{
             fontFamily: "Kiwi Maru",
             // fontFamily: font1,
-            // display: "flex",
-            // justifyContent: "flex-start", // Aligns content horizontally to the start
-            // alignItems: "flex-start",
+            display: "flex",
+            justifyContent: "flex-end", // Aligns content horizontally to the start
+            alignItems: "flexend",
             // mt: {
             //   xs: "20%",
             //   sm: "38%",
@@ -677,10 +677,12 @@ function Home() {
             mr: "0%",
 
             mt: "-5%",
-            mb: "2%",
+            mb: "6%",
             ml: "0%",
+            mr: "5%",
+
             fontSize: {
-              xs: "3.5em",
+              xs: "3em",
               sm: "5em",
               md: "7em",
               lg: "8.5em",
@@ -886,8 +888,6 @@ function Home() {
               </Button>
             </Grid>
           </Grid>
-          <br />
-          <br />
 
           <img
             src={scrollImage}
